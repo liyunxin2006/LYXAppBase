@@ -1,3 +1,5 @@
+.DS_Store
+
 # Xcode
 #
 build/
@@ -16,6 +18,8 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+*.xcworkspace
+!default.xcworkspace
 
 # CocoaPods
 #
@@ -24,3 +28,6 @@ DerivedData
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
 #
 #Pods/
+Pods
+Podfile.lock
+LYXBaseApp.xcodeproj/xcshareddata/xcschemes/
