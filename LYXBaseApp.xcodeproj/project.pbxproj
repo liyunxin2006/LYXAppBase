@@ -95,6 +95,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35680FE31BCE4D5D00FED7C9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		35680FE41BCE4D5D00FED7C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35680FE51BCE4D5D00FED7C9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		35680FE61BCE4D5D00FED7C9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		35680FE71BCE4D5D00FED7C9 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		35680FE81BCE4D5D00FED7C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35680FE91BCE4D5D00FED7C9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		35BED8BE1BB252C80030D89B = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +169,13 @@
 		35BED8C91BB252C80030D89B /* LYXBaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				35680FE51BCE4D5D00FED7C9 /* Resource */,
+				35680FE31BCE4D5D00FED7C9 /* Images */,
+				35680FE41BCE4D5D00FED7C9 /* Model */,
+				35680FE91BCE4D5D00FED7C9 /* ViewModel */,
+				35680FE81BCE4D5D00FED7C9 /* View */,
+				35680FE61BCE4D5D00FED7C9 /* Util */,
+				35680FE71BCE4D5D00FED7C9 /* Vendor */,
 				35BED8CD1BB252C80030D89B /* AppDelegate.h */,
 				35BED8CE1BB252C80030D89B /* AppDelegate.m */,
 				35BED8D01BB252C80030D89B /* ViewController.h */,
