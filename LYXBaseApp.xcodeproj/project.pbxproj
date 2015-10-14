@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35680FF71BCE559600FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FF61BCE559600FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
+		35680FF91BCE55AE00FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FF81BCE55AE00FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
+		35680FFB1BCE55C700FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FFA1BCE55C700FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
+		35680FFD1BCE55D100FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FFC1BCE55D100FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
+		35680FFF1BCE55DB00FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FFE1BCE55DB00FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
+		356810011BCE55E400FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 356810001BCE55E400FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
+		356810031BCE55EE00FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 356810021BCE55EE00FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
 		35BED8CC1BB252C80030D89B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CB1BB252C80030D89B /* main.m */; };
 		35BED8CF1BB252C80030D89B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CE1BB252C80030D89B /* AppDelegate.m */; };
 		35BED8D21BB252C80030D89B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8D11BB252C80030D89B /* ViewController.m */; };
@@ -39,6 +46,13 @@
 
 /* Begin PBXFileReference section */
 		00D1C4A9652EFA6D87FE0D82 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		35680FF61BCE559600FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
+		35680FF81BCE55AE00FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
+		35680FFA1BCE55C700FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
+		35680FFC1BCE55D100FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
+		35680FFE1BCE55DB00FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
+		356810001BCE55E400FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
+		356810021BCE55EE00FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
 		35BED8C71BB252C80030D89B /* LYXBaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYXBaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BED8CB1BB252C80030D89B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35BED8CD1BB252C80030D89B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -95,6 +109,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		35680FEF1BCE556B00FED7C9 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				35680FF61BCE559600FED7C9 /* empty */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		35680FF01BCE556B00FED7C9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				35680FF81BCE55AE00FED7C9 /* empty */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35680FF11BCE556B00FED7C9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				35680FFA1BCE55C700FED7C9 /* empty */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		35680FF21BCE556B00FED7C9 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				35680FFC1BCE55D100FED7C9 /* empty */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		35680FF31BCE556B00FED7C9 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				35680FFE1BCE55DB00FED7C9 /* empty */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		35680FF41BCE556B00FED7C9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				356810001BCE55E400FED7C9 /* empty */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35680FF51BCE556B00FED7C9 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				356810021BCE55EE00FED7C9 /* empty */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		35BED8BE1BB252C80030D89B = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +190,13 @@
 		35BED8C91BB252C80030D89B /* LYXBaseApp */ = {
 			isa = PBXGroup;
 			children = (
+				35680FEF1BCE556B00FED7C9 /* Images */,
+				35680FF01BCE556B00FED7C9 /* Model */,
+				35680FF11BCE556B00FED7C9 /* Resource */,
+				35680FF21BCE556B00FED7C9 /* Util */,
+				35680FF31BCE556B00FED7C9 /* Vendor */,
+				35680FF41BCE556B00FED7C9 /* View */,
+				35680FF51BCE556B00FED7C9 /* ViewModel */,
 				35BED8CD1BB252C80030D89B /* AppDelegate.h */,
 				35BED8CE1BB252C80030D89B /* AppDelegate.m */,
 				35BED8D01BB252C80030D89B /* ViewController.h */,
@@ -285,9 +362,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				356810031BCE55EE00FED7C9 /* empty in Resources */,
+				356810011BCE55E400FED7C9 /* empty in Resources */,
+				35680FF71BCE559600FED7C9 /* empty in Resources */,
 				35BED9461BB38D120030D89B /* Localizable.strings in Resources */,
+				35680FFF1BCE55DB00FED7C9 /* empty in Resources */,
 				35BED8DA1BB252C80030D89B /* LaunchScreen.storyboard in Resources */,
+				35680FF91BCE55AE00FED7C9 /* empty in Resources */,
+				35680FFB1BCE55C700FED7C9 /* empty in Resources */,
 				35BED9431BB38D090030D89B /* InfoPlist.strings in Resources */,
+				35680FFD1BCE55D100FED7C9 /* empty in Resources */,
 				35BED8D71BB252C80030D89B /* Assets.xcassets in Resources */,
 				35BED8D51BB252C80030D89B /* Main.storyboard in Resources */,
 			);
