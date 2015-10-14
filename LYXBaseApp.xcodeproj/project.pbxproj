@@ -10,10 +10,8 @@
 		35680FF71BCE559600FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FF61BCE559600FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
 		35680FF91BCE55AE00FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FF81BCE55AE00FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
 		35680FFB1BCE55C700FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FFA1BCE55C700FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
-		35680FFD1BCE55D100FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FFC1BCE55D100FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
 		35680FFF1BCE55DB00FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FFE1BCE55DB00FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
 		356810011BCE55E400FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 356810001BCE55E400FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
-		356810031BCE55EE00FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 356810021BCE55EE00FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
 		35BED8CC1BB252C80030D89B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CB1BB252C80030D89B /* main.m */; };
 		35BED8CF1BB252C80030D89B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CE1BB252C80030D89B /* AppDelegate.m */; };
 		35BED8D21BB252C80030D89B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8D11BB252C80030D89B /* ViewController.m */; };
@@ -49,10 +47,13 @@
 		35680FF61BCE559600FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
 		35680FF81BCE55AE00FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
 		35680FFA1BCE55C700FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
-		35680FFC1BCE55D100FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
 		35680FFE1BCE55DB00FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
 		356810001BCE55E400FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
-		356810021BCE55EE00FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
+		356810061BCE5F9200FED7C9 /* LYXNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXNavigationProtocol.h; sourceTree = "<group>"; };
+		356810091BCE602400FED7C9 /* LYXViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXViewModelProtocol.h; sourceTree = "<group>"; };
+		3568100C1BCE642200FED7C9 /* LYXBaseApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LYXBaseApp-Prefix.pch"; sourceTree = "<group>"; };
+		3568100D1BCE664100FED7C9 /* LYXConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXConfig.h; sourceTree = "<group>"; };
+		3568100E1BCE666600FED7C9 /* LYXConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXConstant.h; sourceTree = "<group>"; };
 		35BED8C71BB252C80030D89B /* LYXBaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYXBaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BED8CB1BB252C80030D89B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35BED8CD1BB252C80030D89B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -136,7 +137,8 @@
 		35680FF21BCE556B00FED7C9 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				35680FFC1BCE55D100FED7C9 /* empty */,
+				3568100D1BCE664100FED7C9 /* LYXConfig.h */,
+				3568100E1BCE666600FED7C9 /* LYXConstant.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -160,9 +162,18 @@
 		35680FF51BCE556B00FED7C9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				356810021BCE55EE00FED7C9 /* empty */,
+				356810041BCE5E0B00FED7C9 /* BaseClass */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		356810041BCE5E0B00FED7C9 /* BaseClass */ = {
+			isa = PBXGroup;
+			children = (
+				356810061BCE5F9200FED7C9 /* LYXNavigationProtocol.h */,
+				356810091BCE602400FED7C9 /* LYXViewModelProtocol.h */,
+			);
+			name = BaseClass;
 			sourceTree = "<group>";
 		};
 		35BED8BE1BB252C80030D89B = {
@@ -216,6 +227,7 @@
 			isa = PBXGroup;
 			children = (
 				35BED8CB1BB252C80030D89B /* main.m */,
+				3568100C1BCE642200FED7C9 /* LYXBaseApp-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -362,7 +374,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				356810031BCE55EE00FED7C9 /* empty in Resources */,
 				356810011BCE55E400FED7C9 /* empty in Resources */,
 				35680FF71BCE559600FED7C9 /* empty in Resources */,
 				35BED9461BB38D120030D89B /* Localizable.strings in Resources */,
@@ -371,7 +382,6 @@
 				35680FF91BCE55AE00FED7C9 /* empty in Resources */,
 				35680FFB1BCE55C700FED7C9 /* empty in Resources */,
 				35BED9431BB38D090030D89B /* InfoPlist.strings in Resources */,
-				35680FFD1BCE55D100FED7C9 /* empty in Resources */,
 				35BED8D71BB252C80030D89B /* Assets.xcassets in Resources */,
 				35BED8D51BB252C80030D89B /* Main.storyboard in Resources */,
 			);
@@ -614,6 +624,8 @@
 			baseConfigurationReference = 00D1C4A9652EFA6D87FE0D82 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LYXBaseApp/LYXBaseApp-Prefix.pch";
 				INFOPLIST_FILE = LYXBaseApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyx.LYXBaseApp;
@@ -626,6 +638,8 @@
 			baseConfigurationReference = 650AEF6BED8CEBA9047305AA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/LYXBaseApp/LYXBaseApp-Prefix.pch";
 				INFOPLIST_FILE = LYXBaseApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lyx.LYXBaseApp;
