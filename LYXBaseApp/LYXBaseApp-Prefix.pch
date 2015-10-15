@@ -14,6 +14,7 @@
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
+#import <RDVTabBarController/RDVTabBarController.h>
 #import "LYXConstant.h"
 //#import "MRCUtil.h"
 #import "LYXConfig.h"
@@ -24,13 +25,13 @@
 //#import "IQKeyboardManager.h"
 //#import <SDWebImage/UIImageView+WebCache.h>
 //#import <SDWebImage/UIButton+WebCache.h>
-//#import "MRCViewModelServices.h"
+#import "LYXViewModelServices.h"
 //#import "OCTUser+MRCPersistence.h"
 //#import "OCTRepository+MRCPersistence.h"
-//#import <objc/runtime.h>
+#import <objc/runtime.h>
 //#import <AFNetworking/AFNetworking.h>
 //#import "UIImage+MRCOcticons.h"
-//#import "MRCAppDelegate.h"
+#import "AppDelegate.h"
 //#import "SVPullToRefresh.h"
 //#import "CBStoreHouseRefreshControl.h"
 //#import "UIView+Borders.h"
@@ -40,7 +41,7 @@
 //#import "SSKeychain+MRCUtil.h"
 //#import "UIImage+Octicons.h"
 //#import "TWMessageBarManager.h"
-//#import "UIScrollView+EmptyDataSet.h"
+#import "UIScrollView+EmptyDataSet.h"
 //#import "Ono.h"
 //#import "UMSocial.h"
 //#import "FMDB.h"

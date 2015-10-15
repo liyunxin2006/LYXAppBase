@@ -13,7 +13,7 @@
 /// AppDelegate
 ///------------
 
-#define MRCSharedAppDelegate ((MRCAppDelegate *)[UIApplication sharedApplication].delegate)
+#define LYXSharedAppDelegate ((AppDelegate *)[UIApplication sharedApplication].delegate)
 
 ///------------
 /// Client Info
