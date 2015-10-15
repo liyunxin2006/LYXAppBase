@@ -11,7 +11,6 @@
 
 @interface LYXMeViewController ()
 
-@property (nonatomic, weak) IBOutlet UITextView *textView;
 @property (nonatomic, strong, readonly) LYXMeViewModel *viewModel;
 
 @end

@@ -16,6 +16,7 @@
 #import <ReactiveCocoa/RACEXTScope.h>
 #import <RDVTabBarController/RDVTabBarController.h>
 #import "UIImage+RTTint.h"
+#import "LYXStoryBoardUtilities.h"
 #import "LYXConstant.h"
 //#import "MRCUtil.h"
 #import "LYXConfig.h"

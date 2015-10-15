@@ -42,15 +42,14 @@
 //    self.meViewController.rdv_tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Profile" image:profileImage tag:4];
     
     UIViewController *controller1 = [[UIViewController alloc] init];
-    UIViewController *controller2 = [[UIViewController alloc] init];
-    controller2.view.backgroundColor = [UIColor lightGrayColor];
+    LYXMeViewController *meViewController = (LYXMeViewController *)[LYXStoryBoardUtilities viewControllerForStoryboardName:@"Me" class:[LYXMeViewController class]];
     UINavigationController *navigationController1 = [[LYXNavigationController alloc] initWithRootViewController:controller1];
-    UINavigationController *navigationController2 = [[LYXNavigationController alloc] initWithRootViewController:controller2];
+    UINavigationController *meNavController = [[LYXNavigationController alloc] initWithRootViewController:meViewController];
     navigationController1.title = @"首页";
-    navigationController2.title = @"我的";
+    meNavController.title = @"我的";
     
 //    self.viewControllers = @[ self.homeViewController, self.meViewController ];
-    self.viewControllers = @[ navigationController1, navigationController2];
+    self.viewControllers = @[ navigationController1, meNavController];
     
 //    [[[self
 //       rac_signalForSelector:@selector(tabBarController:didSelectViewController:)
