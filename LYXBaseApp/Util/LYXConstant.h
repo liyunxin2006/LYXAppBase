@@ -148,13 +148,13 @@ typedef id   (^IDBlock_id)  (id);
 /// App Info
 ///---------
 
-#define MRCApplicationVersionKey @"MRCApplicationVersionKey"
+#define LYXApplicationVersionKey @"LYXApplicationVersionKey"
 
 #define MRC_APP_ID        @"961330940"
 #define MRC_APP_STORE_URL @"https://itunes.apple.com/cn/app/id"MRC_APP_ID"?mt=8"
 
-#define MRC_APP_NAME    ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])
-#define MRC_APP_VERSION ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
+#define LYX_APP_NAME    ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])
+#define LYX_APP_VERSION ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
 #define MRC_APP_BUILD   ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"])
 
 ///-----------------------------
@@ -191,8 +191,8 @@ typedef id   (^IDBlock_id)  (id);
 /// FMDB
 ///-----
 
-#define MRC_FMDB_PATH [NSString stringWithFormat:@"%@/%@.db", MRC_DOCUMENT_DIRECTORY, MRC_APP_NAME]
-#define MRCLogLastError(db) NSLog(@"lastError: %@, lastErrorCode: %d, lastErrorMessage: %@", [db lastError], [db lastErrorCode], [db lastErrorMessage]);
+#define LYX_FMDB_PATH [NSString stringWithFormat:@"%@/%@.db", LYX_DOCUMENT_DIRECTORY, LYX_APP_NAME]
+#define LYXLogLastError(db) NSLog(@"lastError: %@, lastErrorCode: %d, lastErrorMessage: %@", [db lastError], [db lastErrorCode], [db lastErrorMessage]);
 
 //--------------
 /// Notification

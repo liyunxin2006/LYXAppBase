@@ -7,8 +7,23 @@
 //
 
 #import "AppDelegate.h"
+#import "LYXViewModelServicesImpl.h"
+//#import "MRCLoginViewModel.h"
+//#import "MRCLoginViewController.h"
+#import "LYXMainViewModel.h"
+#import "LYXMainViewController.h"
+#import "LYXNavigationControllerStack.h"
+#import "LYXNavigationController.h"
 
 @interface AppDelegate ()
+
+@property (nonatomic, strong) LYXViewModelServicesImpl *services;
+@property (nonatomic, strong) id<LYXViewModelProtocol> viewModel;
+@property (nonatomic, strong) Reachability *reachability;
+
+@property (nonatomic, strong, readwrite) LYXNavigationControllerStack *navigationControllerStack;
+@property (nonatomic, assign, readwrite) NetworkStatus networkStatus;
+//@property (nonatomic, copy, readwrite) NSString *adURL;
 
 @end
 
@@ -16,30 +31,135 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self initializeFMDB];
+    
+    AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
+    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    
+    self.services = [[LYXViewModelServicesImpl alloc] init];
+    self.navigationControllerStack = [[LYXNavigationControllerStack alloc] initWithServices:self.services];
+    
+    UINavigationController *navigationController = [[LYXNavigationController alloc] initWithRootViewController:self.createInitialViewController];
+    [self.navigationControllerStack pushNavigationController:navigationController];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
+    
+    [self configureAppearance];
+    [self configureKeyboardManager];
+    [self configureReachability];
+    [self configureUMengSocial];
+    
+    // Save the application version info.
+    [[NSUserDefaults standardUserDefaults] setValue:LYX_APP_VERSION forKey:LYXApplicationVersionKey];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     return YES;
 }
 
-- (void)applicationWillResignActive:(UIApplication *)application {
-    // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
-    // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
+- (void)applicationWillResignActive:(UIApplication *)application {}
+
+- (void)applicationDidEnterBackground:(UIApplication *)application {}
+
+- (void)applicationWillEnterForeground:(UIApplication *)application {}
+
+- (void)applicationDidBecomeActive:(UIApplication *)application {}
+
+- (void)applicationWillTerminate:(UIApplication *)application {}
+
+- (UIViewController *)createInitialViewController {
+    // The user has logged-in.
+//    if ([SSKeychain rawLogin].isExist && [SSKeychain accessToken].isExist) {
+//        // Some OctoKit APIs will use the `login` property of `OCTUser`.
+//        OCTUser *user = [OCTUser mrc_userWithRawLogin:[SSKeychain rawLogin] server:OCTServer.dotComServer];
+//        
+//        OCTClient *authenticatedClient = [OCTClient authenticatedClientWithUser:user token:[SSKeychain accessToken]];
+//        self.services.client = authenticatedClient;
+//        self.viewModel = [[MRCHomepageViewModel alloc] initWithServices:self.services params:nil];
+//        
+//        return [[MRCHomepageViewController alloc] initWithViewModel:self.viewModel];
+//    } else {
+//        self.viewModel = [[MRCLoginViewModel alloc] initWithServices:self.services params:nil];
+//        return [[MRCLoginViewController alloc] initWithViewModel:self.viewModel];
+//    }
+    
+    self.viewModel = [[LYXMainViewModel alloc] initWithServices:self.services params:nil];
+    
+    return [[LYXMainViewController alloc] initWithViewModel:self.viewModel];
 }
 
-- (void)applicationDidEnterBackground:(UIApplication *)application {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+- (void)configureAppearance {
+    self.window.backgroundColor = UIColor.whiteColor;
+    
+    // 0x2F434F
+    [UINavigationBar appearance].barTintColor = [UIColor colorWithRed:(48 - 40) / 215.0 green:(67 - 40) / 215.0 blue:(78 - 40) / 215.0 alpha:1];
+    [UINavigationBar appearance].barStyle  = UIBarStyleBlack;
+    [UINavigationBar appearance].tintColor = [UIColor whiteColor];
+    
+    [UISegmentedControl appearance].tintColor = [UIColor whiteColor];
+    
+    [UITabBar appearance].tintColor = HexRGB(colorI2);
 }
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {
-    // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+- (void)configureKeyboardManager {
+    IQKeyboardManager.sharedManager.enableAutoToolbar = NO;
+    IQKeyboardManager.sharedManager.shouldResignOnTouchOutside = YES;
 }
 
-- (void)applicationDidBecomeActive:(UIApplication *)application {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+- (void)configureReachability {
+    self.reachability = Reachability.reachabilityForInternetConnection;
+    
+    RAC(self, networkStatus) = [[[[NSNotificationCenter.defaultCenter
+                                   rac_addObserverForName:kReachabilityChangedNotification object:nil]
+                                  map:^id(NSNotification *notification) {
+                                      return @([notification.object currentReachabilityStatus]);
+                                  }]
+                                 startWith:@(self.reachability.currentReachabilityStatus)]
+                                distinctUntilChanged];
+    
+    @weakify(self)
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        @strongify(self)
+        [self.reachability startNotifier];
+    });
 }
 
-- (void)applicationWillTerminate:(UIApplication *)application {
-    // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+- (void)configureUMengSocial {
+//    [UMSocialData setAppKey:MRC_UM_APP_KEY];
+//    
+//    [UMSocialConfig hiddenNotInstallPlatforms:@[ UMShareToWechatSession, UMShareToWechatTimeline, UMShareToQQ/*, UMShareToQzone */]];
+//    
+//    [UMSocialWechatHandler setWXAppId:MRC_WX_APP_ID appSecret:MRC_WX_APP_SECRET url:MRC_UM_SHARE_URL];
+//    [UMSocialSinaHandler openSSOWithRedirectURL:MRC_WEIBO_REDIRECT_URL];
+//    [UMSocialQQHandler setQQWithAppId:MRC_QQ_APP_ID appKey:MRC_QQ_APP_KEY url:MRC_UM_SHARE_URL];
+}
+
+- (void)initializeFMDB {
+    [[FMDatabaseQueue sharedInstance] inDatabase:^(FMDatabase *db) {
+        NSString *version = [[NSUserDefaults standardUserDefaults] valueForKey:LYXApplicationVersionKey];
+        if (![version isEqualToString:LYX_APP_VERSION]) {
+            if (version == nil) {
+//                [SSKeychain deleteAccessToken];
+                
+                NSString *path = [[NSBundle mainBundle] pathForResource:@"update_v1_0_0" ofType:@"sql"];
+                NSString *sql  = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
+                
+                if (![db executeStatements:sql]) {
+                    LYXLogLastError(db);
+                }
+            }
+        }
+    }];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+//    if ([url.scheme isEqual:MRC_URL_SCHEME]) {
+//        [OCTClient completeSignInWithCallbackURL:url];
+//        return YES;
+//    }
+//    return [UMSocialSnsService handleOpenURL:url];
+    return YES;
 }
 
 @end

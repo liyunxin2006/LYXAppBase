@@ -7,11 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Reachability.h"
+
+@class LYXNavigationControllerStack;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+// The window of current application.
+@property (nonatomic, strong) UIWindow *window;
 
+@property (nonatomic, strong, readonly) LYXNavigationControllerStack *navigationControllerStack;
+@property (nonatomic, assign, readonly) NetworkStatus networkStatus;
+
+//@property (nonatomic, copy, readonly) NSString *adURL;
 
 @end
-
