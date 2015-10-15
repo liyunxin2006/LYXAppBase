@@ -15,6 +15,10 @@
 		356810141BCF3B7400FED7C9 /* LYXViewModelServicesImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810131BCF3B7400FED7C9 /* LYXViewModelServicesImpl.m */; settings = {ASSET_TAGS = (); }; };
 		356810171BCF3D4600FED7C9 /* LYXViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810161BCF3D4600FED7C9 /* LYXViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		3568101A1BCF46B100FED7C9 /* LYXTabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810191BCF46B100FED7C9 /* LYXTabBarViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		3568101F1BCF4D7E00FED7C9 /* LYXMainViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568101E1BCF4D7E00FED7C9 /* LYXMainViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		356810221BCF4F2F00FED7C9 /* LYXTableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810211BCF4F2F00FED7C9 /* LYXTableViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		356810251BCF507A00FED7C9 /* LYXSegmentedControlViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810241BCF507A00FED7C9 /* LYXSegmentedControlViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		356810281BCF510C00FED7C9 /* LYXWebViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810271BCF510C00FED7C9 /* LYXWebViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		35BED8CC1BB252C80030D89B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CB1BB252C80030D89B /* main.m */; };
 		35BED8CF1BB252C80030D89B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CE1BB252C80030D89B /* AppDelegate.m */; };
 		35BED8D21BB252C80030D89B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8D11BB252C80030D89B /* ViewController.m */; };
@@ -64,6 +68,14 @@
 		356810161BCF3D4600FED7C9 /* LYXViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXViewModel.m; sourceTree = "<group>"; };
 		356810181BCF46B100FED7C9 /* LYXTabBarViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXTabBarViewModel.h; sourceTree = "<group>"; };
 		356810191BCF46B100FED7C9 /* LYXTabBarViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXTabBarViewModel.m; sourceTree = "<group>"; };
+		3568101D1BCF4D7E00FED7C9 /* LYXMainViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXMainViewModel.h; sourceTree = "<group>"; };
+		3568101E1BCF4D7E00FED7C9 /* LYXMainViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXMainViewModel.m; sourceTree = "<group>"; };
+		356810201BCF4F2F00FED7C9 /* LYXTableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXTableViewModel.h; sourceTree = "<group>"; };
+		356810211BCF4F2F00FED7C9 /* LYXTableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXTableViewModel.m; sourceTree = "<group>"; };
+		356810231BCF507A00FED7C9 /* LYXSegmentedControlViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXSegmentedControlViewModel.h; sourceTree = "<group>"; };
+		356810241BCF507A00FED7C9 /* LYXSegmentedControlViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXSegmentedControlViewModel.m; sourceTree = "<group>"; };
+		356810261BCF510C00FED7C9 /* LYXWebViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXWebViewModel.h; sourceTree = "<group>"; };
+		356810271BCF510C00FED7C9 /* LYXWebViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXWebViewModel.m; sourceTree = "<group>"; };
 		35BED8C71BB252C80030D89B /* LYXBaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYXBaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BED8CB1BB252C80030D89B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35BED8CD1BB252C80030D89B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,6 +185,8 @@
 			isa = PBXGroup;
 			children = (
 				356810041BCE5E0B00FED7C9 /* BaseClass */,
+				3568101C1BCF4C0D00FED7C9 /* Me */,
+				3568101B1BCF4BEA00FED7C9 /* Home */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -189,8 +203,30 @@
 				356810161BCF3D4600FED7C9 /* LYXViewModel.m */,
 				356810181BCF46B100FED7C9 /* LYXTabBarViewModel.h */,
 				356810191BCF46B100FED7C9 /* LYXTabBarViewModel.m */,
+				356810201BCF4F2F00FED7C9 /* LYXTableViewModel.h */,
+				356810211BCF4F2F00FED7C9 /* LYXTableViewModel.m */,
+				356810231BCF507A00FED7C9 /* LYXSegmentedControlViewModel.h */,
+				356810241BCF507A00FED7C9 /* LYXSegmentedControlViewModel.m */,
+				356810261BCF510C00FED7C9 /* LYXWebViewModel.h */,
+				356810271BCF510C00FED7C9 /* LYXWebViewModel.m */,
+				3568101D1BCF4D7E00FED7C9 /* LYXMainViewModel.h */,
+				3568101E1BCF4D7E00FED7C9 /* LYXMainViewModel.m */,
 			);
 			name = BaseClass;
+			sourceTree = "<group>";
+		};
+		3568101B1BCF4BEA00FED7C9 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		3568101C1BCF4C0D00FED7C9 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Me;
 			sourceTree = "<group>";
 		};
 		35BED8BE1BB252C80030D89B = {
@@ -474,11 +510,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				356810141BCF3B7400FED7C9 /* LYXViewModelServicesImpl.m in Sources */,
+				3568101F1BCF4D7E00FED7C9 /* LYXMainViewModel.m in Sources */,
 				356810171BCF3D4600FED7C9 /* LYXViewModel.m in Sources */,
+				356810251BCF507A00FED7C9 /* LYXSegmentedControlViewModel.m in Sources */,
 				3568101A1BCF46B100FED7C9 /* LYXTabBarViewModel.m in Sources */,
 				35BED8D21BB252C80030D89B /* ViewController.m in Sources */,
 				35BED8CF1BB252C80030D89B /* AppDelegate.m in Sources */,
+				356810281BCF510C00FED7C9 /* LYXWebViewModel.m in Sources */,
 				35BED8CC1BB252C80030D89B /* main.m in Sources */,
+				356810221BCF4F2F00FED7C9 /* LYXTableViewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
