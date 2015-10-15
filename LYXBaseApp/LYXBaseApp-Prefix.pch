@@ -14,7 +14,9 @@
 #import <UIKit/UIKit.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <ReactiveCocoa/RACEXTScope.h>
-#import <RDVTabBarController/RDVTabBarController.h>
+#import "RDVTabBarController.h"
+#import "RDVTabBarItem.h"
+#import "RDVTabBar.h"
 #import "UIImage+RTTint.h"
 #import "LYXStoryBoardUtilities.h"
 #import "LYXConstant.h"

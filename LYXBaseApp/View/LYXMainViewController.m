@@ -51,12 +51,12 @@
 //    self.viewControllers = @[ self.homeViewController, self.meViewController ];
     self.viewControllers = @[ navigationController1, meNavController];
     
-//    [[[self
-//       rac_signalForSelector:@selector(tabBarController:didSelectViewController:)
-//       fromProtocol:@protocol(RDVTabBarControllerDelegate)]
-//      startWith:RACTuplePack(self, self.homeViewController)]
-//     subscribeNext:^(RACTuple *tuple) {
-//         RACTupleUnpack(UITabBarController *tabBarController, UIViewController *viewController) = tuple;
+    [[[self
+       rac_signalForSelector:@selector(tabBarController:didSelectViewController:)
+       fromProtocol:@protocol(RDVTabBarControllerDelegate)]
+      startWith:RACTuplePack(self, self.homeViewController)]
+     subscribeNext:^(RACTuple *tuple) {
+         RACTupleUnpack(RDVTabBarController *tabBarController, UIViewController *viewController) = tuple;
 //         
 //         tabBarController.navigationItem.title = [((MRCViewController *)viewController).viewModel title];
 //         
@@ -69,56 +69,65 @@
 //         } else if (viewController.tabBarItem.tag == 4) {
 //             tabBarController.navigationItem.titleView = nil;
 //         }
-//     }];
+         
+         if (tabBarController.selectedIndex == 0) {
+             NSLog(@"0");
+         }else if (tabBarController.selectedIndex == 1) {
+             NSLog(@"1");
+         }
+     }];
     self.delegate = self;
+    [self customizeTabBar];
 }
 
-//- (void)customizeTabBarForController:(RDVTabBarController *)tabBarController {
-//    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_bg.png"];
-//    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_bg.png"];
-//    
-//    NSInteger index = 0;
-//    for (RDVTabBarItem *item in [[tabBarController tabBar] items]) {
-//        [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
-//        
-//        UIImage *selectedimage;
-//        UIImage *unselectedimage;
-//        
-//        if (index == 0) {
-//            selectedimage = [UIImage imageNamed:@"tab_home_white.png"];
-//            unselectedimage = [UIImage imageNamed:@"tab_home_gray.png"];
-//        }else if (index == 1) {
-//            selectedimage = [UIImage imageNamed:@"tab_category_white.png"];
-//            unselectedimage = [UIImage imageNamed:@"tab_category_gray.png"];
-//        }else if (index == 2) {
-//            selectedimage = [UIImage imageNamed:@"tab_o2o_white.png"];
-//            unselectedimage = [UIImage imageNamed:@"tab_o2o_gray.png"];
-//        }else if (index == 3) {
-//            selectedimage = [UIImage imageNamed:@"tab_cart_white.png"];
-//            unselectedimage = [UIImage imageNamed:@"tab_cart_gray.png"];
-//        }else if (index == 4) {
-//            selectedimage = [UIImage imageNamed:@"tab_me_white.png"];
-//            unselectedimage = [UIImage imageNamed:@"tab_me_gray.png"];
-//        }
-//        
-//        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
-//        
-//        NSDictionary *selectedTitleAttributes = @{
-//                                                  NSFontAttributeName: [UIFont systemFontOfSize:11],
-//                                                  NSForegroundColorAttributeName: [UIColor whiteColor]
-//                                                  };
-//        item.selectedTitleAttributes = selectedTitleAttributes;
-//        
-//        NSDictionary *unselectedTitleAttributes = @{
-//                                                    NSFontAttributeName: [UIFont systemFontOfSize:11],
-//                                                    NSForegroundColorAttributeName: [UIColor grayColor]
-//                                                    };
-//        item.unselectedTitleAttributes = unselectedTitleAttributes;
-//        
-//        item.titlePositionAdjustment = UIOffsetMake(0.0f, 2.0f);
-//        
-//        index++;
-//    }
-//}
+- (void)customizeTabBar {
+    UIImage *finishedImage = [UIImage imageNamed:@"tabbar_selected_bg.png"];
+    UIImage *unfinishedImage = [UIImage imageNamed:@"tabbar_normal_bg.png"];
+    
+    NSInteger index = 0;
+    for (RDVTabBarItem *item in [[self tabBar] items]) {
+        [item setBackgroundSelectedImage:finishedImage withUnselectedImage:unfinishedImage];
+        
+        UIImage *selectedimage;
+        UIImage *unselectedimage;
+        
+        if (index == 0) {
+            selectedimage = [UIImage imageNamed:@"tab_home_white.png"];
+            unselectedimage = [UIImage imageNamed:@"tab_home_gray.png"];
+        }else if (index == 1) {
+            selectedimage = [UIImage imageNamed:@"tab_category_white.png"];
+            unselectedimage = [UIImage imageNamed:@"tab_category_gray.png"];
+            //selectedimage = [UIImage imageNamed:@"tab_o2o_s.png"];
+            //unselectedimage = [UIImage imageNamed:@"tab_o2o.png"];
+        }else if (index == 2) {
+            selectedimage = [UIImage imageNamed:@"tab_o2o_white.png"];
+            unselectedimage = [UIImage imageNamed:@"tab_o2o_gray.png"];
+        }else if (index == 3) {
+            selectedimage = [UIImage imageNamed:@"tab_cart_white.png"];
+            unselectedimage = [UIImage imageNamed:@"tab_cart_gray.png"];
+        }else if (index == 4) {
+            selectedimage = [UIImage imageNamed:@"tab_me_white.png"];
+            unselectedimage = [UIImage imageNamed:@"tab_me_gray.png"];
+        }
+        
+        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
+        
+        NSDictionary *selectedTitleAttributes = @{
+                                                  NSFontAttributeName: [UIFont systemFontOfSize:11],
+                                                  NSForegroundColorAttributeName: [UIColor whiteColor]
+                                                  };
+        item.selectedTitleAttributes = selectedTitleAttributes;
+        
+        NSDictionary *unselectedTitleAttributes = @{
+                                                    NSFontAttributeName: [UIFont systemFontOfSize:11],
+                                                    NSForegroundColorAttributeName: [UIColor grayColor]
+                                                    };
+        item.unselectedTitleAttributes = unselectedTitleAttributes;
+        
+        item.titlePositionAdjustment = UIOffsetMake(0.0f, 2.0f);
+        
+        index++;
+    }
+}
 
 @end
