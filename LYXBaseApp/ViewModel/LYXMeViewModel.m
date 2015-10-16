@@ -25,7 +25,7 @@
 - (void)initialize {
     [super initialize];
     
-    self.title = @"我的";
+    self.title = NSLocalizedString(@"Me", nil);
 }
 
 @end

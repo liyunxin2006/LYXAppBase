@@ -25,7 +25,7 @@
 - (void)initialize {
     [super initialize];
     
-    self.title = @"首页";
+    self.title = NSLocalizedString(@"Home", nil);
     
     self.shouldPullToRefresh = YES;
     self.shouldInfiniteScrolling = YES;

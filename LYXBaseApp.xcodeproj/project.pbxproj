@@ -60,7 +60,6 @@
 		356810A21BCFBB2400FED7C9 /* tabbar_selected_bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3568108A1BCFBB2400FED7C9 /* tabbar_selected_bg@3x.png */; settings = {ASSET_TAGS = (); }; };
 		35BED8CC1BB252C80030D89B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CB1BB252C80030D89B /* main.m */; };
 		35BED8CF1BB252C80030D89B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CE1BB252C80030D89B /* AppDelegate.m */; };
-		35BED8D21BB252C80030D89B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8D11BB252C80030D89B /* ViewController.m */; };
 		35BED8D51BB252C80030D89B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BED8D31BB252C80030D89B /* Main.storyboard */; };
 		35BED8D71BB252C80030D89B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35BED8D61BB252C80030D89B /* Assets.xcassets */; };
 		35BED8DA1BB252C80030D89B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BED8D81BB252C80030D89B /* LaunchScreen.storyboard */; };
@@ -176,8 +175,6 @@
 		35BED8CB1BB252C80030D89B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35BED8CD1BB252C80030D89B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		35BED8CE1BB252C80030D89B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		35BED8D01BB252C80030D89B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		35BED8D11BB252C80030D89B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		35BED8D41BB252C80030D89B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35BED8D61BB252C80030D89B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35BED8D91BB252C80030D89B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -480,8 +477,6 @@
 				35680FF31BCE556B00FED7C9 /* Vendor */,
 				35BED8CD1BB252C80030D89B /* AppDelegate.h */,
 				35BED8CE1BB252C80030D89B /* AppDelegate.m */,
-				35BED8D01BB252C80030D89B /* ViewController.h */,
-				35BED8D11BB252C80030D89B /* ViewController.m */,
 				35BED8D31BB252C80030D89B /* Main.storyboard */,
 				35BED8D61BB252C80030D89B /* Assets.xcassets */,
 				35BED8D81BB252C80030D89B /* LaunchScreen.storyboard */,
@@ -762,7 +757,6 @@
 				356810491BCF863900FED7C9 /* UINavigationItem+LYXBackBarButtonItem.m in Sources */,
 				356810251BCF507A00FED7C9 /* LYXSegmentedControlViewModel.m in Sources */,
 				3568101A1BCF46B100FED7C9 /* LYXTabBarViewModel.m in Sources */,
-				35BED8D21BB252C80030D89B /* ViewController.m in Sources */,
 				35BED8CF1BB252C80030D89B /* AppDelegate.m in Sources */,
 				356810281BCF510C00FED7C9 /* LYXWebViewModel.m in Sources */,
 				356810501BCF88F800FED7C9 /* LYXWebViewController.m in Sources */,
