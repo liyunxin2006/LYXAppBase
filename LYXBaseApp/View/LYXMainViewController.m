@@ -31,9 +31,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
+//    self.automaticallyAdjustsScrollViewInsets = NO;
     
-//    self.homeViewController = [[LYXHomeViewController alloc] initWithViewModel:self.viewModel.homeViewModel];
+    self.homeViewController = [[LYXHomeViewController alloc] initWithViewModel:self.viewModel.homeViewModel];
 //    UIImage *newsImage = [UIImage octicon_imageWithIdentifier:@"Rss" size:CGSizeMake(25, 25)];
 //    self.homeViewController.rdv_tabBarItem = [[UITabBarItem alloc] initWithTitle:@"News" image:newsImage tag:1];
     
@@ -41,38 +41,38 @@
 //    UIImage *profileImage = [UIImage octicon_imageWithIdentifier:@"Person" size:CGSizeMake(25, 25)];
 //    self.meViewController.rdv_tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Profile" image:profileImage tag:4];
     
-    LYXMeViewController *homeViewController = (LYXMeViewController *)[LYXStoryBoardUtilities viewControllerForStoryboardName:@"Me" class:[LYXMeViewController class]];
-    UINavigationController *homeNavController = [[LYXNavigationController alloc] initWithRootViewController:homeViewController];
-    homeNavController.title = @"首页";
+//    self.homeViewController = [[LYXMeViewController alloc] initWithViewModel:self.viewModel.meViewModel];
+//    UINavigationController *homeNavController = [[LYXNavigationController alloc] initWithRootViewController:homeViewController];
+//    homeNavController.title = @"首页";
     
-    LYXMeViewController *categoryViewController = (LYXMeViewController *)[LYXStoryBoardUtilities viewControllerForStoryboardName:@"Me" class:[LYXMeViewController class]];
-    UINavigationController *categoryNavController = [[LYXNavigationController alloc] initWithRootViewController:categoryViewController];
-    categoryNavController.title = @"分类";
+//    LYXMeViewController *categoryViewController = [[LYXMeViewController alloc] initWithViewModel:self.viewModel.meViewModel];
+//    UINavigationController *categoryNavController = [[LYXNavigationController alloc] initWithRootViewController:categoryViewController];
+//    categoryNavController.title = @"分类";
     
-    LYXMeViewController *discoveryViewController = (LYXMeViewController *)[LYXStoryBoardUtilities viewControllerForStoryboardName:@"Me" class:[LYXMeViewController class]];
-    UINavigationController *discoveryNavController = [[LYXNavigationController alloc] initWithRootViewController:discoveryViewController];
-    discoveryNavController.title = @"发现";
+//    LYXMeViewController *discoveryViewController = [[LYXMeViewController alloc] initWithViewModel:self.viewModel.meViewModel];
+//    UINavigationController *discoveryNavController = [[LYXNavigationController alloc] initWithRootViewController:discoveryViewController];
+//    discoveryNavController.title = @"发现";
     
-    LYXMeViewController *cartViewController = (LYXMeViewController *)[LYXStoryBoardUtilities viewControllerForStoryboardName:@"Me" class:[LYXMeViewController class]];
-    UINavigationController *cartNavController = [[LYXNavigationController alloc] initWithRootViewController:cartViewController];
-    cartNavController.title = @"购物车";
+//    LYXMeViewController *cartViewController = [[LYXMeViewController alloc] initWithViewModel:self.viewModel.meViewModel];
+//    UINavigationController *cartNavController = [[LYXNavigationController alloc] initWithRootViewController:cartViewController];
+//    cartNavController.title = @"购物车";
     
-    LYXMeViewController *meViewController = (LYXMeViewController *)[LYXStoryBoardUtilities viewControllerForStoryboardName:@"Me" class:[LYXMeViewController class]];
-    UINavigationController *meNavController = [[LYXNavigationController alloc] initWithRootViewController:meViewController];
-    meNavController.title = @"我的";
+    self.meViewController = [[LYXMeViewController alloc] initWithViewModel:self.viewModel.meViewModel];
+//    UINavigationController *meNavController = [[LYXNavigationController alloc] initWithRootViewController:meViewController];
+//    meNavController.title = @"我的";
     
-//    self.viewControllers = @[ self.homeViewController, self.meViewController ];
-    self.viewControllers = @[homeNavController, categoryNavController, discoveryNavController, cartNavController, meNavController];
+    self.viewControllers = @[self.homeViewController, self.meViewController];
+//    self.viewControllers = @[homeNavController, categoryNavController, discoveryNavController, cartNavController, meNavController];
     
-//    [[[self
-//       rac_signalForSelector:@selector(tabBarController:didSelectViewController:)
-//       fromProtocol:@protocol(RDVTabBarControllerDelegate)]
-//      startWith:RACTuplePack(self, self.homeViewController)]
-//     subscribeNext:^(RACTuple *tuple) {
-//         RACTupleUnpack(RDVTabBarController *tabBarController, UIViewController *viewController) = tuple;
-//         
-//         tabBarController.navigationItem.title = [((MRCViewController *)viewController).viewModel title];
-//         
+    [[[self
+       rac_signalForSelector:@selector(tabBarController:didSelectViewController:)
+       fromProtocol:@protocol(RDVTabBarControllerDelegate)]
+      startWith:RACTuplePack(self, self.homeViewController)]
+     subscribeNext:^(RACTuple *tuple) {
+         RACTupleUnpack(RDVTabBarController *tabBarController, UIViewController *viewController) = tuple;
+         
+         tabBarController.navigationItem.title = [((LYXViewController *)viewController).viewModel title];
+         
 //         if (viewController.tabBarItem.tag == 1) {
 //             tabBarController.navigationItem.titleView = nil;
 //         } else if (viewController.tabBarItem.tag == 2) {
@@ -88,7 +88,7 @@
 //         }else if (tabBarController.selectedIndex == 1) {
 //             NSLog(@"1");
 //         }
-//     }];
+     }];
     self.delegate = self;
     [self customizeTabBar];
 }

@@ -25,7 +25,7 @@
 - (void)initialize {
     [super initialize];
     
-    self.title = @"Home";
+    self.title = @"首页";
     
     self.shouldPullToRefresh = YES;
     self.shouldInfiniteScrolling = YES;

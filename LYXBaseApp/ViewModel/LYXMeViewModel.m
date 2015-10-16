@@ -8,6 +8,24 @@
 
 #import "LYXMeViewModel.h"
 
+@interface LYXMeViewModel ()
+
+@end
+
 @implementation LYXMeViewModel
+
+- (instancetype)initWithServices:(id<LYXViewModelServices>)services params:(id)params {
+    self = [super initWithServices:services params:params];
+    if (self) {
+        
+    }
+    return self;
+}
+
+- (void)initialize {
+    [super initialize];
+    
+    self.title = @"我的";
+}
 
 @end
