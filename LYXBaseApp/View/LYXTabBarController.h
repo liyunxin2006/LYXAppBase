@@ -8,6 +8,6 @@
 
 #import "LYXViewProtocol.h"
 
-@interface LYXTabBarController : RDVTabBarController <LYXViewProtocol>
+@interface LYXTabBarController : UITabBarController <LYXViewProtocol>
 
 @end
