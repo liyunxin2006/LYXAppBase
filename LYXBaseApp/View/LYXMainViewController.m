@@ -107,34 +107,26 @@
         if (index == 0) {
             selectedimage = [UIImage imageNamed:@"tab_home_white.png"];
             unselectedimage = [UIImage imageNamed:@"tab_home_gray.png"];
+            [item setTitle:NSLocalizedString(@"Home", nil)];
         }else if (index == 1) {
-            selectedimage = [UIImage imageNamed:@"tab_category_white.png"];
-            unselectedimage = [UIImage imageNamed:@"tab_category_gray.png"];
-        }else if (index == 2) {
-            selectedimage = [UIImage imageNamed:@"tab_o2o_white.png"];
-            unselectedimage = [UIImage imageNamed:@"tab_o2o_gray.png"];
-        }else if (index == 3) {
-            selectedimage = [UIImage imageNamed:@"tab_cart_white.png"];
-            unselectedimage = [UIImage imageNamed:@"tab_cart_gray.png"];
-        }else if (index == 4) {
             selectedimage = [UIImage imageNamed:@"tab_me_white.png"];
             unselectedimage = [UIImage imageNamed:@"tab_me_gray.png"];
+            [item setTitle:NSLocalizedString(@"Me", nil)];
         }
-        
-        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
         
         NSDictionary *selectedTitleAttributes = @{
                                                   NSFontAttributeName: [UIFont systemFontOfSize:11],
                                                   NSForegroundColorAttributeName: [UIColor whiteColor]
                                                   };
-        item.selectedTitleAttributes = selectedTitleAttributes;
         
         NSDictionary *unselectedTitleAttributes = @{
                                                     NSFontAttributeName: [UIFont systemFontOfSize:11],
                                                     NSForegroundColorAttributeName: [UIColor grayColor]
                                                     };
-        item.unselectedTitleAttributes = unselectedTitleAttributes;
         
+        [item setFinishedSelectedImage:selectedimage withFinishedUnselectedImage:unselectedimage];
+        item.selectedTitleAttributes = selectedTitleAttributes;
+        item.unselectedTitleAttributes = unselectedTitleAttributes;
         item.titlePositionAdjustment = UIOffsetMake(0.0f, 2.0f);
         
         index++;
