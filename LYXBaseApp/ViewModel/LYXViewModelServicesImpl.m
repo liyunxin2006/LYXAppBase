@@ -7,20 +7,20 @@
 //
 
 #import "LYXViewModelServicesImpl.h"
-//#import "MRCRepositoryServiceImpl.h"
-//#import "MRCAppStoreServiceImpl.h"
+#import "LYXRepositoryServiceImpl.h"
+#import "LYXAppStoreServiceImpl.h"
 
 @implementation LYXViewModelServicesImpl
 
 //@synthesize client = _client;
-//@synthesize repositoryService = _repositoryService;
-//@synthesize appStoreService = _appStoreService;
+@synthesize repositoryService = _repositoryService;
+@synthesize appStoreService = _appStoreService;
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-//        _repositoryService = [[MRCRepositoryServiceImpl alloc] init];
-//        _appStoreService   = [[MRCAppStoreServiceImpl alloc] init];
+        _repositoryService = [[LYXRepositoryServiceImpl alloc] init];
+        _appStoreService   = [[LYXAppStoreServiceImpl alloc] init];
     }
     return self;
 }

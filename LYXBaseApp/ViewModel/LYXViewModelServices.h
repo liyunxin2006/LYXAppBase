@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "LYXNavigationProtocol.h"
-//#import "MRCRepositoryService.h"
-//#import "MRCAppStoreService.h"
+#import "LYXRepositoryService.h"
+#import "LYXAppStoreService.h"
 
 @protocol LYXViewModelServices <NSObject, LYXNavigationProtocol>
 
@@ -18,7 +18,7 @@
 // A reference to OCTClient instance.
 //@property (nonatomic, strong) OCTClient *client;
 //
-//@property (nonatomic, strong, readonly) id<MRCRepositoryService> repositoryService;
-//@property (nonatomic, strong, readonly) id<MRCAppStoreService> appStoreService;
+@property (nonatomic, strong, readonly) id<LYXRepositoryService> repositoryService;
+@property (nonatomic, strong, readonly) id<LYXAppStoreService> appStoreService;
 
 @end

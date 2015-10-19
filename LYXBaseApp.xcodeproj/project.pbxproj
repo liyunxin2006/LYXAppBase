@@ -35,6 +35,8 @@
 		356810711BCFA82600FED7C9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568106E1BCFA82600FED7C9 /* UIImage+ImageEffects.m */; settings = {ASSET_TAGS = (); }; };
 		356810721BCFA82600FED7C9 /* UIImage+RTTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810701BCFA82600FED7C9 /* UIImage+RTTint.m */; settings = {ASSET_TAGS = (); }; };
 		356810EE1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810ED1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m */; settings = {ASSET_TAGS = (); }; };
+		356810F71BD4DEB500FED7C9 /* LYXRepositoryServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810F61BD4DEB500FED7C9 /* LYXRepositoryServiceImpl.m */; settings = {ASSET_TAGS = (); }; };
+		356810FD1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810FC1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.m */; settings = {ASSET_TAGS = (); }; };
 		35BED8CC1BB252C80030D89B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CB1BB252C80030D89B /* main.m */; };
 		35BED8CF1BB252C80030D89B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CE1BB252C80030D89B /* AppDelegate.m */; };
 		35BED8D51BB252C80030D89B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BED8D31BB252C80030D89B /* Main.storyboard */; };
@@ -126,6 +128,12 @@
 		356810701BCFA82600FED7C9 /* UIImage+RTTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RTTint.m"; sourceTree = "<group>"; };
 		356810EC1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXTableViewCellStyleValue1.h; sourceTree = "<group>"; };
 		356810ED1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXTableViewCellStyleValue1.m; sourceTree = "<group>"; };
+		356810F21BD4DE7100FED7C9 /* LYXRepositoryService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXRepositoryService.h; sourceTree = "<group>"; };
+		356810F51BD4DEB500FED7C9 /* LYXRepositoryServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXRepositoryServiceImpl.h; sourceTree = "<group>"; };
+		356810F61BD4DEB500FED7C9 /* LYXRepositoryServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXRepositoryServiceImpl.m; sourceTree = "<group>"; };
+		356810F81BD4E5F000FED7C9 /* LYXAppStoreService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXAppStoreService.h; sourceTree = "<group>"; };
+		356810FB1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXAppStoreServiceImpl.h; sourceTree = "<group>"; };
+		356810FC1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXAppStoreServiceImpl.m; sourceTree = "<group>"; };
 		35BED8C71BB252C80030D89B /* LYXBaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYXBaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BED8CB1BB252C80030D89B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35BED8CD1BB252C80030D89B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -192,6 +200,14 @@
 			isa = PBXGroup;
 			children = (
 				356810641BCF9D9800FED7C9 /* Database */,
+				356810691BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.h */,
+				3568106A1BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.m */,
+				356810F21BD4DE7100FED7C9 /* LYXRepositoryService.h */,
+				356810F51BD4DEB500FED7C9 /* LYXRepositoryServiceImpl.h */,
+				356810F61BD4DEB500FED7C9 /* LYXRepositoryServiceImpl.m */,
+				356810F81BD4E5F000FED7C9 /* LYXAppStoreService.h */,
+				356810FB1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.h */,
+				356810FC1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,8 +356,6 @@
 			isa = PBXGroup;
 			children = (
 				356810671BCF9E1200FED7C9 /* update_v1_0_0.sql */,
-				356810691BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.h */,
-				3568106A1BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.m */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -662,6 +676,7 @@
 			files = (
 				356810341BCF57B700FED7C9 /* LYXNavigationControllerStack.m in Sources */,
 				356810431BCF796A00FED7C9 /* LYXTableViewController.m in Sources */,
+				356810FD1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.m in Sources */,
 				356810141BCF3B7400FED7C9 /* LYXViewModelServicesImpl.m in Sources */,
 				3568101F1BCF4D7E00FED7C9 /* LYXMainViewModel.m in Sources */,
 				3568102E1BCF544A00FED7C9 /* LYXMeViewModel.m in Sources */,
@@ -681,6 +696,7 @@
 				3568102B1BCF527000FED7C9 /* LYXHomeViewModel.m in Sources */,
 				356810721BCFA82600FED7C9 /* UIImage+RTTint.m in Sources */,
 				3568105D1BCF8D8400FED7C9 /* LYXHomeViewController.m in Sources */,
+				356810F71BD4DEB500FED7C9 /* LYXRepositoryServiceImpl.m in Sources */,
 				35BED8CC1BB252C80030D89B /* main.m in Sources */,
 				3568103D1BCF754D00FED7C9 /* LYXTabBarController.m in Sources */,
 				3568103A1BCF5A0700FED7C9 /* LYXNavigationController.m in Sources */,
