@@ -8,7 +8,7 @@
 
 #import "LYXTableViewController.h"
 #import "LYXTableViewModel.h"
-//#import "MRCTableViewCellStyleValue1.h"
+#import "LYXTableViewCellStyleValue1.h"
 
 @interface LYXTableViewController ()
 
@@ -58,7 +58,7 @@
     self.tableView.sectionIndexMinimumDisplayRowCount = 20;
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
-//    [self.tableView registerClass:[MRCTableViewCellStyleValue1 class] forCellReuseIdentifier:@"MRCTableViewCellStyleValue1"];
+    [self.tableView registerClass:[LYXTableViewCellStyleValue1 class] forCellReuseIdentifier:@"LYXTableViewCellStyleValue1"];
     
 //    @weakify(self)
 //    if (self.viewModel.shouldPullToRefresh) {
@@ -74,7 +74,7 @@
 //                                                     reverseLoadingAnimation:YES
 //                                                     internalAnimationFactor:0.5];
 //    }
-    
+//    
 //    if (self.viewModel.shouldInfiniteScrolling) {
 //        [self.tableView addInfiniteScrollingWithActionHandler:^{
 //            @strongify(self)
@@ -117,19 +117,11 @@
     [super bindViewModel];
     
     @weakify(self)
-//    [RACObserve(self.viewModel, dataSource).distinctUntilChanged.deliverOnMainThread subscribeNext:^(id x) {
-//        @strongify(self)
-//        [self.tableView reloadData];
-//    }];
     [[RACObserve(self.viewModel, dataSource).distinctUntilChanged deliverOn:RACScheduler.mainThreadScheduler] subscribeNext:^(id x) {
         @strongify(self)
         [self.tableView reloadData];
     }];
     
-//    [RACObserve(self.viewModel, shouldDisplayEmptyDataSet).deliverOnMainThread subscribeNext:^(id x) {
-//        @strongify(self)
-//        [self.tableView reloadEmptyDataSet];
-//    }];
     [[RACObserve(self.viewModel, shouldDisplayEmptyDataSet) deliverOn:RACScheduler.mainThreadScheduler] subscribeNext:^(id x) {
         @strongify(self)
         [self.tableView reloadEmptyDataSet];
@@ -153,8 +145,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [self tableView:tableView dequeueReusableCellWithIdentifier:@"MRCTableViewCellStyleValue1" forIndexPath:indexPath];
-    UITableViewCell *cell = [self tableView:tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [self tableView:tableView dequeueReusableCellWithIdentifier:@"MRCTableViewCellStyleValue1" forIndexPath:indexPath];
     
     id object = self.viewModel.dataSource[indexPath.section][indexPath.row];
     [self configureCell:cell atIndexPath:indexPath withObject:(id)object];
@@ -192,20 +183,6 @@
 
 - (void)refreshTriggered:(id)sender {
     @weakify(self)
-//    [[[self.viewModel.requestRemoteDataCommand
-//       execute:@1]
-//     	deliverOnMainThread]
-//    	subscribeNext:^(id x) {
-//            @strongify(self)
-//            self.viewModel.page = 1;
-//            [self.refreshControl finishingLoading];
-//        } error:^(NSError *error) {
-//            @strongify(self)
-//            [self.refreshControl finishingLoading];
-//        } completed:^{
-//            @strongify(self)
-//            [self.refreshControl finishingLoading];
-//        }];
     [[[self.viewModel.requestRemoteDataCommand execute:@1] deliverOn:RACScheduler.mainThreadScheduler] subscribeNext:^(id x) {
         @strongify(self)
         self.viewModel.page = 1;

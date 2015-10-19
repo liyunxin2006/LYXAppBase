@@ -34,6 +34,7 @@
 		3568106B1BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568106A1BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.m */; settings = {ASSET_TAGS = (); }; };
 		356810711BCFA82600FED7C9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568106E1BCFA82600FED7C9 /* UIImage+ImageEffects.m */; settings = {ASSET_TAGS = (); }; };
 		356810721BCFA82600FED7C9 /* UIImage+RTTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810701BCFA82600FED7C9 /* UIImage+RTTint.m */; settings = {ASSET_TAGS = (); }; };
+		356810EE1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810ED1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m */; settings = {ASSET_TAGS = (); }; };
 		35BED8CC1BB252C80030D89B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CB1BB252C80030D89B /* main.m */; };
 		35BED8CF1BB252C80030D89B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CE1BB252C80030D89B /* AppDelegate.m */; };
 		35BED8D51BB252C80030D89B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BED8D31BB252C80030D89B /* Main.storyboard */; };
@@ -123,6 +124,8 @@
 		3568106E1BCFA82600FED7C9 /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		3568106F1BCFA82600FED7C9 /* UIImage+RTTint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+RTTint.h"; sourceTree = "<group>"; };
 		356810701BCFA82600FED7C9 /* UIImage+RTTint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RTTint.m"; sourceTree = "<group>"; };
+		356810EC1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXTableViewCellStyleValue1.h; sourceTree = "<group>"; };
+		356810ED1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXTableViewCellStyleValue1.m; sourceTree = "<group>"; };
 		35BED8C71BB252C80030D89B /* LYXBaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYXBaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BED8CB1BB252C80030D89B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35BED8CD1BB252C80030D89B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -224,6 +227,7 @@
 		35680FF41BCE556B00FED7C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				356810EB1BD49FB400FED7C9 /* TableViewCell */,
 				3568104B1BCF885000FED7C9 /* BaseClass */,
 				356810A41BD0D9A700FED7C9 /* Index */,
 				356810511BCF8B2400FED7C9 /* Home */,
@@ -369,6 +373,15 @@
 				356810621BCF945900FED7C9 /* LYXMainViewController.m */,
 			);
 			name = Index;
+			sourceTree = "<group>";
+		};
+		356810EB1BD49FB400FED7C9 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				356810EC1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.h */,
+				356810ED1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m */,
+			);
+			name = TableViewCell;
 			sourceTree = "<group>";
 		};
 		35BED8BE1BB252C80030D89B = {
@@ -653,6 +666,7 @@
 				3568101F1BCF4D7E00FED7C9 /* LYXMainViewModel.m in Sources */,
 				3568102E1BCF544A00FED7C9 /* LYXMeViewModel.m in Sources */,
 				356810711BCFA82600FED7C9 /* UIImage+ImageEffects.m in Sources */,
+				356810EE1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m in Sources */,
 				356810371BCF588B00FED7C9 /* LYXRouter.m in Sources */,
 				356810601BCF8E1200FED7C9 /* LYXMeViewController.m in Sources */,
 				356810461BCF83E300FED7C9 /* LYXSegmentedControlController.m in Sources */,
