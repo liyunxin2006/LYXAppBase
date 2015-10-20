@@ -1,7 +1,0 @@
-#[submodule "Coding_iOS/Resources/webview"]
-#	path = Coding_iOS/Resources/webview
-#	url = git://git.coding.net/bluishoul/CodingAppWebviewTemplate.git
-
-[submodule "OctoKit"]
-	path = OctoKit
-url=https://github.com/leichunfeng/octokit.objc.git
