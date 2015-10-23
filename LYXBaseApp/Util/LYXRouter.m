@@ -38,6 +38,8 @@ static LYXRouter *_sharedInstance = nil;
 
 - (NSDictionary *)viewModelViewMappings {
     return @{
+             @"LYXLoginViewModel": @"LYXLoginViewController",
+             @"LYXMainViewModel": @"LYXMainViewController",
              @"LYXHomeViewModel": @"LYXHomeViewController",
              @"LYXMeViewModel": @"LYXMeViewController",
              };

@@ -12,7 +12,7 @@
 
 @implementation LYXViewModelServicesImpl
 
-//@synthesize client = _client;
+@synthesize client = _client;
 @synthesize repositoryService = _repositoryService;
 @synthesize appStoreService = _appStoreService;
 

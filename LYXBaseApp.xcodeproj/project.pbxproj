@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		35680FFB1BCE55C700FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FFA1BCE55C700FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
-		35680FFF1BCE55DB00FED7C9 /* empty in Resources */ = {isa = PBXBuildFile; fileRef = 35680FFE1BCE55DB00FED7C9 /* empty */; settings = {ASSET_TAGS = (); }; };
 		356810141BCF3B7400FED7C9 /* LYXViewModelServicesImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810131BCF3B7400FED7C9 /* LYXViewModelServicesImpl.m */; settings = {ASSET_TAGS = (); }; };
 		356810171BCF3D4600FED7C9 /* LYXViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810161BCF3D4600FED7C9 /* LYXViewModel.m */; settings = {ASSET_TAGS = (); }; };
 		3568101A1BCF46B100FED7C9 /* LYXTabBarViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810191BCF46B100FED7C9 /* LYXTabBarViewModel.m */; settings = {ASSET_TAGS = (); }; };
@@ -37,9 +36,102 @@
 		356810EE1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810ED1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m */; settings = {ASSET_TAGS = (); }; };
 		356810F71BD4DEB500FED7C9 /* LYXRepositoryServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810F61BD4DEB500FED7C9 /* LYXRepositoryServiceImpl.m */; settings = {ASSET_TAGS = (); }; };
 		356810FD1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810FC1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.m */; settings = {ASSET_TAGS = (); }; };
+		35AA48F61BDA004900BABB4F /* OCTClient+Search.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA48F31BDA004900BABB4F /* OCTClient+Search.m */; settings = {ASSET_TAGS = (); }; };
+		35AA48F71BDA004900BABB4F /* OCTRepositoriesSearchResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA48F51BDA004900BABB4F /* OCTRepositoriesSearchResult.m */; settings = {ASSET_TAGS = (); }; };
+		35AA48FB1BDA007000BABB4F /* OCTClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA48F91BDA007000BABB4F /* OCTClient.m */; settings = {ASSET_TAGS = (); }; };
+		35AA48FF1BDA009400BABB4F /* OCTClient+Watching.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA48FE1BDA009400BABB4F /* OCTClient+Watching.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49081BDA00E100BABB4F /* OCTObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49031BDA00E100BABB4F /* OCTObject.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49091BDA00E100BABB4F /* OCTResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49061BDA00E100BABB4F /* OCTResponse.m */; settings = {ASSET_TAGS = (); }; };
+		35AA490F1BDA010900BABB4F /* OCTAccessToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA490C1BDA010900BABB4F /* OCTAccessToken.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49101BDA010900BABB4F /* OCTAuthorization.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA490E1BDA010900BABB4F /* OCTAuthorization.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49161BDA012900BABB4F /* OCTCommitComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49131BDA012900BABB4F /* OCTCommitComment.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49171BDA012900BABB4F /* OCTGitCommit.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49151BDA012900BABB4F /* OCTGitCommit.m */; settings = {ASSET_TAGS = (); }; };
+		35AA491D1BDA016200BABB4F /* OCTEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA491A1BDA016200BABB4F /* OCTEntity.m */; settings = {ASSET_TAGS = (); }; };
+		35AA491E1BDA016200BABB4F /* OCTPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA491C1BDA016200BABB4F /* OCTPlan.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49271BDA019300BABB4F /* OCTClient+Organizations.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49221BDA019300BABB4F /* OCTClient+Organizations.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49281BDA019300BABB4F /* OCTOrganization.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49241BDA019300BABB4F /* OCTOrganization.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49291BDA019300BABB4F /* OCTTeam.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49261BDA019300BABB4F /* OCTTeam.m */; settings = {ASSET_TAGS = (); }; };
+		35AA492E1BDA01AC00BABB4F /* OCTClient+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA492B1BDA01AC00BABB4F /* OCTClient+User.m */; settings = {ASSET_TAGS = (); }; };
+		35AA492F1BDA01AC00BABB4F /* OCTUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA492D1BDA01AC00BABB4F /* OCTUser.m */; settings = {ASSET_TAGS = (); }; };
+		35AA494B1BDA01D800BABB4F /* OCTClient+Events.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49321BDA01D800BABB4F /* OCTClient+Events.m */; settings = {ASSET_TAGS = (); }; };
+		35AA494C1BDA01D800BABB4F /* OCTCommitCommentEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49341BDA01D800BABB4F /* OCTCommitCommentEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA494D1BDA01D800BABB4F /* OCTEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49361BDA01D800BABB4F /* OCTEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA494E1BDA01D800BABB4F /* OCTForkEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49381BDA01D800BABB4F /* OCTForkEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA494F1BDA01D800BABB4F /* OCTIssueCommentEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA493A1BDA01D800BABB4F /* OCTIssueCommentEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49501BDA01D800BABB4F /* OCTIssueEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA493C1BDA01D800BABB4F /* OCTIssueEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49511BDA01D800BABB4F /* OCTMemberEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA493E1BDA01D800BABB4F /* OCTMemberEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49521BDA01D800BABB4F /* OCTPublicEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49401BDA01D800BABB4F /* OCTPublicEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49531BDA01D800BABB4F /* OCTPullRequestCommentEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49421BDA01D800BABB4F /* OCTPullRequestCommentEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49541BDA01D800BABB4F /* OCTPullRequestEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49441BDA01D800BABB4F /* OCTPullRequestEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49551BDA01D800BABB4F /* OCTPushEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49461BDA01D800BABB4F /* OCTPushEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49561BDA01D800BABB4F /* OCTRefEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49481BDA01D800BABB4F /* OCTRefEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49571BDA01D800BABB4F /* OCTWatchEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA494A1BDA01D800BABB4F /* OCTWatchEvent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA495F1BDA020400BABB4F /* OCTClient+Gists.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA495A1BDA020400BABB4F /* OCTClient+Gists.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49601BDA020400BABB4F /* OCTGist.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA495C1BDA020400BABB4F /* OCTGist.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49611BDA020400BABB4F /* OCTGistFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA495E1BDA020400BABB4F /* OCTGistFile.m */; settings = {ASSET_TAGS = (); }; };
+		35AA496B1BDA022400BABB4F /* OCTClient+Git.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49641BDA022400BABB4F /* OCTClient+Git.m */; settings = {ASSET_TAGS = (); }; };
+		35AA496C1BDA022400BABB4F /* OCTCommit.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49661BDA022400BABB4F /* OCTCommit.m */; settings = {ASSET_TAGS = (); }; };
+		35AA496D1BDA022400BABB4F /* OCTRef.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49681BDA022400BABB4F /* OCTRef.m */; settings = {ASSET_TAGS = (); }; };
+		35AA496E1BDA022400BABB4F /* OCTTree.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA496A1BDA022400BABB4F /* OCTTree.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49781BDA024500BABB4F /* OCTBlobTreeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49711BDA024500BABB4F /* OCTBlobTreeEntry.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49791BDA024500BABB4F /* OCTCommitTreeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49731BDA024500BABB4F /* OCTCommitTreeEntry.m */; settings = {ASSET_TAGS = (); }; };
+		35AA497A1BDA024500BABB4F /* OCTContentTreeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49751BDA024500BABB4F /* OCTContentTreeEntry.m */; settings = {ASSET_TAGS = (); }; };
+		35AA497B1BDA024500BABB4F /* OCTTreeEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49771BDA024500BABB4F /* OCTTreeEntry.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49831BDA027800BABB4F /* OCTClient+Issues.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA497E1BDA027800BABB4F /* OCTClient+Issues.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49841BDA027800BABB4F /* OCTIssue.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49801BDA027800BABB4F /* OCTIssue.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49851BDA027800BABB4F /* OCTIssueComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49821BDA027800BABB4F /* OCTIssueComment.m */; settings = {ASSET_TAGS = (); }; };
+		35AA498B1BDA029600BABB4F /* OCTClient+Notifications.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49881BDA029600BABB4F /* OCTClient+Notifications.m */; settings = {ASSET_TAGS = (); }; };
+		35AA498C1BDA029600BABB4F /* OCTNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA498A1BDA029600BABB4F /* OCTNotification.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49921BDA02B500BABB4F /* OCTClient+Keys.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA498F1BDA02B500BABB4F /* OCTClient+Keys.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49931BDA02B500BABB4F /* OCTPublicKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49911BDA02B500BABB4F /* OCTPublicKey.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49991BDA02D500BABB4F /* OCTPullRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49961BDA02D500BABB4F /* OCTPullRequest.m */; settings = {ASSET_TAGS = (); }; };
+		35AA499A1BDA02D500BABB4F /* OCTPullRequestComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49981BDA02D500BABB4F /* OCTPullRequestComment.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49A41BDA02F900BABB4F /* OCTBranch.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA499D1BDA02F900BABB4F /* OCTBranch.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49A51BDA02F900BABB4F /* OCTClient+Repositories.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA499F1BDA02F900BABB4F /* OCTClient+Repositories.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49A61BDA02F900BABB4F /* OCTGitCommitFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49A11BDA02F900BABB4F /* OCTGitCommitFile.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49A71BDA02F900BABB4F /* OCTRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49A31BDA02F900BABB4F /* OCTRepository.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49B31BDA032400BABB4F /* OCTContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49AA1BDA032400BABB4F /* OCTContent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49B41BDA032400BABB4F /* OCTDirectoryContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49AC1BDA032400BABB4F /* OCTDirectoryContent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49B51BDA032400BABB4F /* OCTFileContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49AE1BDA032400BABB4F /* OCTFileContent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49B61BDA032400BABB4F /* OCTSubmoduleContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49B01BDA032400BABB4F /* OCTSubmoduleContent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49B71BDA032400BABB4F /* OCTSymlinkContent.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49B21BDA032400BABB4F /* OCTSymlinkContent.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49BE1BDA034A00BABB4F /* OCTServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49BA1BDA034A00BABB4F /* OCTServer.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49BF1BDA034A00BABB4F /* OCTServerMetadata.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49BD1BDA034A00BABB4F /* OCTServerMetadata.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49C31BDA036F00BABB4F /* OCTClient+Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49C21BDA036F00BABB4F /* OCTClient+Activity.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49CD1BDA03A700BABB4F /* NSDateFormatter+OCTFormattingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49C61BDA03A700BABB4F /* NSDateFormatter+OCTFormattingAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49CE1BDA03A700BABB4F /* NSURL+OCTQueryAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49C81BDA03A700BABB4F /* NSURL+OCTQueryAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49CF1BDA03A700BABB4F /* NSValueTransformer+OCTPredefinedTransformerAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49CA1BDA03A700BABB4F /* NSValueTransformer+OCTPredefinedTransformerAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49D01BDA03A700BABB4F /* RACSignal+OCTClientAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49CC1BDA03A700BABB4F /* RACSignal+OCTClientAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49D51BDA0C5800BABB4F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49D41BDA0C5800BABB4F /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49D71BDA0D6100BABB4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35AA49D61BDA0D6100BABB4F /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
+		35AA49E01BDA15EE00BABB4F /* LYXLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49DF1BDA15EE00BABB4F /* LYXLoginViewModel.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49E31BDA186900BABB4F /* OCTUser+LYXPersistence.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49E21BDA186900BABB4F /* OCTUser+LYXPersistence.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49E91BDA1DEE00BABB4F /* LYXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49E81BDA1DEE00BABB4F /* LYXUtil.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49EC1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49EB1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49EF1BDA21F500BABB4F /* LYXMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49EE1BDA21F500BABB4F /* LYXMemoryCache.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49F41BDA26D400BABB4F /* LYXLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49F21BDA26D400BABB4F /* LYXLoginViewController.m */; settings = {ASSET_TAGS = (); }; };
+		35AA49F51BDA26D400BABB4F /* LYXLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35AA49F31BDA26D400BABB4F /* LYXLoginViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		35AA49F91BDA27C500BABB4F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 35AA49F71BDA27C500BABB4F /* LICENSE */; settings = {ASSET_TAGS = (); }; };
+		35AA49FA1BDA27C500BABB4F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49F81BDA27C500BABB4F /* README.md */; settings = {ASSET_TAGS = (); }; };
+		35AA4A021BDA27DB00BABB4F /* TGRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49FC1BDA27DB00BABB4F /* TGRImageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		35AA4A031BDA27DB00BABB4F /* TGRImageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35AA49FD1BDA27DB00BABB4F /* TGRImageViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		35AA4A041BDA27DB00BABB4F /* TGRImageZoomAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA49FF1BDA27DB00BABB4F /* TGRImageZoomAnimationController.m */; settings = {ASSET_TAGS = (); }; };
+		35AA4A051BDA27DB00BABB4F /* UIImage+AspectFit.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA4A011BDA27DB00BABB4F /* UIImage+AspectFit.m */; settings = {ASSET_TAGS = (); }; };
+		35AA4A1F1BDA29F700BABB4F /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 35AA4A1D1BDA29F700BABB4F /* LICENSE */; settings = {ASSET_TAGS = (); }; };
+		35AA4A201BDA29F700BABB4F /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 35AA4A1E1BDA29F700BABB4F /* README.md */; settings = {ASSET_TAGS = (); }; };
+		35AA4A241BDA2A2E00BABB4F /* TWMessageBarManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA4A231BDA2A2E00BABB4F /* TWMessageBarManager.m */; settings = {ASSET_TAGS = (); }; };
+		35AA4A2C1BDA2A4D00BABB4F /* icon-error.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AA4A261BDA2A4D00BABB4F /* icon-error.png */; settings = {ASSET_TAGS = (); }; };
+		35AA4A2D1BDA2A4D00BABB4F /* icon-error@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AA4A271BDA2A4D00BABB4F /* icon-error@2x.png */; settings = {ASSET_TAGS = (); }; };
+		35AA4A2E1BDA2A4D00BABB4F /* icon-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AA4A281BDA2A4D00BABB4F /* icon-info.png */; settings = {ASSET_TAGS = (); }; };
+		35AA4A2F1BDA2A4D00BABB4F /* icon-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AA4A291BDA2A4D00BABB4F /* icon-info@2x.png */; settings = {ASSET_TAGS = (); }; };
+		35AA4A301BDA2A4D00BABB4F /* icon-success.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AA4A2A1BDA2A4D00BABB4F /* icon-success.png */; settings = {ASSET_TAGS = (); }; };
+		35AA4A311BDA2A4D00BABB4F /* icon-success@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AA4A2B1BDA2A4D00BABB4F /* icon-success@2x.png */; settings = {ASSET_TAGS = (); }; };
+		35AA4A351BDA2F3A00BABB4F /* LYXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA4A341BDA2F3A00BABB4F /* LYXButton.m */; settings = {ASSET_TAGS = (); }; };
+		35AA4A381BDA2F7C00BABB4F /* LYXFollowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA4A371BDA2F7C00BABB4F /* LYXFollowButton.m */; settings = {ASSET_TAGS = (); }; };
+		35AA4A3B1BDA301500BABB4F /* UIImage+LYXOcticons.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA4A3A1BDA301500BABB4F /* UIImage+LYXOcticons.m */; settings = {ASSET_TAGS = (); }; };
+		35AA4A441BDA35D500BABB4F /* test@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AA4A431BDA35D500BABB4F /* test@2x.png */; settings = {ASSET_TAGS = (); }; };
 		35BED8CC1BB252C80030D89B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CB1BB252C80030D89B /* main.m */; };
 		35BED8CF1BB252C80030D89B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CE1BB252C80030D89B /* AppDelegate.m */; };
-		35BED8D51BB252C80030D89B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BED8D31BB252C80030D89B /* Main.storyboard */; };
 		35BED8D71BB252C80030D89B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35BED8D61BB252C80030D89B /* Assets.xcassets */; };
 		35BED8DA1BB252C80030D89B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35BED8D81BB252C80030D89B /* LaunchScreen.storyboard */; };
 		35BED8E51BB252C90030D89B /* LYXBaseAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8E41BB252C90030D89B /* LYXBaseAppTests.m */; };
@@ -69,7 +161,6 @@
 /* Begin PBXFileReference section */
 		00D1C4A9652EFA6D87FE0D82 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		35680FFA1BCE55C700FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
-		35680FFE1BCE55DB00FED7C9 /* empty */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = empty; sourceTree = "<group>"; };
 		356810061BCE5F9200FED7C9 /* LYXNavigationProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXNavigationProtocol.h; sourceTree = "<group>"; };
 		356810091BCE602400FED7C9 /* LYXViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXViewModelProtocol.h; sourceTree = "<group>"; };
 		3568100C1BCE642200FED7C9 /* LYXBaseApp-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "LYXBaseApp-Prefix.pch"; sourceTree = "<group>"; };
@@ -134,11 +225,191 @@
 		356810F81BD4E5F000FED7C9 /* LYXAppStoreService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXAppStoreService.h; sourceTree = "<group>"; };
 		356810FB1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXAppStoreServiceImpl.h; sourceTree = "<group>"; };
 		356810FC1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXAppStoreServiceImpl.m; sourceTree = "<group>"; };
+		35AA48F01BDA001B00BABB4F /* OctoKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OctoKit.h; sourceTree = "<group>"; };
+		35AA48F21BDA004900BABB4F /* OCTClient+Search.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Search.h"; sourceTree = "<group>"; };
+		35AA48F31BDA004900BABB4F /* OCTClient+Search.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Search.m"; sourceTree = "<group>"; };
+		35AA48F41BDA004900BABB4F /* OCTRepositoriesSearchResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTRepositoriesSearchResult.h; sourceTree = "<group>"; };
+		35AA48F51BDA004900BABB4F /* OCTRepositoriesSearchResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTRepositoriesSearchResult.m; sourceTree = "<group>"; };
+		35AA48F81BDA007000BABB4F /* OCTClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTClient.h; sourceTree = "<group>"; };
+		35AA48F91BDA007000BABB4F /* OCTClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTClient.m; sourceTree = "<group>"; };
+		35AA48FA1BDA007000BABB4F /* OCTClient+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Private.h"; sourceTree = "<group>"; };
+		35AA48FD1BDA009400BABB4F /* OCTClient+Watching.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Watching.h"; sourceTree = "<group>"; };
+		35AA48FE1BDA009400BABB4F /* OCTClient+Watching.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Watching.m"; sourceTree = "<group>"; };
+		35AA49011BDA00E100BABB4F /* OCTComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTComment.h; sourceTree = "<group>"; };
+		35AA49021BDA00E100BABB4F /* OCTObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTObject.h; sourceTree = "<group>"; };
+		35AA49031BDA00E100BABB4F /* OCTObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTObject.m; sourceTree = "<group>"; };
+		35AA49041BDA00E100BABB4F /* OCTObject+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTObject+Private.h"; sourceTree = "<group>"; };
+		35AA49051BDA00E100BABB4F /* OCTResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTResponse.h; sourceTree = "<group>"; };
+		35AA49061BDA00E100BABB4F /* OCTResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTResponse.m; sourceTree = "<group>"; };
+		35AA49071BDA00E100BABB4F /* OCTReviewComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTReviewComment.h; sourceTree = "<group>"; };
+		35AA490B1BDA010900BABB4F /* OCTAccessToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTAccessToken.h; sourceTree = "<group>"; };
+		35AA490C1BDA010900BABB4F /* OCTAccessToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTAccessToken.m; sourceTree = "<group>"; };
+		35AA490D1BDA010900BABB4F /* OCTAuthorization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTAuthorization.h; sourceTree = "<group>"; };
+		35AA490E1BDA010900BABB4F /* OCTAuthorization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTAuthorization.m; sourceTree = "<group>"; };
+		35AA49121BDA012900BABB4F /* OCTCommitComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTCommitComment.h; sourceTree = "<group>"; };
+		35AA49131BDA012900BABB4F /* OCTCommitComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTCommitComment.m; sourceTree = "<group>"; };
+		35AA49141BDA012900BABB4F /* OCTGitCommit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTGitCommit.h; sourceTree = "<group>"; };
+		35AA49151BDA012900BABB4F /* OCTGitCommit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTGitCommit.m; sourceTree = "<group>"; };
+		35AA49191BDA016200BABB4F /* OCTEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTEntity.h; sourceTree = "<group>"; };
+		35AA491A1BDA016200BABB4F /* OCTEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTEntity.m; sourceTree = "<group>"; };
+		35AA491B1BDA016200BABB4F /* OCTPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTPlan.h; sourceTree = "<group>"; };
+		35AA491C1BDA016200BABB4F /* OCTPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTPlan.m; sourceTree = "<group>"; };
+		35AA49211BDA019300BABB4F /* OCTClient+Organizations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Organizations.h"; sourceTree = "<group>"; };
+		35AA49221BDA019300BABB4F /* OCTClient+Organizations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Organizations.m"; sourceTree = "<group>"; };
+		35AA49231BDA019300BABB4F /* OCTOrganization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTOrganization.h; sourceTree = "<group>"; };
+		35AA49241BDA019300BABB4F /* OCTOrganization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTOrganization.m; sourceTree = "<group>"; };
+		35AA49251BDA019300BABB4F /* OCTTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTTeam.h; sourceTree = "<group>"; };
+		35AA49261BDA019300BABB4F /* OCTTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTTeam.m; sourceTree = "<group>"; };
+		35AA492A1BDA01AC00BABB4F /* OCTClient+User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+User.h"; sourceTree = "<group>"; };
+		35AA492B1BDA01AC00BABB4F /* OCTClient+User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+User.m"; sourceTree = "<group>"; };
+		35AA492C1BDA01AC00BABB4F /* OCTUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTUser.h; sourceTree = "<group>"; };
+		35AA492D1BDA01AC00BABB4F /* OCTUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTUser.m; sourceTree = "<group>"; };
+		35AA49311BDA01D800BABB4F /* OCTClient+Events.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Events.h"; sourceTree = "<group>"; };
+		35AA49321BDA01D800BABB4F /* OCTClient+Events.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Events.m"; sourceTree = "<group>"; };
+		35AA49331BDA01D800BABB4F /* OCTCommitCommentEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTCommitCommentEvent.h; sourceTree = "<group>"; };
+		35AA49341BDA01D800BABB4F /* OCTCommitCommentEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTCommitCommentEvent.m; sourceTree = "<group>"; };
+		35AA49351BDA01D800BABB4F /* OCTEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTEvent.h; sourceTree = "<group>"; };
+		35AA49361BDA01D800BABB4F /* OCTEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTEvent.m; sourceTree = "<group>"; };
+		35AA49371BDA01D800BABB4F /* OCTForkEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTForkEvent.h; sourceTree = "<group>"; };
+		35AA49381BDA01D800BABB4F /* OCTForkEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTForkEvent.m; sourceTree = "<group>"; };
+		35AA49391BDA01D800BABB4F /* OCTIssueCommentEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTIssueCommentEvent.h; sourceTree = "<group>"; };
+		35AA493A1BDA01D800BABB4F /* OCTIssueCommentEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTIssueCommentEvent.m; sourceTree = "<group>"; };
+		35AA493B1BDA01D800BABB4F /* OCTIssueEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTIssueEvent.h; sourceTree = "<group>"; };
+		35AA493C1BDA01D800BABB4F /* OCTIssueEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTIssueEvent.m; sourceTree = "<group>"; };
+		35AA493D1BDA01D800BABB4F /* OCTMemberEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTMemberEvent.h; sourceTree = "<group>"; };
+		35AA493E1BDA01D800BABB4F /* OCTMemberEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTMemberEvent.m; sourceTree = "<group>"; };
+		35AA493F1BDA01D800BABB4F /* OCTPublicEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTPublicEvent.h; sourceTree = "<group>"; };
+		35AA49401BDA01D800BABB4F /* OCTPublicEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTPublicEvent.m; sourceTree = "<group>"; };
+		35AA49411BDA01D800BABB4F /* OCTPullRequestCommentEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTPullRequestCommentEvent.h; sourceTree = "<group>"; };
+		35AA49421BDA01D800BABB4F /* OCTPullRequestCommentEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTPullRequestCommentEvent.m; sourceTree = "<group>"; };
+		35AA49431BDA01D800BABB4F /* OCTPullRequestEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTPullRequestEvent.h; sourceTree = "<group>"; };
+		35AA49441BDA01D800BABB4F /* OCTPullRequestEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTPullRequestEvent.m; sourceTree = "<group>"; };
+		35AA49451BDA01D800BABB4F /* OCTPushEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTPushEvent.h; sourceTree = "<group>"; };
+		35AA49461BDA01D800BABB4F /* OCTPushEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTPushEvent.m; sourceTree = "<group>"; };
+		35AA49471BDA01D800BABB4F /* OCTRefEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTRefEvent.h; sourceTree = "<group>"; };
+		35AA49481BDA01D800BABB4F /* OCTRefEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTRefEvent.m; sourceTree = "<group>"; };
+		35AA49491BDA01D800BABB4F /* OCTWatchEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTWatchEvent.h; sourceTree = "<group>"; };
+		35AA494A1BDA01D800BABB4F /* OCTWatchEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTWatchEvent.m; sourceTree = "<group>"; };
+		35AA49591BDA020400BABB4F /* OCTClient+Gists.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Gists.h"; sourceTree = "<group>"; };
+		35AA495A1BDA020400BABB4F /* OCTClient+Gists.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Gists.m"; sourceTree = "<group>"; };
+		35AA495B1BDA020400BABB4F /* OCTGist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTGist.h; sourceTree = "<group>"; };
+		35AA495C1BDA020400BABB4F /* OCTGist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTGist.m; sourceTree = "<group>"; };
+		35AA495D1BDA020400BABB4F /* OCTGistFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTGistFile.h; sourceTree = "<group>"; };
+		35AA495E1BDA020400BABB4F /* OCTGistFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTGistFile.m; sourceTree = "<group>"; };
+		35AA49631BDA022400BABB4F /* OCTClient+Git.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Git.h"; sourceTree = "<group>"; };
+		35AA49641BDA022400BABB4F /* OCTClient+Git.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Git.m"; sourceTree = "<group>"; };
+		35AA49651BDA022400BABB4F /* OCTCommit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTCommit.h; sourceTree = "<group>"; };
+		35AA49661BDA022400BABB4F /* OCTCommit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTCommit.m; sourceTree = "<group>"; };
+		35AA49671BDA022400BABB4F /* OCTRef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTRef.h; sourceTree = "<group>"; };
+		35AA49681BDA022400BABB4F /* OCTRef.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTRef.m; sourceTree = "<group>"; };
+		35AA49691BDA022400BABB4F /* OCTTree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTTree.h; sourceTree = "<group>"; };
+		35AA496A1BDA022400BABB4F /* OCTTree.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTTree.m; sourceTree = "<group>"; };
+		35AA49701BDA024500BABB4F /* OCTBlobTreeEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTBlobTreeEntry.h; sourceTree = "<group>"; };
+		35AA49711BDA024500BABB4F /* OCTBlobTreeEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTBlobTreeEntry.m; sourceTree = "<group>"; };
+		35AA49721BDA024500BABB4F /* OCTCommitTreeEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTCommitTreeEntry.h; sourceTree = "<group>"; };
+		35AA49731BDA024500BABB4F /* OCTCommitTreeEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTCommitTreeEntry.m; sourceTree = "<group>"; };
+		35AA49741BDA024500BABB4F /* OCTContentTreeEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTContentTreeEntry.h; sourceTree = "<group>"; };
+		35AA49751BDA024500BABB4F /* OCTContentTreeEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTContentTreeEntry.m; sourceTree = "<group>"; };
+		35AA49761BDA024500BABB4F /* OCTTreeEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTTreeEntry.h; sourceTree = "<group>"; };
+		35AA49771BDA024500BABB4F /* OCTTreeEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTTreeEntry.m; sourceTree = "<group>"; };
+		35AA497D1BDA027800BABB4F /* OCTClient+Issues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Issues.h"; sourceTree = "<group>"; };
+		35AA497E1BDA027800BABB4F /* OCTClient+Issues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Issues.m"; sourceTree = "<group>"; };
+		35AA497F1BDA027800BABB4F /* OCTIssue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTIssue.h; sourceTree = "<group>"; };
+		35AA49801BDA027800BABB4F /* OCTIssue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTIssue.m; sourceTree = "<group>"; };
+		35AA49811BDA027800BABB4F /* OCTIssueComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTIssueComment.h; sourceTree = "<group>"; };
+		35AA49821BDA027800BABB4F /* OCTIssueComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTIssueComment.m; sourceTree = "<group>"; };
+		35AA49871BDA029600BABB4F /* OCTClient+Notifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Notifications.h"; sourceTree = "<group>"; };
+		35AA49881BDA029600BABB4F /* OCTClient+Notifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Notifications.m"; sourceTree = "<group>"; };
+		35AA49891BDA029600BABB4F /* OCTNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTNotification.h; sourceTree = "<group>"; };
+		35AA498A1BDA029600BABB4F /* OCTNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTNotification.m; sourceTree = "<group>"; };
+		35AA498E1BDA02B500BABB4F /* OCTClient+Keys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Keys.h"; sourceTree = "<group>"; };
+		35AA498F1BDA02B500BABB4F /* OCTClient+Keys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Keys.m"; sourceTree = "<group>"; };
+		35AA49901BDA02B500BABB4F /* OCTPublicKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTPublicKey.h; sourceTree = "<group>"; };
+		35AA49911BDA02B500BABB4F /* OCTPublicKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTPublicKey.m; sourceTree = "<group>"; };
+		35AA49951BDA02D500BABB4F /* OCTPullRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTPullRequest.h; sourceTree = "<group>"; };
+		35AA49961BDA02D500BABB4F /* OCTPullRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTPullRequest.m; sourceTree = "<group>"; };
+		35AA49971BDA02D500BABB4F /* OCTPullRequestComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTPullRequestComment.h; sourceTree = "<group>"; };
+		35AA49981BDA02D500BABB4F /* OCTPullRequestComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTPullRequestComment.m; sourceTree = "<group>"; };
+		35AA499C1BDA02F900BABB4F /* OCTBranch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTBranch.h; sourceTree = "<group>"; };
+		35AA499D1BDA02F900BABB4F /* OCTBranch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTBranch.m; sourceTree = "<group>"; };
+		35AA499E1BDA02F900BABB4F /* OCTClient+Repositories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Repositories.h"; sourceTree = "<group>"; };
+		35AA499F1BDA02F900BABB4F /* OCTClient+Repositories.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Repositories.m"; sourceTree = "<group>"; };
+		35AA49A01BDA02F900BABB4F /* OCTGitCommitFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTGitCommitFile.h; sourceTree = "<group>"; };
+		35AA49A11BDA02F900BABB4F /* OCTGitCommitFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTGitCommitFile.m; sourceTree = "<group>"; };
+		35AA49A21BDA02F900BABB4F /* OCTRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTRepository.h; sourceTree = "<group>"; };
+		35AA49A31BDA02F900BABB4F /* OCTRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTRepository.m; sourceTree = "<group>"; };
+		35AA49A91BDA032400BABB4F /* OCTContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTContent.h; sourceTree = "<group>"; };
+		35AA49AA1BDA032400BABB4F /* OCTContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTContent.m; sourceTree = "<group>"; };
+		35AA49AB1BDA032400BABB4F /* OCTDirectoryContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTDirectoryContent.h; sourceTree = "<group>"; };
+		35AA49AC1BDA032400BABB4F /* OCTDirectoryContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTDirectoryContent.m; sourceTree = "<group>"; };
+		35AA49AD1BDA032400BABB4F /* OCTFileContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTFileContent.h; sourceTree = "<group>"; };
+		35AA49AE1BDA032400BABB4F /* OCTFileContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTFileContent.m; sourceTree = "<group>"; };
+		35AA49AF1BDA032400BABB4F /* OCTSubmoduleContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTSubmoduleContent.h; sourceTree = "<group>"; };
+		35AA49B01BDA032400BABB4F /* OCTSubmoduleContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTSubmoduleContent.m; sourceTree = "<group>"; };
+		35AA49B11BDA032400BABB4F /* OCTSymlinkContent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTSymlinkContent.h; sourceTree = "<group>"; };
+		35AA49B21BDA032400BABB4F /* OCTSymlinkContent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTSymlinkContent.m; sourceTree = "<group>"; };
+		35AA49B91BDA034A00BABB4F /* OCTServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTServer.h; sourceTree = "<group>"; };
+		35AA49BA1BDA034A00BABB4F /* OCTServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTServer.m; sourceTree = "<group>"; };
+		35AA49BB1BDA034A00BABB4F /* OCTServer+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTServer+Private.h"; sourceTree = "<group>"; };
+		35AA49BC1BDA034A00BABB4F /* OCTServerMetadata.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCTServerMetadata.h; sourceTree = "<group>"; };
+		35AA49BD1BDA034A00BABB4F /* OCTServerMetadata.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCTServerMetadata.m; sourceTree = "<group>"; };
+		35AA49C11BDA036F00BABB4F /* OCTClient+Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTClient+Activity.h"; sourceTree = "<group>"; };
+		35AA49C21BDA036F00BABB4F /* OCTClient+Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTClient+Activity.m"; sourceTree = "<group>"; };
+		35AA49C51BDA03A700BABB4F /* NSDateFormatter+OCTFormattingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDateFormatter+OCTFormattingAdditions.h"; sourceTree = "<group>"; };
+		35AA49C61BDA03A700BABB4F /* NSDateFormatter+OCTFormattingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDateFormatter+OCTFormattingAdditions.m"; sourceTree = "<group>"; };
+		35AA49C71BDA03A700BABB4F /* NSURL+OCTQueryAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+OCTQueryAdditions.h"; sourceTree = "<group>"; };
+		35AA49C81BDA03A700BABB4F /* NSURL+OCTQueryAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+OCTQueryAdditions.m"; sourceTree = "<group>"; };
+		35AA49C91BDA03A700BABB4F /* NSValueTransformer+OCTPredefinedTransformerAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSValueTransformer+OCTPredefinedTransformerAdditions.h"; sourceTree = "<group>"; };
+		35AA49CA1BDA03A700BABB4F /* NSValueTransformer+OCTPredefinedTransformerAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSValueTransformer+OCTPredefinedTransformerAdditions.m"; sourceTree = "<group>"; };
+		35AA49CB1BDA03A700BABB4F /* RACSignal+OCTClientAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+OCTClientAdditions.h"; sourceTree = "<group>"; };
+		35AA49CC1BDA03A700BABB4F /* RACSignal+OCTClientAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+OCTClientAdditions.m"; sourceTree = "<group>"; };
+		35AA49D31BDA0C5800BABB4F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		35AA49D41BDA0C5800BABB4F /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		35AA49D61BDA0D6100BABB4F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		35AA49DE1BDA15EE00BABB4F /* LYXLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXLoginViewModel.h; sourceTree = "<group>"; };
+		35AA49DF1BDA15EE00BABB4F /* LYXLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXLoginViewModel.m; sourceTree = "<group>"; };
+		35AA49E11BDA186900BABB4F /* OCTUser+LYXPersistence.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OCTUser+LYXPersistence.h"; sourceTree = "<group>"; };
+		35AA49E21BDA186900BABB4F /* OCTUser+LYXPersistence.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "OCTUser+LYXPersistence.m"; sourceTree = "<group>"; };
+		35AA49E41BDA19A900BABB4F /* LYXPersistenceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXPersistenceProtocol.h; sourceTree = "<group>"; };
+		35AA49E71BDA1DEE00BABB4F /* LYXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXUtil.h; sourceTree = "<group>"; };
+		35AA49E81BDA1DEE00BABB4F /* LYXUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXUtil.m; sourceTree = "<group>"; };
+		35AA49EA1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SSKeychain+LYXUtil.h"; sourceTree = "<group>"; };
+		35AA49EB1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain+LYXUtil.m"; sourceTree = "<group>"; };
+		35AA49ED1BDA21F500BABB4F /* LYXMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXMemoryCache.h; sourceTree = "<group>"; };
+		35AA49EE1BDA21F500BABB4F /* LYXMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXMemoryCache.m; sourceTree = "<group>"; };
+		35AA49F11BDA26D400BABB4F /* LYXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXLoginViewController.h; sourceTree = "<group>"; };
+		35AA49F21BDA26D400BABB4F /* LYXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXLoginViewController.m; sourceTree = "<group>"; };
+		35AA49F31BDA26D400BABB4F /* LYXLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYXLoginViewController.xib; sourceTree = "<group>"; };
+		35AA49F71BDA27C500BABB4F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		35AA49F81BDA27C500BABB4F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		35AA49FB1BDA27DB00BABB4F /* TGRImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRImageViewController.h; sourceTree = "<group>"; };
+		35AA49FC1BDA27DB00BABB4F /* TGRImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRImageViewController.m; sourceTree = "<group>"; };
+		35AA49FD1BDA27DB00BABB4F /* TGRImageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TGRImageViewController.xib; sourceTree = "<group>"; };
+		35AA49FE1BDA27DB00BABB4F /* TGRImageZoomAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TGRImageZoomAnimationController.h; sourceTree = "<group>"; };
+		35AA49FF1BDA27DB00BABB4F /* TGRImageZoomAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TGRImageZoomAnimationController.m; sourceTree = "<group>"; };
+		35AA4A001BDA27DB00BABB4F /* UIImage+AspectFit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+AspectFit.h"; sourceTree = "<group>"; };
+		35AA4A011BDA27DB00BABB4F /* UIImage+AspectFit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+AspectFit.m"; sourceTree = "<group>"; };
+		35AA4A1D1BDA29F700BABB4F /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		35AA4A1E1BDA29F700BABB4F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		35AA4A221BDA2A2E00BABB4F /* TWMessageBarManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWMessageBarManager.h; sourceTree = "<group>"; };
+		35AA4A231BDA2A2E00BABB4F /* TWMessageBarManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWMessageBarManager.m; sourceTree = "<group>"; };
+		35AA4A261BDA2A4D00BABB4F /* icon-error.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-error.png"; sourceTree = "<group>"; };
+		35AA4A271BDA2A4D00BABB4F /* icon-error@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-error@2x.png"; sourceTree = "<group>"; };
+		35AA4A281BDA2A4D00BABB4F /* icon-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-info.png"; sourceTree = "<group>"; };
+		35AA4A291BDA2A4D00BABB4F /* icon-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-info@2x.png"; sourceTree = "<group>"; };
+		35AA4A2A1BDA2A4D00BABB4F /* icon-success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-success.png"; sourceTree = "<group>"; };
+		35AA4A2B1BDA2A4D00BABB4F /* icon-success@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-success@2x.png"; sourceTree = "<group>"; };
+		35AA4A331BDA2F3A00BABB4F /* LYXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXButton.h; sourceTree = "<group>"; };
+		35AA4A341BDA2F3A00BABB4F /* LYXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXButton.m; sourceTree = "<group>"; };
+		35AA4A361BDA2F7C00BABB4F /* LYXFollowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXFollowButton.h; sourceTree = "<group>"; };
+		35AA4A371BDA2F7C00BABB4F /* LYXFollowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXFollowButton.m; sourceTree = "<group>"; };
+		35AA4A391BDA301500BABB4F /* UIImage+LYXOcticons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LYXOcticons.h"; sourceTree = "<group>"; };
+		35AA4A3A1BDA301500BABB4F /* UIImage+LYXOcticons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LYXOcticons.m"; sourceTree = "<group>"; };
+		35AA4A431BDA35D500BABB4F /* test@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test@2x.png"; sourceTree = SOURCE_ROOT; };
 		35BED8C71BB252C80030D89B /* LYXBaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYXBaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BED8CB1BB252C80030D89B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35BED8CD1BB252C80030D89B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		35BED8CE1BB252C80030D89B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		35BED8D41BB252C80030D89B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		35BED8D61BB252C80030D89B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35BED8D91BB252C80030D89B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		35BED8DB1BB252C80030D89B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,11 +421,9 @@
 		35BED8F11BB252C90030D89B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35BED9441BB38D090030D89B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		35BED9471BB38D120030D89B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		35BED9491BB38D310030D89B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		35BED94A1BB38D310030D89B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		35BED94B1BB38D310030D89B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		35BED94C1BB38D310030D89B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		35BED94E1BB38D620030D89B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		35BED9501BB38D690030D89B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		35BED9511BB38D710030D89B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		35BED9521BB38D740030D89B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -208,6 +477,11 @@
 				356810F81BD4E5F000FED7C9 /* LYXAppStoreService.h */,
 				356810FB1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.h */,
 				356810FC1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.m */,
+				35AA49E41BDA19A900BABB4F /* LYXPersistenceProtocol.h */,
+				35AA49E11BDA186900BABB4F /* OCTUser+LYXPersistence.h */,
+				35AA49E21BDA186900BABB4F /* OCTUser+LYXPersistence.m */,
+				35AA49ED1BDA21F500BABB4F /* LYXMemoryCache.h */,
+				35AA49EE1BDA21F500BABB4F /* LYXMemoryCache.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,6 +502,10 @@
 				3568100E1BCE666600FED7C9 /* LYXConstant.h */,
 				356810351BCF588B00FED7C9 /* LYXRouter.h */,
 				356810361BCF588B00FED7C9 /* LYXRouter.m */,
+				35AA49E71BDA1DEE00BABB4F /* LYXUtil.h */,
+				35AA49E81BDA1DEE00BABB4F /* LYXUtil.m */,
+				35AA49EA1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.h */,
+				35AA49EB1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -235,7 +513,9 @@
 		35680FF31BCE556B00FED7C9 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
-				35680FFE1BCE55DB00FED7C9 /* empty */,
+				35AA4A1C1BDA29B300BABB4F /* TWMessageBarManager */,
+				35AA49F61BDA27AB00BABB4F /* Vertigo */,
+				35AA48EE1BD9FFE100BABB4F /* OctoKit */,
 			);
 			path = Vendor;
 			sourceTree = "<group>";
@@ -243,8 +523,10 @@
 		35680FF41BCE556B00FED7C9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				35AA4A321BDA2F1400BABB4F /* Button */,
 				356810EB1BD49FB400FED7C9 /* TableViewCell */,
 				3568104B1BCF885000FED7C9 /* BaseClass */,
+				35AA49F01BDA266500BABB4F /* Login & Register */,
 				356810A41BD0D9A700FED7C9 /* Index */,
 				356810511BCF8B2400FED7C9 /* Home */,
 				356810521BCF8B2B00FED7C9 /* Me */,
@@ -255,6 +537,7 @@
 		35680FF51BCE556B00FED7C9 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				35AA49DD1BDA159F00BABB4F /* Login & Register */,
 				356810041BCE5E0B00FED7C9 /* BaseClass */,
 				356810A31BD0D95F00FED7C9 /* Index */,
 				3568101B1BCF4BEA00FED7C9 /* Home */,
@@ -348,6 +631,7 @@
 		3568105A1BCF8D0E00FED7C9 /* v1.0.0 */ = {
 			isa = PBXGroup;
 			children = (
+				35AA4A431BDA35D500BABB4F /* test@2x.png */,
 			);
 			name = v1.0.0;
 			sourceTree = "<group>";
@@ -367,6 +651,8 @@
 				3568106E1BCFA82600FED7C9 /* UIImage+ImageEffects.m */,
 				3568106F1BCFA82600FED7C9 /* UIImage+RTTint.h */,
 				356810701BCFA82600FED7C9 /* UIImage+RTTint.m */,
+				35AA4A391BDA301500BABB4F /* UIImage+LYXOcticons.h */,
+				35AA4A3A1BDA301500BABB4F /* UIImage+LYXOcticons.m */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -396,6 +682,406 @@
 				356810ED1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m */,
 			);
 			name = TableViewCell;
+			sourceTree = "<group>";
+		};
+		35AA48EE1BD9FFE100BABB4F /* OctoKit */ = {
+			isa = PBXGroup;
+			children = (
+				35AA48F01BDA001B00BABB4F /* OctoKit.h */,
+				35AA48EF1BD9FFF200BABB4F /* Classes */,
+				35AA49C41BDA038800BABB4F /* Extensions */,
+			);
+			path = OctoKit;
+			sourceTree = "<group>";
+		};
+		35AA48EF1BD9FFF200BABB4F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49C01BDA035C00BABB4F /* Activity */,
+				35AA49B81BDA033800BABB4F /* Server */,
+				35AA499B1BDA02DF00BABB4F /* Repositories */,
+				35AA49941BDA02C400BABB4F /* Pull Requests */,
+				35AA498D1BDA02A400BABB4F /* Public Keys */,
+				35AA49861BDA028500BABB4F /* Notifications */,
+				35AA497C1BDA026400BABB4F /* Issues */,
+				35AA49621BDA021300BABB4F /* Git Data */,
+				35AA49581BDA01F100BABB4F /* Gists */,
+				35AA49301BDA01C100BABB4F /* Events */,
+				35AA49181BDA014D00BABB4F /* Entities */,
+				35AA49111BDA011700BABB4F /* Commits */,
+				35AA490A1BDA00F400BABB4F /* Authentication */,
+				35AA49001BDA009A00BABB4F /* Base Models */,
+				35AA48FC1BDA007C00BABB4F /* Watching */,
+				35AA48F11BDA002100BABB4F /* Search */,
+				35AA48F81BDA007000BABB4F /* OCTClient.h */,
+				35AA48F91BDA007000BABB4F /* OCTClient.m */,
+				35AA48FA1BDA007000BABB4F /* OCTClient+Private.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		35AA48F11BDA002100BABB4F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				35AA48F21BDA004900BABB4F /* OCTClient+Search.h */,
+				35AA48F31BDA004900BABB4F /* OCTClient+Search.m */,
+				35AA48F41BDA004900BABB4F /* OCTRepositoriesSearchResult.h */,
+				35AA48F51BDA004900BABB4F /* OCTRepositoriesSearchResult.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		35AA48FC1BDA007C00BABB4F /* Watching */ = {
+			isa = PBXGroup;
+			children = (
+				35AA48FD1BDA009400BABB4F /* OCTClient+Watching.h */,
+				35AA48FE1BDA009400BABB4F /* OCTClient+Watching.m */,
+			);
+			name = Watching;
+			sourceTree = "<group>";
+		};
+		35AA49001BDA009A00BABB4F /* Base Models */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49011BDA00E100BABB4F /* OCTComment.h */,
+				35AA49021BDA00E100BABB4F /* OCTObject.h */,
+				35AA49031BDA00E100BABB4F /* OCTObject.m */,
+				35AA49041BDA00E100BABB4F /* OCTObject+Private.h */,
+				35AA49051BDA00E100BABB4F /* OCTResponse.h */,
+				35AA49061BDA00E100BABB4F /* OCTResponse.m */,
+				35AA49071BDA00E100BABB4F /* OCTReviewComment.h */,
+			);
+			name = "Base Models";
+			sourceTree = "<group>";
+		};
+		35AA490A1BDA00F400BABB4F /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				35AA490B1BDA010900BABB4F /* OCTAccessToken.h */,
+				35AA490C1BDA010900BABB4F /* OCTAccessToken.m */,
+				35AA490D1BDA010900BABB4F /* OCTAuthorization.h */,
+				35AA490E1BDA010900BABB4F /* OCTAuthorization.m */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		35AA49111BDA011700BABB4F /* Commits */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49121BDA012900BABB4F /* OCTCommitComment.h */,
+				35AA49131BDA012900BABB4F /* OCTCommitComment.m */,
+				35AA49141BDA012900BABB4F /* OCTGitCommit.h */,
+				35AA49151BDA012900BABB4F /* OCTGitCommit.m */,
+			);
+			name = Commits;
+			sourceTree = "<group>";
+		};
+		35AA49181BDA014D00BABB4F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49201BDA017800BABB4F /* Users */,
+				35AA491F1BDA017400BABB4F /* Organizations */,
+				35AA49191BDA016200BABB4F /* OCTEntity.h */,
+				35AA491A1BDA016200BABB4F /* OCTEntity.m */,
+				35AA491B1BDA016200BABB4F /* OCTPlan.h */,
+				35AA491C1BDA016200BABB4F /* OCTPlan.m */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		35AA491F1BDA017400BABB4F /* Organizations */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49211BDA019300BABB4F /* OCTClient+Organizations.h */,
+				35AA49221BDA019300BABB4F /* OCTClient+Organizations.m */,
+				35AA49231BDA019300BABB4F /* OCTOrganization.h */,
+				35AA49241BDA019300BABB4F /* OCTOrganization.m */,
+				35AA49251BDA019300BABB4F /* OCTTeam.h */,
+				35AA49261BDA019300BABB4F /* OCTTeam.m */,
+			);
+			name = Organizations;
+			sourceTree = "<group>";
+		};
+		35AA49201BDA017800BABB4F /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				35AA492A1BDA01AC00BABB4F /* OCTClient+User.h */,
+				35AA492B1BDA01AC00BABB4F /* OCTClient+User.m */,
+				35AA492C1BDA01AC00BABB4F /* OCTUser.h */,
+				35AA492D1BDA01AC00BABB4F /* OCTUser.m */,
+			);
+			name = Users;
+			sourceTree = "<group>";
+		};
+		35AA49301BDA01C100BABB4F /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49311BDA01D800BABB4F /* OCTClient+Events.h */,
+				35AA49321BDA01D800BABB4F /* OCTClient+Events.m */,
+				35AA49331BDA01D800BABB4F /* OCTCommitCommentEvent.h */,
+				35AA49341BDA01D800BABB4F /* OCTCommitCommentEvent.m */,
+				35AA49351BDA01D800BABB4F /* OCTEvent.h */,
+				35AA49361BDA01D800BABB4F /* OCTEvent.m */,
+				35AA49371BDA01D800BABB4F /* OCTForkEvent.h */,
+				35AA49381BDA01D800BABB4F /* OCTForkEvent.m */,
+				35AA49391BDA01D800BABB4F /* OCTIssueCommentEvent.h */,
+				35AA493A1BDA01D800BABB4F /* OCTIssueCommentEvent.m */,
+				35AA493B1BDA01D800BABB4F /* OCTIssueEvent.h */,
+				35AA493C1BDA01D800BABB4F /* OCTIssueEvent.m */,
+				35AA493D1BDA01D800BABB4F /* OCTMemberEvent.h */,
+				35AA493E1BDA01D800BABB4F /* OCTMemberEvent.m */,
+				35AA493F1BDA01D800BABB4F /* OCTPublicEvent.h */,
+				35AA49401BDA01D800BABB4F /* OCTPublicEvent.m */,
+				35AA49411BDA01D800BABB4F /* OCTPullRequestCommentEvent.h */,
+				35AA49421BDA01D800BABB4F /* OCTPullRequestCommentEvent.m */,
+				35AA49431BDA01D800BABB4F /* OCTPullRequestEvent.h */,
+				35AA49441BDA01D800BABB4F /* OCTPullRequestEvent.m */,
+				35AA49451BDA01D800BABB4F /* OCTPushEvent.h */,
+				35AA49461BDA01D800BABB4F /* OCTPushEvent.m */,
+				35AA49471BDA01D800BABB4F /* OCTRefEvent.h */,
+				35AA49481BDA01D800BABB4F /* OCTRefEvent.m */,
+				35AA49491BDA01D800BABB4F /* OCTWatchEvent.h */,
+				35AA494A1BDA01D800BABB4F /* OCTWatchEvent.m */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		35AA49581BDA01F100BABB4F /* Gists */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49591BDA020400BABB4F /* OCTClient+Gists.h */,
+				35AA495A1BDA020400BABB4F /* OCTClient+Gists.m */,
+				35AA495B1BDA020400BABB4F /* OCTGist.h */,
+				35AA495C1BDA020400BABB4F /* OCTGist.m */,
+				35AA495D1BDA020400BABB4F /* OCTGistFile.h */,
+				35AA495E1BDA020400BABB4F /* OCTGistFile.m */,
+			);
+			name = Gists;
+			sourceTree = "<group>";
+		};
+		35AA49621BDA021300BABB4F /* Git Data */ = {
+			isa = PBXGroup;
+			children = (
+				35AA496F1BDA022700BABB4F /* Three Entries */,
+				35AA49631BDA022400BABB4F /* OCTClient+Git.h */,
+				35AA49641BDA022400BABB4F /* OCTClient+Git.m */,
+				35AA49651BDA022400BABB4F /* OCTCommit.h */,
+				35AA49661BDA022400BABB4F /* OCTCommit.m */,
+				35AA49671BDA022400BABB4F /* OCTRef.h */,
+				35AA49681BDA022400BABB4F /* OCTRef.m */,
+				35AA49691BDA022400BABB4F /* OCTTree.h */,
+				35AA496A1BDA022400BABB4F /* OCTTree.m */,
+			);
+			name = "Git Data";
+			sourceTree = "<group>";
+		};
+		35AA496F1BDA022700BABB4F /* Three Entries */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49701BDA024500BABB4F /* OCTBlobTreeEntry.h */,
+				35AA49711BDA024500BABB4F /* OCTBlobTreeEntry.m */,
+				35AA49721BDA024500BABB4F /* OCTCommitTreeEntry.h */,
+				35AA49731BDA024500BABB4F /* OCTCommitTreeEntry.m */,
+				35AA49741BDA024500BABB4F /* OCTContentTreeEntry.h */,
+				35AA49751BDA024500BABB4F /* OCTContentTreeEntry.m */,
+				35AA49761BDA024500BABB4F /* OCTTreeEntry.h */,
+				35AA49771BDA024500BABB4F /* OCTTreeEntry.m */,
+			);
+			name = "Three Entries";
+			sourceTree = "<group>";
+		};
+		35AA497C1BDA026400BABB4F /* Issues */ = {
+			isa = PBXGroup;
+			children = (
+				35AA497D1BDA027800BABB4F /* OCTClient+Issues.h */,
+				35AA497E1BDA027800BABB4F /* OCTClient+Issues.m */,
+				35AA497F1BDA027800BABB4F /* OCTIssue.h */,
+				35AA49801BDA027800BABB4F /* OCTIssue.m */,
+				35AA49811BDA027800BABB4F /* OCTIssueComment.h */,
+				35AA49821BDA027800BABB4F /* OCTIssueComment.m */,
+			);
+			name = Issues;
+			sourceTree = "<group>";
+		};
+		35AA49861BDA028500BABB4F /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49871BDA029600BABB4F /* OCTClient+Notifications.h */,
+				35AA49881BDA029600BABB4F /* OCTClient+Notifications.m */,
+				35AA49891BDA029600BABB4F /* OCTNotification.h */,
+				35AA498A1BDA029600BABB4F /* OCTNotification.m */,
+			);
+			name = Notifications;
+			sourceTree = "<group>";
+		};
+		35AA498D1BDA02A400BABB4F /* Public Keys */ = {
+			isa = PBXGroup;
+			children = (
+				35AA498E1BDA02B500BABB4F /* OCTClient+Keys.h */,
+				35AA498F1BDA02B500BABB4F /* OCTClient+Keys.m */,
+				35AA49901BDA02B500BABB4F /* OCTPublicKey.h */,
+				35AA49911BDA02B500BABB4F /* OCTPublicKey.m */,
+			);
+			name = "Public Keys";
+			sourceTree = "<group>";
+		};
+		35AA49941BDA02C400BABB4F /* Pull Requests */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49951BDA02D500BABB4F /* OCTPullRequest.h */,
+				35AA49961BDA02D500BABB4F /* OCTPullRequest.m */,
+				35AA49971BDA02D500BABB4F /* OCTPullRequestComment.h */,
+				35AA49981BDA02D500BABB4F /* OCTPullRequestComment.m */,
+			);
+			name = "Pull Requests";
+			sourceTree = "<group>";
+		};
+		35AA499B1BDA02DF00BABB4F /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49A81BDA030100BABB4F /* Content */,
+				35AA499C1BDA02F900BABB4F /* OCTBranch.h */,
+				35AA499D1BDA02F900BABB4F /* OCTBranch.m */,
+				35AA499E1BDA02F900BABB4F /* OCTClient+Repositories.h */,
+				35AA499F1BDA02F900BABB4F /* OCTClient+Repositories.m */,
+				35AA49A01BDA02F900BABB4F /* OCTGitCommitFile.h */,
+				35AA49A11BDA02F900BABB4F /* OCTGitCommitFile.m */,
+				35AA49A21BDA02F900BABB4F /* OCTRepository.h */,
+				35AA49A31BDA02F900BABB4F /* OCTRepository.m */,
+			);
+			name = Repositories;
+			sourceTree = "<group>";
+		};
+		35AA49A81BDA030100BABB4F /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49A91BDA032400BABB4F /* OCTContent.h */,
+				35AA49AA1BDA032400BABB4F /* OCTContent.m */,
+				35AA49AB1BDA032400BABB4F /* OCTDirectoryContent.h */,
+				35AA49AC1BDA032400BABB4F /* OCTDirectoryContent.m */,
+				35AA49AD1BDA032400BABB4F /* OCTFileContent.h */,
+				35AA49AE1BDA032400BABB4F /* OCTFileContent.m */,
+				35AA49AF1BDA032400BABB4F /* OCTSubmoduleContent.h */,
+				35AA49B01BDA032400BABB4F /* OCTSubmoduleContent.m */,
+				35AA49B11BDA032400BABB4F /* OCTSymlinkContent.h */,
+				35AA49B21BDA032400BABB4F /* OCTSymlinkContent.m */,
+			);
+			name = Content;
+			sourceTree = "<group>";
+		};
+		35AA49B81BDA033800BABB4F /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49B91BDA034A00BABB4F /* OCTServer.h */,
+				35AA49BA1BDA034A00BABB4F /* OCTServer.m */,
+				35AA49BB1BDA034A00BABB4F /* OCTServer+Private.h */,
+				35AA49BC1BDA034A00BABB4F /* OCTServerMetadata.h */,
+				35AA49BD1BDA034A00BABB4F /* OCTServerMetadata.m */,
+			);
+			name = Server;
+			sourceTree = "<group>";
+		};
+		35AA49C01BDA035C00BABB4F /* Activity */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49C11BDA036F00BABB4F /* OCTClient+Activity.h */,
+				35AA49C21BDA036F00BABB4F /* OCTClient+Activity.m */,
+			);
+			name = Activity;
+			sourceTree = "<group>";
+		};
+		35AA49C41BDA038800BABB4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49C51BDA03A700BABB4F /* NSDateFormatter+OCTFormattingAdditions.h */,
+				35AA49C61BDA03A700BABB4F /* NSDateFormatter+OCTFormattingAdditions.m */,
+				35AA49C71BDA03A700BABB4F /* NSURL+OCTQueryAdditions.h */,
+				35AA49C81BDA03A700BABB4F /* NSURL+OCTQueryAdditions.m */,
+				35AA49C91BDA03A700BABB4F /* NSValueTransformer+OCTPredefinedTransformerAdditions.h */,
+				35AA49CA1BDA03A700BABB4F /* NSValueTransformer+OCTPredefinedTransformerAdditions.m */,
+				35AA49CB1BDA03A700BABB4F /* RACSignal+OCTClientAdditions.h */,
+				35AA49CC1BDA03A700BABB4F /* RACSignal+OCTClientAdditions.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		35AA49DD1BDA159F00BABB4F /* Login & Register */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49DE1BDA15EE00BABB4F /* LYXLoginViewModel.h */,
+				35AA49DF1BDA15EE00BABB4F /* LYXLoginViewModel.m */,
+			);
+			name = "Login & Register";
+			sourceTree = "<group>";
+		};
+		35AA49F01BDA266500BABB4F /* Login & Register */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49F11BDA26D400BABB4F /* LYXLoginViewController.h */,
+				35AA49F21BDA26D400BABB4F /* LYXLoginViewController.m */,
+				35AA49F31BDA26D400BABB4F /* LYXLoginViewController.xib */,
+			);
+			name = "Login & Register";
+			sourceTree = "<group>";
+		};
+		35AA49F61BDA27AB00BABB4F /* Vertigo */ = {
+			isa = PBXGroup;
+			children = (
+				35AA49FB1BDA27DB00BABB4F /* TGRImageViewController.h */,
+				35AA49FC1BDA27DB00BABB4F /* TGRImageViewController.m */,
+				35AA49FD1BDA27DB00BABB4F /* TGRImageViewController.xib */,
+				35AA49FE1BDA27DB00BABB4F /* TGRImageZoomAnimationController.h */,
+				35AA49FF1BDA27DB00BABB4F /* TGRImageZoomAnimationController.m */,
+				35AA4A001BDA27DB00BABB4F /* UIImage+AspectFit.h */,
+				35AA4A011BDA27DB00BABB4F /* UIImage+AspectFit.m */,
+				35AA49F71BDA27C500BABB4F /* LICENSE */,
+				35AA49F81BDA27C500BABB4F /* README.md */,
+			);
+			path = Vertigo;
+			sourceTree = "<group>";
+		};
+		35AA4A1C1BDA29B300BABB4F /* TWMessageBarManager */ = {
+			isa = PBXGroup;
+			children = (
+				35AA4A211BDA29FD00BABB4F /* Classes */,
+				35AA4A1D1BDA29F700BABB4F /* LICENSE */,
+				35AA4A1E1BDA29F700BABB4F /* README.md */,
+			);
+			path = TWMessageBarManager;
+			sourceTree = "<group>";
+		};
+		35AA4A211BDA29FD00BABB4F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				35AA4A251BDA2A3A00BABB4F /* Icons */,
+				35AA4A221BDA2A2E00BABB4F /* TWMessageBarManager.h */,
+				35AA4A231BDA2A2E00BABB4F /* TWMessageBarManager.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		35AA4A251BDA2A3A00BABB4F /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				35AA4A261BDA2A4D00BABB4F /* icon-error.png */,
+				35AA4A271BDA2A4D00BABB4F /* icon-error@2x.png */,
+				35AA4A281BDA2A4D00BABB4F /* icon-info.png */,
+				35AA4A291BDA2A4D00BABB4F /* icon-info@2x.png */,
+				35AA4A2A1BDA2A4D00BABB4F /* icon-success.png */,
+				35AA4A2B1BDA2A4D00BABB4F /* icon-success@2x.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		35AA4A321BDA2F1400BABB4F /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				35AA4A331BDA2F3A00BABB4F /* LYXButton.h */,
+				35AA4A341BDA2F3A00BABB4F /* LYXButton.m */,
+				35AA4A361BDA2F7C00BABB4F /* LYXFollowButton.h */,
+				35AA4A371BDA2F7C00BABB4F /* LYXFollowButton.m */,
+			);
+			name = Button;
 			sourceTree = "<group>";
 		};
 		35BED8BE1BB252C80030D89B = {
@@ -432,7 +1118,9 @@
 				35680FF31BCE556B00FED7C9 /* Vendor */,
 				35BED8CD1BB252C80030D89B /* AppDelegate.h */,
 				35BED8CE1BB252C80030D89B /* AppDelegate.m */,
-				35BED8D31BB252C80030D89B /* Main.storyboard */,
+				35AA49D31BDA0C5800BABB4F /* ViewController.h */,
+				35AA49D41BDA0C5800BABB4F /* ViewController.m */,
+				35AA49D61BDA0D6100BABB4F /* Main.storyboard */,
 				35BED8D61BB252C80030D89B /* Assets.xcassets */,
 				35BED8D81BB252C80030D89B /* LaunchScreen.storyboard */,
 				35BED8DB1BB252C80030D89B /* Info.plist */,
@@ -594,14 +1282,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35AA4A031BDA27DB00BABB4F /* TGRImageViewController.xib in Resources */,
+				35AA49F51BDA26D400BABB4F /* LYXLoginViewController.xib in Resources */,
+				35AA4A301BDA2A4D00BABB4F /* icon-success.png in Resources */,
+				35AA49D71BDA0D6100BABB4F /* Main.storyboard in Resources */,
 				35BED9461BB38D120030D89B /* Localizable.strings in Resources */,
-				35680FFF1BCE55DB00FED7C9 /* empty in Resources */,
+				35AA4A311BDA2A4D00BABB4F /* icon-success@2x.png in Resources */,
+				35AA4A441BDA35D500BABB4F /* test@2x.png in Resources */,
 				35BED8DA1BB252C80030D89B /* LaunchScreen.storyboard in Resources */,
+				35AA4A1F1BDA29F700BABB4F /* LICENSE in Resources */,
 				356810681BCF9E1200FED7C9 /* update_v1_0_0.sql in Resources */,
 				35680FFB1BCE55C700FED7C9 /* empty in Resources */,
+				35AA4A2E1BDA2A4D00BABB4F /* icon-info.png in Resources */,
+				35AA4A2F1BDA2A4D00BABB4F /* icon-info@2x.png in Resources */,
+				35AA49F91BDA27C500BABB4F /* LICENSE in Resources */,
+				35AA4A2C1BDA2A4D00BABB4F /* icon-error.png in Resources */,
 				35BED9431BB38D090030D89B /* InfoPlist.strings in Resources */,
 				35BED8D71BB252C80030D89B /* Assets.xcassets in Resources */,
-				35BED8D51BB252C80030D89B /* Main.storyboard in Resources */,
+				35AA4A2D1BDA2A4D00BABB4F /* icon-error@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -674,35 +1372,117 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35AA496E1BDA022400BABB4F /* OCTTree.m in Sources */,
 				356810341BCF57B700FED7C9 /* LYXNavigationControllerStack.m in Sources */,
+				35AA49851BDA027800BABB4F /* OCTIssueComment.m in Sources */,
+				35AA49551BDA01D800BABB4F /* OCTPushEvent.m in Sources */,
+				35AA48F61BDA004900BABB4F /* OCTClient+Search.m in Sources */,
+				35AA499A1BDA02D500BABB4F /* OCTPullRequestComment.m in Sources */,
+				35AA49A61BDA02F900BABB4F /* OCTGitCommitFile.m in Sources */,
 				356810431BCF796A00FED7C9 /* LYXTableViewController.m in Sources */,
 				356810FD1BD4E62100FED7C9 /* LYXAppStoreServiceImpl.m in Sources */,
+				35AA4A051BDA27DB00BABB4F /* UIImage+AspectFit.m in Sources */,
+				35AA49921BDA02B500BABB4F /* OCTClient+Keys.m in Sources */,
+				35AA4A3B1BDA301500BABB4F /* UIImage+LYXOcticons.m in Sources */,
+				35AA49531BDA01D800BABB4F /* OCTPullRequestCommentEvent.m in Sources */,
 				356810141BCF3B7400FED7C9 /* LYXViewModelServicesImpl.m in Sources */,
+				35AA49791BDA024500BABB4F /* OCTCommitTreeEntry.m in Sources */,
 				3568101F1BCF4D7E00FED7C9 /* LYXMainViewModel.m in Sources */,
+				35AA49B71BDA032400BABB4F /* OCTSymlinkContent.m in Sources */,
+				35AA496D1BDA022400BABB4F /* OCTRef.m in Sources */,
 				3568102E1BCF544A00FED7C9 /* LYXMeViewModel.m in Sources */,
 				356810711BCFA82600FED7C9 /* UIImage+ImageEffects.m in Sources */,
+				35AA49A71BDA02F900BABB4F /* OCTRepository.m in Sources */,
+				35AA4A201BDA29F700BABB4F /* README.md in Sources */,
+				35AA49781BDA024500BABB4F /* OCTBlobTreeEntry.m in Sources */,
+				35AA4A041BDA27DB00BABB4F /* TGRImageZoomAnimationController.m in Sources */,
+				35AA494F1BDA01D800BABB4F /* OCTIssueCommentEvent.m in Sources */,
+				35AA49CD1BDA03A700BABB4F /* NSDateFormatter+OCTFormattingAdditions.m in Sources */,
 				356810EE1BD4A04400FED7C9 /* LYXTableViewCellStyleValue1.m in Sources */,
+				35AA49091BDA00E100BABB4F /* OCTResponse.m in Sources */,
+				35AA49271BDA019300BABB4F /* OCTClient+Organizations.m in Sources */,
+				35AA49BF1BDA034A00BABB4F /* OCTServerMetadata.m in Sources */,
+				35AA492E1BDA01AC00BABB4F /* OCTClient+User.m in Sources */,
+				35AA49CE1BDA03A700BABB4F /* NSURL+OCTQueryAdditions.m in Sources */,
+				35AA49101BDA010900BABB4F /* OCTAuthorization.m in Sources */,
+				35AA49841BDA027800BABB4F /* OCTIssue.m in Sources */,
+				35AA48F71BDA004900BABB4F /* OCTRepositoriesSearchResult.m in Sources */,
+				35AA497B1BDA024500BABB4F /* OCTTreeEntry.m in Sources */,
+				35AA49BE1BDA034A00BABB4F /* OCTServer.m in Sources */,
 				356810371BCF588B00FED7C9 /* LYXRouter.m in Sources */,
+				35AA48FB1BDA007000BABB4F /* OCTClient.m in Sources */,
+				35AA49931BDA02B500BABB4F /* OCTPublicKey.m in Sources */,
+				35AA49561BDA01D800BABB4F /* OCTRefEvent.m in Sources */,
+				35AA49B51BDA032400BABB4F /* OCTFileContent.m in Sources */,
 				356810601BCF8E1200FED7C9 /* LYXMeViewController.m in Sources */,
 				356810461BCF83E300FED7C9 /* LYXSegmentedControlController.m in Sources */,
+				35AA49FA1BDA27C500BABB4F /* README.md in Sources */,
+				35AA4A381BDA2F7C00BABB4F /* LYXFollowButton.m in Sources */,
 				356810631BCF945900FED7C9 /* LYXMainViewController.m in Sources */,
+				35AA491D1BDA016200BABB4F /* OCTEntity.m in Sources */,
+				35AA49D51BDA0C5800BABB4F /* ViewController.m in Sources */,
+				35AA49831BDA027800BABB4F /* OCTClient+Issues.m in Sources */,
+				35AA49171BDA012900BABB4F /* OCTGitCommit.m in Sources */,
+				35AA49E31BDA186900BABB4F /* OCTUser+LYXPersistence.m in Sources */,
+				35AA49081BDA00E100BABB4F /* OCTObject.m in Sources */,
+				35AA494C1BDA01D800BABB4F /* OCTCommitCommentEvent.m in Sources */,
+				35AA494D1BDA01D800BABB4F /* OCTEvent.m in Sources */,
 				356810171BCF3D4600FED7C9 /* LYXViewModel.m in Sources */,
 				356810491BCF863900FED7C9 /* UINavigationItem+LYXBackBarButtonItem.m in Sources */,
 				356810251BCF507A00FED7C9 /* LYXSegmentedControlViewModel.m in Sources */,
+				35AA49B31BDA032400BABB4F /* OCTContent.m in Sources */,
+				35AA492F1BDA01AC00BABB4F /* OCTUser.m in Sources */,
+				35AA49F41BDA26D400BABB4F /* LYXLoginViewController.m in Sources */,
 				3568101A1BCF46B100FED7C9 /* LYXTabBarViewModel.m in Sources */,
+				35AA49EF1BDA21F500BABB4F /* LYXMemoryCache.m in Sources */,
+				35AA49C31BDA036F00BABB4F /* OCTClient+Activity.m in Sources */,
 				35BED8CF1BB252C80030D89B /* AppDelegate.m in Sources */,
 				356810281BCF510C00FED7C9 /* LYXWebViewModel.m in Sources */,
+				35AA49521BDA01D800BABB4F /* OCTPublicEvent.m in Sources */,
+				35AA49A51BDA02F900BABB4F /* OCTClient+Repositories.m in Sources */,
 				356810501BCF88F800FED7C9 /* LYXWebViewController.m in Sources */,
+				35AA49511BDA01D800BABB4F /* OCTMemberEvent.m in Sources */,
+				35AA49E01BDA15EE00BABB4F /* LYXLoginViewModel.m in Sources */,
+				35AA490F1BDA010900BABB4F /* OCTAccessToken.m in Sources */,
 				3568102B1BCF527000FED7C9 /* LYXHomeViewModel.m in Sources */,
+				35AA498B1BDA029600BABB4F /* OCTClient+Notifications.m in Sources */,
+				35AA49B41BDA032400BABB4F /* OCTDirectoryContent.m in Sources */,
+				35AA491E1BDA016200BABB4F /* OCTPlan.m in Sources */,
+				35AA49571BDA01D800BABB4F /* OCTWatchEvent.m in Sources */,
+				35AA496B1BDA022400BABB4F /* OCTClient+Git.m in Sources */,
+				35AA494E1BDA01D800BABB4F /* OCTForkEvent.m in Sources */,
+				35AA4A021BDA27DB00BABB4F /* TGRImageViewController.m in Sources */,
+				35AA49281BDA019300BABB4F /* OCTOrganization.m in Sources */,
+				35AA48FF1BDA009400BABB4F /* OCTClient+Watching.m in Sources */,
+				35AA49B61BDA032400BABB4F /* OCTSubmoduleContent.m in Sources */,
+				35AA49A41BDA02F900BABB4F /* OCTBranch.m in Sources */,
+				35AA49991BDA02D500BABB4F /* OCTPullRequest.m in Sources */,
 				356810721BCFA82600FED7C9 /* UIImage+RTTint.m in Sources */,
 				3568105D1BCF8D8400FED7C9 /* LYXHomeViewController.m in Sources */,
+				35AA49CF1BDA03A700BABB4F /* NSValueTransformer+OCTPredefinedTransformerAdditions.m in Sources */,
+				35AA494B1BDA01D800BABB4F /* OCTClient+Events.m in Sources */,
+				35AA4A351BDA2F3A00BABB4F /* LYXButton.m in Sources */,
 				356810F71BD4DEB500FED7C9 /* LYXRepositoryServiceImpl.m in Sources */,
+				35AA49E91BDA1DEE00BABB4F /* LYXUtil.m in Sources */,
+				35AA49541BDA01D800BABB4F /* OCTPullRequestEvent.m in Sources */,
+				35AA49EC1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.m in Sources */,
 				35BED8CC1BB252C80030D89B /* main.m in Sources */,
+				35AA497A1BDA024500BABB4F /* OCTContentTreeEntry.m in Sources */,
 				3568103D1BCF754D00FED7C9 /* LYXTabBarController.m in Sources */,
+				35AA496C1BDA022400BABB4F /* OCTCommit.m in Sources */,
 				3568103A1BCF5A0700FED7C9 /* LYXNavigationController.m in Sources */,
+				35AA4A241BDA2A2E00BABB4F /* TWMessageBarManager.m in Sources */,
+				35AA49601BDA020400BABB4F /* OCTGist.m in Sources */,
 				356810221BCF4F2F00FED7C9 /* LYXTableViewModel.m in Sources */,
 				356810401BCF76FA00FED7C9 /* LYXViewController.m in Sources */,
+				35AA49D01BDA03A700BABB4F /* RACSignal+OCTClientAdditions.m in Sources */,
+				35AA49291BDA019300BABB4F /* OCTTeam.m in Sources */,
+				35AA498C1BDA029600BABB4F /* OCTNotification.m in Sources */,
 				3568106B1BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.m in Sources */,
+				35AA49161BDA012900BABB4F /* OCTCommitComment.m in Sources */,
+				35AA495F1BDA020400BABB4F /* OCTClient+Gists.m in Sources */,
+				35AA49501BDA01D800BABB4F /* OCTIssueEvent.m in Sources */,
+				35AA49611BDA020400BABB4F /* OCTGistFile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -738,16 +1518,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		35BED8D31BB252C80030D89B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				35BED8D41BB252C80030D89B /* Base */,
-				35BED9491BB38D310030D89B /* zh-Hans */,
-				35BED94E1BB38D620030D89B /* en */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		35BED8D81BB252C80030D89B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

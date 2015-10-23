@@ -16,8 +16,8 @@
 @required
 
 // A reference to OCTClient instance.
-//@property (nonatomic, strong) OCTClient *client;
-//
+@property (nonatomic, strong) OCTClient *client;
+
 @property (nonatomic, strong, readonly) id<LYXRepositoryService> repositoryService;
 @property (nonatomic, strong, readonly) id<LYXAppStoreService> appStoreService;
 

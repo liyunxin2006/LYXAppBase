@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import "LYXViewModelServicesImpl.h"
-//#import "MRCLoginViewModel.h"
-//#import "MRCLoginViewController.h"
+#import "LYXLoginViewModel.h"
+#import "LYXLoginViewController.h"
 #import "LYXMainViewModel.h"
 #import "LYXMainViewController.h"
 #import "LYXNavigationControllerStack.h"
@@ -34,7 +34,7 @@
     [self initializeFMDB];
     
     AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
-    [[AFNetworkReachabilityManager sharedManager] startMonitoring];
+    //[[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
     self.services = [[LYXViewModelServicesImpl alloc] init];
     self.navigationControllerStack = [[LYXNavigationControllerStack alloc] initWithServices:self.services];
@@ -70,23 +70,19 @@
 
 - (UIViewController *)createInitialViewController {
     // The user has logged-in.
-//    if ([SSKeychain rawLogin].isExist && [SSKeychain accessToken].isExist) {
-//        // Some OctoKit APIs will use the `login` property of `OCTUser`.
-//        OCTUser *user = [OCTUser mrc_userWithRawLogin:[SSKeychain rawLogin] server:OCTServer.dotComServer];
-//        
-//        OCTClient *authenticatedClient = [OCTClient authenticatedClientWithUser:user token:[SSKeychain accessToken]];
-//        self.services.client = authenticatedClient;
-//        self.viewModel = [[MRCHomepageViewModel alloc] initWithServices:self.services params:nil];
-//        
-//        return [[MRCHomepageViewController alloc] initWithViewModel:self.viewModel];
-//    } else {
-//        self.viewModel = [[MRCLoginViewModel alloc] initWithServices:self.services params:nil];
-//        return [[MRCLoginViewController alloc] initWithViewModel:self.viewModel];
-//    }
-    
-    self.viewModel = [[LYXMainViewModel alloc] initWithServices:self.services params:nil];
-    
-    return [[LYXMainViewController alloc] initWithViewModel:self.viewModel];
+    if ([SSKeychain rawLogin].isExist && [SSKeychain accessToken].isExist) {
+        // Some OctoKit APIs will use the `login` property of `OCTUser`.
+        OCTUser *user = [OCTUser lyx_userWithRawLogin:[SSKeychain rawLogin] server:OCTServer.dotComServer];
+        
+        OCTClient *authenticatedClient = [OCTClient authenticatedClientWithUser:user token:[SSKeychain accessToken]];
+        self.services.client = authenticatedClient;
+        self.viewModel = [[LYXMainViewModel alloc] initWithServices:self.services params:nil];
+        
+        return [[LYXMainViewController alloc] initWithViewModel:self.viewModel];
+    } else {
+        self.viewModel = [[LYXLoginViewModel alloc] initWithServices:self.services params:nil];
+        return [[LYXLoginViewController alloc] initWithViewModel:self.viewModel];
+    }
 }
 
 - (void)configureAppearance {
@@ -140,7 +136,7 @@
         NSString *version = [[NSUserDefaults standardUserDefaults] valueForKey:LYXApplicationVersionKey];
         if (![version isEqualToString:LYX_APP_VERSION]) {
             if (version == nil) {
-//                [SSKeychain deleteAccessToken];
+                [SSKeychain deleteAccessToken];
                 
                 NSString *path = [[NSBundle mainBundle] pathForResource:@"update_v1_0_0" ofType:@"sql"];
                 NSString *sql  = [[NSString alloc] initWithContentsOfFile:path encoding:NSUTF8StringEncoding error:nil];
