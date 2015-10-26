@@ -376,8 +376,8 @@
 		35AA49E81BDA1DEE00BABB4F /* LYXUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXUtil.m; sourceTree = "<group>"; };
 		35AA49EA1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SSKeychain+LYXUtil.h"; sourceTree = "<group>"; };
 		35AA49EB1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SSKeychain+LYXUtil.m"; sourceTree = "<group>"; };
-		35AA49ED1BDA21F500BABB4F /* LYXMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXMemoryCache.h; sourceTree = "<group>"; };
-		35AA49EE1BDA21F500BABB4F /* LYXMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXMemoryCache.m; sourceTree = "<group>"; };
+		35AA49ED1BDA21F500BABB4F /* LYXMemoryCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LYXMemoryCache.h; path = ../Model/LYXMemoryCache.h; sourceTree = "<group>"; };
+		35AA49EE1BDA21F500BABB4F /* LYXMemoryCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LYXMemoryCache.m; path = ../Model/LYXMemoryCache.m; sourceTree = "<group>"; };
 		35AA49F11BDA26D400BABB4F /* LYXLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXLoginViewController.h; sourceTree = "<group>"; };
 		35AA49F21BDA26D400BABB4F /* LYXLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXLoginViewController.m; sourceTree = "<group>"; };
 		35AA49F31BDA26D400BABB4F /* LYXLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYXLoginViewController.xib; sourceTree = "<group>"; };
@@ -484,8 +484,6 @@
 				35AA49E41BDA19A900BABB4F /* LYXPersistenceProtocol.h */,
 				35AA49E11BDA186900BABB4F /* OCTUser+LYXPersistence.h */,
 				35AA49E21BDA186900BABB4F /* OCTUser+LYXPersistence.m */,
-				35AA49ED1BDA21F500BABB4F /* LYXMemoryCache.h */,
-				35AA49EE1BDA21F500BABB4F /* LYXMemoryCache.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -508,8 +506,8 @@
 				356810361BCF588B00FED7C9 /* LYXRouter.m */,
 				35AA49E71BDA1DEE00BABB4F /* LYXUtil.h */,
 				35AA49E81BDA1DEE00BABB4F /* LYXUtil.m */,
-				35AA49EA1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.h */,
-				35AA49EB1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.m */,
+				35AA49ED1BDA21F500BABB4F /* LYXMemoryCache.h */,
+				35AA49EE1BDA21F500BABB4F /* LYXMemoryCache.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -653,6 +651,8 @@
 		3568106C1BCFA7EC00FED7C9 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				35AA49EA1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.h */,
+				35AA49EB1BDA1F5D00BABB4F /* SSKeychain+LYXUtil.m */,
 				3568106D1BCFA82600FED7C9 /* UIImage+ImageEffects.h */,
 				3568106E1BCFA82600FED7C9 /* UIImage+ImageEffects.m */,
 				3568106F1BCFA82600FED7C9 /* UIImage+RTTint.h */,
