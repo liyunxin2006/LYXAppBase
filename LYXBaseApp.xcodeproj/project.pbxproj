@@ -472,7 +472,7 @@
 		35680FF01BCE556B00FED7C9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				356810641BCF9D9800FED7C9 /* Database */,
+				35D90E481BDE1C8B005D0B7E /* SQL */,
 				356810691BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.h */,
 				3568106A1BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.m */,
 				356810F21BD4DE7100FED7C9 /* LYXRepositoryService.h */,
@@ -636,16 +636,6 @@
 				35D90E461BDE064C005D0B7E /* default-avatar.png */,
 			);
 			name = v1.0.0;
-			sourceTree = "<group>";
-		};
-		356810641BCF9D9800FED7C9 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				35D90E361BDDCF6D005D0B7E /* update_v1_0_1.sql */,
-				35D90E371BDDCF6D005D0B7E /* update_v1_1_0.sql */,
-				35D90E381BDDCF6D005D0B7E /* update_v1_2_0.sql */,
-			);
-			name = Database;
 			sourceTree = "<group>";
 		};
 		3568106C1BCFA7EC00FED7C9 /* Category */ = {
@@ -1162,6 +1152,16 @@
 				35BED8F11BB252C90030D89B /* Info.plist */,
 			);
 			path = LYXBaseAppUITests;
+			sourceTree = "<group>";
+		};
+		35D90E481BDE1C8B005D0B7E /* SQL */ = {
+			isa = PBXGroup;
+			children = (
+				35D90E361BDDCF6D005D0B7E /* update_v1_0_1.sql */,
+				35D90E371BDDCF6D005D0B7E /* update_v1_1_0.sql */,
+				35D90E381BDDCF6D005D0B7E /* update_v1_2_0.sql */,
+			);
+			name = SQL;
 			sourceTree = "<group>";
 		};
 		80D7E3CD28280882A79A0FF3 /* Pods */ = {
