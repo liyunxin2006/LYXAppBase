@@ -29,7 +29,6 @@
 		3568105D1BCF8D8400FED7C9 /* LYXHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568105C1BCF8D8400FED7C9 /* LYXHomeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		356810601BCF8E1200FED7C9 /* LYXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568105F1BCF8E1200FED7C9 /* LYXMeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		356810631BCF945900FED7C9 /* LYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810621BCF945900FED7C9 /* LYXMainViewController.m */; settings = {ASSET_TAGS = (); }; };
-		356810681BCF9E1200FED7C9 /* update_v1_0_0.sql in Resources */ = {isa = PBXBuildFile; fileRef = 356810671BCF9E1200FED7C9 /* update_v1_0_0.sql */; settings = {ASSET_TAGS = (); }; };
 		3568106B1BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568106A1BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.m */; settings = {ASSET_TAGS = (); }; };
 		356810711BCFA82600FED7C9 /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568106E1BCFA82600FED7C9 /* UIImage+ImageEffects.m */; settings = {ASSET_TAGS = (); }; };
 		356810721BCFA82600FED7C9 /* UIImage+RTTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810701BCFA82600FED7C9 /* UIImage+RTTint.m */; settings = {ASSET_TAGS = (); }; };
@@ -138,6 +137,9 @@
 		35BED8F01BB252C90030D89B /* LYXBaseAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8EF1BB252C90030D89B /* LYXBaseAppUITests.m */; };
 		35BED9431BB38D090030D89B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35BED9451BB38D090030D89B /* InfoPlist.strings */; };
 		35BED9461BB38D120030D89B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 35BED9481BB38D120030D89B /* Localizable.strings */; };
+		35D90E391BDDCF6D005D0B7E /* update_v1_0_1.sql in Resources */ = {isa = PBXBuildFile; fileRef = 35D90E361BDDCF6D005D0B7E /* update_v1_0_1.sql */; settings = {ASSET_TAGS = (); }; };
+		35D90E3A1BDDCF6D005D0B7E /* update_v1_1_0.sql in Resources */ = {isa = PBXBuildFile; fileRef = 35D90E371BDDCF6D005D0B7E /* update_v1_1_0.sql */; settings = {ASSET_TAGS = (); }; };
+		35D90E3B1BDDCF6D005D0B7E /* update_v1_2_0.sql in Resources */ = {isa = PBXBuildFile; fileRef = 35D90E381BDDCF6D005D0B7E /* update_v1_2_0.sql */; settings = {ASSET_TAGS = (); }; };
 		D250878AE353638C20334E5B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A5A9315246188397DFECFF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -210,7 +212,6 @@
 		3568105F1BCF8E1200FED7C9 /* LYXMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXMeViewController.m; sourceTree = "<group>"; };
 		356810611BCF945900FED7C9 /* LYXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXMainViewController.h; sourceTree = "<group>"; };
 		356810621BCF945900FED7C9 /* LYXMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXMainViewController.m; sourceTree = "<group>"; };
-		356810671BCF9E1200FED7C9 /* update_v1_0_0.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = update_v1_0_0.sql; sourceTree = "<group>"; };
 		356810691BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabaseQueue+LYXHelper.h"; sourceTree = "<group>"; };
 		3568106A1BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabaseQueue+LYXHelper.m"; sourceTree = "<group>"; };
 		3568106D1BCFA82600FED7C9 /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
@@ -427,6 +428,9 @@
 		35BED9501BB38D690030D89B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		35BED9511BB38D710030D89B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		35BED9521BB38D740030D89B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		35D90E361BDDCF6D005D0B7E /* update_v1_0_1.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = update_v1_0_1.sql; sourceTree = "<group>"; };
+		35D90E371BDDCF6D005D0B7E /* update_v1_1_0.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = update_v1_1_0.sql; sourceTree = "<group>"; };
+		35D90E381BDDCF6D005D0B7E /* update_v1_2_0.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = update_v1_2_0.sql; sourceTree = "<group>"; };
 		51A5A9315246188397DFECFF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		650AEF6BED8CEBA9047305AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -639,7 +643,9 @@
 		356810641BCF9D9800FED7C9 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				356810671BCF9E1200FED7C9 /* update_v1_0_0.sql */,
+				35D90E361BDDCF6D005D0B7E /* update_v1_0_1.sql */,
+				35D90E371BDDCF6D005D0B7E /* update_v1_1_0.sql */,
+				35D90E381BDDCF6D005D0B7E /* update_v1_2_0.sql */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -1287,17 +1293,19 @@
 				35AA4A301BDA2A4D00BABB4F /* icon-success.png in Resources */,
 				35AA49D71BDA0D6100BABB4F /* Main.storyboard in Resources */,
 				35BED9461BB38D120030D89B /* Localizable.strings in Resources */,
+				35D90E3A1BDDCF6D005D0B7E /* update_v1_1_0.sql in Resources */,
 				35AA4A311BDA2A4D00BABB4F /* icon-success@2x.png in Resources */,
 				35AA4A441BDA35D500BABB4F /* test@2x.png in Resources */,
 				35BED8DA1BB252C80030D89B /* LaunchScreen.storyboard in Resources */,
 				35AA4A1F1BDA29F700BABB4F /* LICENSE in Resources */,
-				356810681BCF9E1200FED7C9 /* update_v1_0_0.sql in Resources */,
 				35680FFB1BCE55C700FED7C9 /* empty in Resources */,
 				35AA4A2E1BDA2A4D00BABB4F /* icon-info.png in Resources */,
+				35D90E3B1BDDCF6D005D0B7E /* update_v1_2_0.sql in Resources */,
 				35AA4A2F1BDA2A4D00BABB4F /* icon-info@2x.png in Resources */,
 				35AA49F91BDA27C500BABB4F /* LICENSE in Resources */,
 				35AA4A2C1BDA2A4D00BABB4F /* icon-error.png in Resources */,
 				35BED9431BB38D090030D89B /* InfoPlist.strings in Resources */,
+				35D90E391BDDCF6D005D0B7E /* update_v1_0_1.sql in Resources */,
 				35BED8D71BB252C80030D89B /* Assets.xcassets in Resources */,
 				35AA4A2D1BDA2A4D00BABB4F /* icon-error@2x.png in Resources */,
 			);
