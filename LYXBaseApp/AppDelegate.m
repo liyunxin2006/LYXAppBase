@@ -150,10 +150,10 @@
 }
 
 - (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
-//    if ([url.scheme isEqual:MRC_URL_SCHEME]) {
-//        [OCTClient completeSignInWithCallbackURL:url];
-//        return YES;
-//    }
+    if ([url.scheme isEqual:LYX_URL_SCHEME]) {
+        [OCTClient completeSignInWithCallbackURL:url];
+        return YES;
+    }
 //    return [UMSocialSnsService handleOpenURL:url];
     return YES;
 }
