@@ -38,8 +38,8 @@
     self.homeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Home", nil) image:newsImage tag:1];
     
     self.meViewController = [[LYXMeViewController alloc] initWithViewModel:self.viewModel.meViewModel];
-//    UIImage *reposImage = [UIImage octicon_imageWithIdentifier:@"Repo" size:CGSizeMake(25, 25)];
-    self.meViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Me", nil) image:nil tag:2];
+    UIImage *profileImage = [UIImage octicon_imageWithIdentifier:@"Person" size:CGSizeMake(25, 25)];
+    self.meViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Me", nil) image:profileImage tag:2];
     
     self.viewControllers = @[self.homeViewController, self.meViewController];
     
