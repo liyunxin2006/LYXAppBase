@@ -128,7 +128,6 @@
 		35AA4A351BDA2F3A00BABB4F /* LYXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA4A341BDA2F3A00BABB4F /* LYXButton.m */; settings = {ASSET_TAGS = (); }; };
 		35AA4A381BDA2F7C00BABB4F /* LYXFollowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA4A371BDA2F7C00BABB4F /* LYXFollowButton.m */; settings = {ASSET_TAGS = (); }; };
 		35AA4A3B1BDA301500BABB4F /* UIImage+LYXOcticons.m in Sources */ = {isa = PBXBuildFile; fileRef = 35AA4A3A1BDA301500BABB4F /* UIImage+LYXOcticons.m */; settings = {ASSET_TAGS = (); }; };
-		35AA4A441BDA35D500BABB4F /* test@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 35AA4A431BDA35D500BABB4F /* test@2x.png */; settings = {ASSET_TAGS = (); }; };
 		35BED8CC1BB252C80030D89B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CB1BB252C80030D89B /* main.m */; };
 		35BED8CF1BB252C80030D89B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 35BED8CE1BB252C80030D89B /* AppDelegate.m */; };
 		35BED8D71BB252C80030D89B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35BED8D61BB252C80030D89B /* Assets.xcassets */; };
@@ -140,6 +139,7 @@
 		35D90E391BDDCF6D005D0B7E /* update_v1_0_1.sql in Resources */ = {isa = PBXBuildFile; fileRef = 35D90E361BDDCF6D005D0B7E /* update_v1_0_1.sql */; settings = {ASSET_TAGS = (); }; };
 		35D90E3A1BDDCF6D005D0B7E /* update_v1_1_0.sql in Resources */ = {isa = PBXBuildFile; fileRef = 35D90E371BDDCF6D005D0B7E /* update_v1_1_0.sql */; settings = {ASSET_TAGS = (); }; };
 		35D90E3B1BDDCF6D005D0B7E /* update_v1_2_0.sql in Resources */ = {isa = PBXBuildFile; fileRef = 35D90E381BDDCF6D005D0B7E /* update_v1_2_0.sql */; settings = {ASSET_TAGS = (); }; };
+		35D90E471BDE064C005D0B7E /* default-avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 35D90E461BDE064C005D0B7E /* default-avatar.png */; settings = {ASSET_TAGS = (); }; };
 		D250878AE353638C20334E5B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A5A9315246188397DFECFF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -406,7 +406,6 @@
 		35AA4A371BDA2F7C00BABB4F /* LYXFollowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXFollowButton.m; sourceTree = "<group>"; };
 		35AA4A391BDA301500BABB4F /* UIImage+LYXOcticons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+LYXOcticons.h"; sourceTree = "<group>"; };
 		35AA4A3A1BDA301500BABB4F /* UIImage+LYXOcticons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LYXOcticons.m"; sourceTree = "<group>"; };
-		35AA4A431BDA35D500BABB4F /* test@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "test@2x.png"; sourceTree = SOURCE_ROOT; };
 		35BED8C71BB252C80030D89B /* LYXBaseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LYXBaseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35BED8CB1BB252C80030D89B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		35BED8CD1BB252C80030D89B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -431,6 +430,7 @@
 		35D90E361BDDCF6D005D0B7E /* update_v1_0_1.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = update_v1_0_1.sql; sourceTree = "<group>"; };
 		35D90E371BDDCF6D005D0B7E /* update_v1_1_0.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = update_v1_1_0.sql; sourceTree = "<group>"; };
 		35D90E381BDDCF6D005D0B7E /* update_v1_2_0.sql */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = update_v1_2_0.sql; sourceTree = "<group>"; };
+		35D90E461BDE064C005D0B7E /* default-avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "default-avatar.png"; sourceTree = SOURCE_ROOT; };
 		51A5A9315246188397DFECFF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		650AEF6BED8CEBA9047305AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -635,7 +635,7 @@
 		3568105A1BCF8D0E00FED7C9 /* v1.0.0 */ = {
 			isa = PBXGroup;
 			children = (
-				35AA4A431BDA35D500BABB4F /* test@2x.png */,
+				35D90E461BDE064C005D0B7E /* default-avatar.png */,
 			);
 			name = v1.0.0;
 			sourceTree = "<group>";
@@ -1288,6 +1288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35D90E471BDE064C005D0B7E /* default-avatar.png in Resources */,
 				35AA4A031BDA27DB00BABB4F /* TGRImageViewController.xib in Resources */,
 				35AA49F51BDA26D400BABB4F /* LYXLoginViewController.xib in Resources */,
 				35AA4A301BDA2A4D00BABB4F /* icon-success.png in Resources */,
@@ -1295,7 +1296,6 @@
 				35BED9461BB38D120030D89B /* Localizable.strings in Resources */,
 				35D90E3A1BDDCF6D005D0B7E /* update_v1_1_0.sql in Resources */,
 				35AA4A311BDA2A4D00BABB4F /* icon-success@2x.png in Resources */,
-				35AA4A441BDA35D500BABB4F /* test@2x.png in Resources */,
 				35BED8DA1BB252C80030D89B /* LaunchScreen.storyboard in Resources */,
 				35AA4A1F1BDA29F700BABB4F /* LICENSE in Resources */,
 				35680FFB1BCE55C700FED7C9 /* empty in Resources */,
