@@ -150,7 +150,7 @@ typedef id   (^IDBlock_id)  (id);
 
 #define LYXApplicationVersionKey @"LYXApplicationVersionKey"
 
-#define MRC_APP_ID        @"961330940"
+#define LYX_APP_ID        @"961330940"
 #define MRC_APP_STORE_URL @"https://itunes.apple.com/cn/app/id"MRC_APP_ID"?mt=8"
 
 #define LYX_APP_NAME    ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])

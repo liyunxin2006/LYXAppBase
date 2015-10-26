@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Reachability.h"
-
-@class LYXNavigationControllerStack;
+#import "LYXNavigationControllerStack.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
@@ -19,6 +18,6 @@
 @property (nonatomic, strong, readonly) LYXNavigationControllerStack *navigationControllerStack;
 @property (nonatomic, assign, readonly) NetworkStatus networkStatus;
 
-//@property (nonatomic, copy, readonly) NSString *adURL;
+@property (nonatomic, copy, readonly) NSString *adURL;
 
 @end

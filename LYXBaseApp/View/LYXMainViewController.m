@@ -12,15 +12,11 @@
 #import "LYXMeViewController.h"
 #import "LYXHomeViewModel.h"
 #import "LYXMeViewModel.h"
-#import "LYXNavigationControllerStack.h"
 #import "LYXNavigationController.h"
 
-@interface LYXMainViewController () <UITabBarControllerDelegate>
+@interface LYXMainViewController ()
 
-@property (nonatomic, strong, readonly) LYXMainViewModel *viewModel;
-
-@property (nonatomic, strong) LYXHomeViewController *homeViewController;
-@property (nonatomic, strong) LYXMeViewController *meViewController;
+@property (nonatomic, strong) LYXMainViewModel *viewModel;
 
 @end
 
@@ -31,39 +27,36 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    UINavigationController *homeNavigationController = ({
+        LYXHomeViewController *homeViewController = [[LYXHomeViewController alloc] initWithViewModel:self.viewModel.homeViewModel];
+        
+        UIImage *newsImage = [UIImage octicon_imageWithIdentifier:@"Rss" size:CGSizeMake(25, 25)];
+        homeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"News" image:newsImage tag:1];
+        
+        [[LYXNavigationController alloc] initWithRootViewController:homeViewController];
+    });
     
-    self.homeViewController = [[LYXHomeViewController alloc] initWithViewModel:self.viewModel.homeViewModel];
-    UIImage *newsImage = [UIImage octicon_imageWithIdentifier:@"Rss" size:CGSizeMake(25, 25)];
-    self.homeViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Home", nil) image:newsImage tag:1];
+    UINavigationController *meNavigationController = ({
+        LYXMeViewController *meViewController = [[LYXMeViewController alloc] initWithViewModel:self.viewModel.meViewModel];
+        
+        UIImage *profileImage = [UIImage octicon_imageWithIdentifier:@"Person" size:CGSizeMake(25, 25)];
+        meViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Profile" image:profileImage tag:2];
+        
+        [[LYXNavigationController alloc] initWithRootViewController:meViewController];
+    });
     
-    self.meViewController = [[LYXMeViewController alloc] initWithViewModel:self.viewModel.meViewModel];
-    UIImage *profileImage = [UIImage octicon_imageWithIdentifier:@"Person" size:CGSizeMake(25, 25)];
-    self.meViewController.tabBarItem = [[UITabBarItem alloc] initWithTitle:NSLocalizedString(@"Me", nil) image:profileImage tag:2];
+    self.tabBarController.viewControllers = @[ homeNavigationController, meNavigationController ];
     
-    self.viewControllers = @[self.homeViewController, self.meViewController];
+    [LYXSharedAppDelegate.navigationControllerStack pushNavigationController:homeNavigationController];
     
-    [[[self
-       rac_signalForSelector:@selector(tabBarController:didSelectViewController:)
-       fromProtocol:@protocol(UITabBarControllerDelegate)]
-      startWith:RACTuplePack(self, self.homeViewController)]
+    [[self
+      rac_signalForSelector:@selector(tabBarController:didSelectViewController:)
+      fromProtocol:@protocol(UITabBarControllerDelegate)]
      subscribeNext:^(RACTuple *tuple) {
-         RACTupleUnpack(UITabBarController *tabBarController, UIViewController *viewController) = tuple;
-         
-         tabBarController.navigationItem.title = [((LYXViewController *)viewController).viewModel title];
-         
-         if (viewController.tabBarItem.tag == 1) {
-             tabBarController.navigationItem.titleView = nil;
-         } else if (viewController.tabBarItem.tag == 2) {
-             tabBarController.navigationItem.titleView = nil;
-//             tabBarController.navigationItem.titleView = ((MRCReposViewController *)viewController).segmentedControl;
-         } /*else if (viewController.tabBarItem.tag == 3) {
-             tabBarController.navigationItem.titleView = ((MRCSearchViewController *)viewController).searchController.searchBar;
-         } else if (viewController.tabBarItem.tag == 4) {
-             tabBarController.navigationItem.titleView = nil;
-         }*/
+         [LYXSharedAppDelegate.navigationControllerStack popNavigationController];
+         [LYXSharedAppDelegate.navigationControllerStack pushNavigationController:tuple.second];
      }];
-    self.delegate = self;
+    self.tabBarController.delegate = self;
 }
 
 @end

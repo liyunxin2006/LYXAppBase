@@ -7,7 +7,10 @@
 //
 
 #import "LYXViewProtocol.h"
+#import "LYXViewController.h"
 
-@interface LYXTabBarController : UITabBarController <LYXViewProtocol>
+@interface LYXTabBarController : LYXViewController <UITabBarControllerDelegate>
+
+@property (nonatomic, strong, readonly) UITabBarController *tabBarController;
 
 @end

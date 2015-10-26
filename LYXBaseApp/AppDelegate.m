@@ -14,6 +14,7 @@
 #import "LYXMainViewController.h"
 #import "LYXNavigationControllerStack.h"
 #import "LYXNavigationController.h"
+#import "Appirater.h"
 
 @interface AppDelegate ()
 
@@ -23,7 +24,7 @@
 
 @property (nonatomic, strong, readwrite) LYXNavigationControllerStack *navigationControllerStack;
 @property (nonatomic, assign, readwrite) NetworkStatus networkStatus;
-//@property (nonatomic, copy, readwrite) NSString *adURL;
+@property (nonatomic, copy, readwrite) NSString *adURL;
 
 @end
 
@@ -34,22 +35,19 @@
     [self initializeFMDB];
     
     AFNetworkActivityIndicatorManager.sharedManager.enabled = YES;
-    //[[AFNetworkReachabilityManager sharedManager] startMonitoring];
     
     self.services = [[LYXViewModelServicesImpl alloc] init];
     self.navigationControllerStack = [[LYXNavigationControllerStack alloc] initWithServices:self.services];
     
-    UINavigationController *navigationController = [[LYXNavigationController alloc] initWithRootViewController:self.createInitialViewController];
-    [self.navigationControllerStack pushNavigationController:navigationController];
-    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = navigationController;
+    [self.services resetRootViewModel:[self createInitialViewModel]];
     [self.window makeKeyAndVisible];
     
     [self configureAppearance];
     [self configureKeyboardManager];
     [self configureReachability];
     [self configureUMengSocial];
+    [self configureAppirater];
     
     // Save the application version info.
     [[NSUserDefaults standardUserDefaults] setValue:LYX_APP_VERSION forKey:LYXApplicationVersionKey];
@@ -62,13 +60,15 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {}
 
-- (void)applicationWillEnterForeground:(UIApplication *)application {}
+- (void)applicationWillEnterForeground:(UIApplication *)application {
+    [Appirater appEnteredForeground:YES];
+}
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {}
 
 - (void)applicationWillTerminate:(UIApplication *)application {}
 
-- (UIViewController *)createInitialViewController {
+- (id<LYXViewModelProtocol>)createInitialViewModel {
     // The user has logged-in.
     if ([SSKeychain rawLogin].isExist && [SSKeychain accessToken].isExist) {
         // Some OctoKit APIs will use the `login` property of `OCTUser`.
@@ -76,12 +76,10 @@
         
         OCTClient *authenticatedClient = [OCTClient authenticatedClientWithUser:user token:[SSKeychain accessToken]];
         self.services.client = authenticatedClient;
-        self.viewModel = [[LYXMainViewModel alloc] initWithServices:self.services params:nil];
         
-        return [[LYXMainViewController alloc] initWithViewModel:self.viewModel];
+        return [[LYXMainViewModel alloc] initWithServices:self.services params:nil];
     } else {
-        self.viewModel = [[LYXLoginViewModel alloc] initWithServices:self.services params:nil];
-        return [[LYXLoginViewController alloc] initWithViewModel:self.viewModel];
+        return [[LYXLoginViewModel alloc] initWithServices:self.services params:nil];
     }
 }
 
@@ -124,11 +122,21 @@
 - (void)configureUMengSocial {
 //    [UMSocialData setAppKey:MRC_UM_APP_KEY];
 //    
-//    [UMSocialConfig hiddenNotInstallPlatforms:@[ UMShareToWechatSession, UMShareToWechatTimeline, UMShareToQQ/*, UMShareToQzone */]];
-//    
 //    [UMSocialWechatHandler setWXAppId:MRC_WX_APP_ID appSecret:MRC_WX_APP_SECRET url:MRC_UM_SHARE_URL];
 //    [UMSocialSinaHandler openSSOWithRedirectURL:MRC_WEIBO_REDIRECT_URL];
 //    [UMSocialQQHandler setQQWithAppId:MRC_QQ_APP_ID appKey:MRC_QQ_APP_KEY url:MRC_UM_SHARE_URL];
+//    
+//    [UMSocialConfig hiddenNotInstallPlatforms:@[ UMShareToQQ, UMShareToQzone, UMShareToWechatSession, UMShareToWechatTimeline ]];
+}
+
+- (void)configureAppirater {
+    [Appirater setAppId:LYX_APP_ID];
+    [Appirater setDaysUntilPrompt:7];
+    [Appirater setUsesUntilPrompt:5];
+    [Appirater setSignificantEventsUntilPrompt:-1];
+    [Appirater setTimeBeforeReminding:2];
+    [Appirater setDebug:NO];
+    [Appirater appLaunched:YES];
 }
 
 - (void)initializeFMDB {

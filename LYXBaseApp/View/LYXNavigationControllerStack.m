@@ -9,6 +9,7 @@
 #import "LYXNavigationControllerStack.h"
 #import "LYXRouter.h"
 #import "LYXNavigationController.h"
+#import "LYXTabBarController.h"
 
 @interface LYXNavigationControllerStack ()
 
@@ -64,6 +65,7 @@
      subscribeNext:^(RACTuple *tuple) {
          @strongify(self)
          UIViewController *viewController = (UIViewController *)[LYXRouter.sharedInstance viewControllerForViewModel:tuple.first];
+         viewController.hidesBottomBarWhenPushed = YES;
          [self.navigationControllers.lastObject pushViewController:viewController animated:[tuple.second boolValue]];
      }];
     
@@ -108,14 +110,14 @@
       rac_signalForSelector:@selector(resetRootViewModel:)]
      subscribeNext:^(RACTuple *tuple) {
          @strongify(self)
+         [self.navigationControllers removeAllObjects];
+         
          UIViewController *viewController = (UIViewController *)[LYXRouter.sharedInstance viewControllerForViewModel:tuple.first];
          
-         if (![viewController isKindOfClass:UINavigationController.class]) {
+         if (![viewController isKindOfClass:[UINavigationController class]] && ![viewController isKindOfClass:[LYXTabBarController class]]) {
              viewController = [[LYXNavigationController alloc] initWithRootViewController:viewController];
+             [self pushNavigationController:(UINavigationController *)viewController];
          }
-         
-         [self.navigationControllers removeAllObjects];
-         [self pushNavigationController:(UINavigationController *)viewController];
          
          LYXSharedAppDelegate.window.rootViewController = viewController;
      }];
