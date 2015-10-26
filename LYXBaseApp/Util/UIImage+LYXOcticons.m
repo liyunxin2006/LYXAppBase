@@ -7,8 +7,7 @@
 //
 
 #import "UIImage+LYXOcticons.h"
-//#import "UIImage+Octicons.h"
-#import "UIImage+Octions.h"
+#import "UIImage+Octicons.h"
 
 @implementation UIImage (LYXOcticons)
 
