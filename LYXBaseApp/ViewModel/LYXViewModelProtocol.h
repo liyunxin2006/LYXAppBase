@@ -56,7 +56,7 @@ typedef NS_ENUM(NSUInteger, LYXTitleViewType) {
 // An additional method, in which you can initialize data, RACCommand etc.
 //
 // This method will be execute after the execution of `-initWithServices:params:` method. But
-// the premise is that you need to inherit `MRCViewModel`.
+// the premise is that you need to inherit `LYXViewModel`.
 - (void)initialize;
 
 @end
