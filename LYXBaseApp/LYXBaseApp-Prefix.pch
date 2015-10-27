@@ -36,8 +36,8 @@
 //#import <AFNetworking/UIKit+AFNetworking.h>
 #import "UIImage+LYXOcticons.h"
 #import "AppDelegate.h"
-//#import "SVPullToRefresh.h"
-//#import "CBStoreHouseRefreshControl.h"
+#import "SVPullToRefresh.h"
+#import "CBStoreHouseRefreshControl.h"
 //#import "UIView+Borders.h"
 //#import "MKNetworkKit.h"
 #import "WebViewJavascriptBridge.h"
@@ -59,15 +59,15 @@
 #import "LYXMemoryCache.h"
 #import "UINavigationController+FDFullscreenPopGesture.h"
 #import "FMDatabaseQueue+LYXHelper.h"
-//#import "MRCReactiveView.h"
+#import "LYXReactiveView.h"
 #import <DTCoreText/DTCoreText.h>
 #import "NSString+Octicons.h"
-//#import "NSURL+MRCLink.h"
-//#import "NSMutableAttributedString+MRCEvents.h"
-//#import "OCTEvent+MRCAttributedString.h"
-//#import "OCTRef+MRCAdditions.h"
+#import "NSURL+LYXLink.h"
+#import "NSMutableAttributedString+LYXEvents.h"
+#import "OCTEvent+LYXAttributedString.h"
+#import "OCTRef+LYXAdditions.h"
 #import "GPUImage.h"
-//#import "OCTEvent+MRCPersistence.h"
+#import "OCTEvent+LYXPersistence.h"
 //#import "UIView+MRCFrameAdditions.h"
 #endif
 

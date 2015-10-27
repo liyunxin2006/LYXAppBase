@@ -2,15 +2,16 @@
 //  LYXHomeViewController.m
 //  LYXBaseApp
 //
-//  Created by Yunxin.Li on 15/10/15.
+//  Created by Yunxin.Li on 15/10/26.
 //  Copyright © 2015年 LYX. All rights reserved.
 //
 
 #import "LYXHomeViewController.h"
 #import "LYXHomeViewModel.h"
-//#import "MRCNewsTableViewCell.h"
-//#import "MRCNewsItemViewModel.h"
-//#import "MRCNetworkHeaderView.h"
+#import "LYXNewsTableViewCell.h"
+#import "LYXNewsItemViewModel.h"
+#import "LYXNetworkHeaderView.h"
+//#import "LYXSearchViewModel.h"
 
 @interface LYXHomeViewController ()
 
@@ -25,13 +26,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.tableView registerNib:[UINib nibWithNibName:@"MRCNewsTableViewCell" bundle:nil] forCellReuseIdentifier:@"MRCNewsTableViewCell"];
+    [self.tableView registerNib:[UINib nibWithNibName:@"LYXNewsTableViewCell" bundle:nil] forCellReuseIdentifier:@"LYXNewsTableViewCell"];
     
-    UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
-    
-    RAC(self.tableView, tableHeaderView) = [RACObserve(LYXSharedAppDelegate, networkStatus) map:^(NSNumber *networkStatus) {
-        return networkStatus.integerValue == NotReachable ? tableHeaderView : nil;
-    }];
+    if (self.viewModel.type == LYXNewsViewModelTypeNews) {
+        UIView *tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 44)];
+        
+        LYXNetworkHeaderView *networkHeaderView = [NSBundle.mainBundle loadNibNamed:@"LYXNetworkHeaderView" owner:nil options:nil].firstObject;
+        networkHeaderView.frame = tableHeaderView.bounds;
+        [tableHeaderView addSubview:networkHeaderView];
+        
+        RAC(self.tableView, tableHeaderView) = [RACObserve(LYXSharedAppDelegate, networkStatus) map:^(NSNumber *networkStatus) {
+            return networkStatus.integerValue == NotReachable ? tableHeaderView : nil;
+        }];
+    }
     
     @weakify(self)
     [self.viewModel.requestRemoteDataCommand.executing subscribeNext:^(NSNumber *executing) {
@@ -43,34 +50,33 @@
         }
     }];
     
-    /*RAC(self.viewModel, dataSource) = [[RACObserve(self.viewModel, events)
+    RAC(self.viewModel, dataSource) = [[RACObserve(self.viewModel, events)
                                         map:^(NSArray *events) {
                                             @strongify(self)
                                             return [self.viewModel dataSourceWithEvents:events];
                                         }]
                                        map:^(NSArray *viewModels) {
-                                           for (MRCNewsItemViewModel *viewModel in viewModels.firstObject) {
-                                               viewModel.height = [MRCNewsTableViewCell heightWithViewModel:viewModel];
+                                           for (LYXNewsItemViewModel *viewModel in viewModels.firstObject) {
+                                               viewModel.height = [LYXNewsTableViewCell heightWithViewModel:viewModel];
                                            }
                                            return viewModels;
-                                       }];*/
+                                       }];
 }
 
 - (UIEdgeInsets)contentInset {
-    return UIEdgeInsetsMake(64, 0, 49, 0);
+    return self.viewModel.type == LYXNewsViewModelTypeNews ? UIEdgeInsetsMake(64, 0, 49, 0) : [super contentInset];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView dequeueReusableCellWithIdentifier:(NSString *)identifier forIndexPath:(NSIndexPath *)indexPath {
-    return [tableView dequeueReusableCellWithIdentifier:@"MRCTableViewCellStyleValue1" forIndexPath:indexPath];
+    return [tableView dequeueReusableCellWithIdentifier:@"LYXNewsTableViewCell" forIndexPath:indexPath];
 }
 
-//- (void)configureCell:(MRCNewsTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(MRCNewsItemViewModel *)viewModel {
-//    [cell bindViewModel:viewModel];
-//}
+- (void)configureCell:(LYXNewsTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath withObject:(LYXNewsItemViewModel *)viewModel {
+    [cell bindViewModel:viewModel];
+}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return [self.viewModel.dataSource[indexPath.section][indexPath.row] height];
-    return 44.f;
+    return [self.viewModel.dataSource[indexPath.section][indexPath.row] height];
 }
 
 @end

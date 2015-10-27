@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="oLE-Uz-yBK" customClass="LYXNetworkHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BZh-nt-7cy">
+                    <rect key="frame" x="15" y="7" width="29" height="29"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="29" id="RMw-lL-Ugp"/>
+                        <constraint firstAttribute="width" constant="29" id="VjF-s0-CIo"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Network unavailable, check network" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHW-Rn-PNM">
+                    <rect key="frame" x="52" y="13" width="308" height="18"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <animations/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="BZh-nt-7cy" secondAttribute="centerY" id="2MR-Rd-9AA"/>
+                <constraint firstItem="BZh-nt-7cy" firstAttribute="leading" secondItem="oLE-Uz-yBK" secondAttribute="leading" constant="15" id="P9T-ie-Gyy"/>
+                <constraint firstAttribute="trailing" secondItem="sHW-Rn-PNM" secondAttribute="trailing" constant="15" id="YtS-zm-ZJn"/>
+                <constraint firstItem="sHW-Rn-PNM" firstAttribute="leading" secondItem="BZh-nt-7cy" secondAttribute="trailing" constant="8" id="aij-F7-Fqh"/>
+                <constraint firstAttribute="centerY" secondItem="sHW-Rn-PNM" secondAttribute="centerY" id="nVb-5r-b0R"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="imageView" destination="BZh-nt-7cy" id="av4-RL-8nJ"/>
+            </connections>
+            <point key="canvasLocation" x="-163.5" y="384"/>
+        </view>
+    </objects>
+</document>

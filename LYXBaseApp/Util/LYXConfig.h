@@ -6,8 +6,8 @@
 //  Copyright © 2015年 LYX. All rights reserved.
 //
 
-#ifndef LYXConfig_h
-#define LYXConfig_h
+#ifndef LYXBaseApp_LYXConfig_h
+#define LYXBaseApp_LYXConfig_h
 
 ///------------
 /// AppDelegate

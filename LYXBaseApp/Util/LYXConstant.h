@@ -6,8 +6,8 @@
 //  Copyright © 2015年 LYX. All rights reserved.
 //
 
-#ifndef LYXConstant_h
-#define LYXConstant_h
+#ifndef LYXBaseApp_LYXConstant_h
+#define LYXBaseApp_LYXConstant_h
 
 ///------
 /// NSLog
@@ -18,6 +18,8 @@
 #else
 #define NSLog(...) {}
 #endif
+
+#define LYXLogError(error) NSLog(@"Error: %@", error)
 
 ///------
 /// Block
@@ -129,9 +131,9 @@ typedef id   (^IDBlock_id)  (id);
 //#define colorI6 0xE1E8ED
 //#define colorI6 0xEFEDEA
 
-#define MRC_PLACEHOLDER_IMAGE [HexRGB(0xEDEDED) color2Image]
+#define LYX_PLACEHOLDER_IMAGE [HexRGB(0xEDEDED) color2Image]
 
-#define MRC_EMPTY_PLACEHOLDER @"Not Set"
+#define LYX_EMPTY_PLACEHOLDER @"Not Set"
 
 #define SCREEN_WIDTH  ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
@@ -141,8 +143,8 @@ typedef id   (^IDBlock_id)  (id);
 
 #define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
 
-#define MRC_LEFT_IMAGE_SIZE CGSizeMake(25, 25)
-#define MRC_1PX_WIDTH (1 / [UIScreen mainScreen].scale)
+#define LYX_LEFT_IMAGE_SIZE CGSizeMake(25, 25)
+#define LYX_1PX_WIDTH (1 / [UIScreen mainScreen].scale)
 
 ///---------
 /// App Info
@@ -150,12 +152,13 @@ typedef id   (^IDBlock_id)  (id);
 
 #define LYXApplicationVersionKey @"LYXApplicationVersionKey"
 
-#define LYX_APP_ID        @"961330940"
-#define MRC_APP_STORE_URL @"https://itunes.apple.com/cn/app/id"MRC_APP_ID"?mt=8"
+#define LYX_APP_ID               @"961330940"
+#define LYX_APP_STORE_URL        @"https://itunes.apple.com/cn/app/id"LYX_APP_ID"?mt=8"
+#define LYX_APP_STORE_REVIEW_URL @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?id="LYX_APP_ID@"&onlyLatestVersion=true&pageNumber=0&sortOrdering=1&type=Purple+Software"
 
 #define LYX_APP_NAME    ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])
 #define LYX_APP_VERSION ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
-#define MRC_APP_BUILD   ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"])
+#define LYX_APP_BUILD   ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"])
 
 ///-----------------------------
 /// MVVMReactiveCocoa Repository
@@ -164,28 +167,28 @@ typedef id   (^IDBlock_id)  (id);
 #define MVVM_REACTIVECOCOA_OWNER_LOGIN @"leichunfeng"
 #define MVVM_REACTIVECOCOA_NAME        @"MVVMReactiveCocoa"
 
-#define MRC_README_CSS_STYLE @"<style type=\"text/css\">body { font-family: \"Helvetica Neue\", Helvetica, \"Segoe UI\", Arial, freesans, sans-serif; }</style>"
+#define LYX_README_CSS_STYLE @"<style type=\"text/css\">body { font-family: \"Helvetica Neue\", Helvetica, \"Segoe UI\", Arial, freesans, sans-serif; }</style>"
 
 ///------------
 /// UMengSocial
 ///------------
 
-#define MRC_UM_APP_KEY   @"553e402e67e58ed9f4004045"
-#define MRC_UM_SHARE_URL @"http://www.umeng.com/social"
+#define LYX_UM_APP_KEY   @"553e402e67e58ed9f4004045"
+#define LYX_UM_SHARE_URL @"http://www.umeng.com/social"
 
 // Wechat
-#define MRC_WX_APP_ID     @"wx738f343b7a8d1bdb"
-#define MRC_WX_APP_SECRET @"a09ec93457abc134f769e37da4d8ad21"
+#define LYX_WX_APP_ID     @"wx738f343b7a8d1bdb"
+#define LYX_WX_APP_SECRET @"a09ec93457abc134f769e37da4d8ad21"
 
 // Sina Weibo
-#define MRC_WEIBO_APP_KEY      @"2568724352"
-#define MRC_WEIBO_APP_SECRET   @"ef15e9184ff294fc67a3240e960782f2"
-#define MRC_WEIBO_REDIRECT_URL @"http://sns.whalecloud.com/sina2/callback"
+#define LYX_WEIBO_APP_KEY      @"2568724352"
+#define LYX_WEIBO_APP_SECRET   @"ef15e9184ff294fc67a3240e960782f2"
+#define LYX_WEIBO_REDIRECT_URL @"http://sns.whalecloud.com/sina2/callback"
 
 // QQ
-#define MRC_QQ_APP_ID            @"1104637080"
-#define MRC_QQ_APP_KEY           @"WWGP247M3a7xIAUL"
-#define MRC_TENCENT_REDIRECT_URL @"http://sns.whalecloud.com/tencent2/callback"
+#define LYX_QQ_APP_ID            @"1104637080"
+#define LYX_QQ_APP_KEY           @"WWGP247M3a7xIAUL"
+#define LYX_TENCENT_REDIRECT_URL @"http://sns.whalecloud.com/tencent2/callback"
 
 ///-----
 /// FMDB
@@ -198,7 +201,7 @@ typedef id   (^IDBlock_id)  (id);
 /// Notification
 ///-------------
 
-#define MRCStarredReposDidChangeNotification   @"MRCStarredReposDidChangeNotification"
-#define MRCRecentSearchesDidChangeNotification @"MRCRecentSearchesDidChangeNotification"
+#define LYXStarredReposDidChangeNotification   @"LYXStarredReposDidChangeNotification"
+#define LYXRecentSearchesDidChangeNotification @"LYXRecentSearchesDidChangeNotification"
 
 #endif

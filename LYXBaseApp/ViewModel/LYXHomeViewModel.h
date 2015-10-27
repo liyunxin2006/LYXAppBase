@@ -8,16 +8,16 @@
 
 #import "LYXTableViewModel.h"
 
-//typedef NS_ENUM(NSUInteger, MRCNewsViewModelType) {
-//    MRCNewsViewModelTypeNews,
-//    MRCNewsViewModelTypePublicActivity
-//};
+typedef NS_ENUM(NSUInteger, LYXNewsViewModelType) {
+    LYXNewsViewModelTypeNews,
+    LYXNewsViewModelTypePublicActivity
+};
 
 @interface LYXHomeViewModel : LYXTableViewModel
 
 @property (nonatomic, copy, readonly) NSArray *events;
-//@property (nonatomic, assign, readonly) BOOL isCurrentUser;
-//@property (nonatomic, assign, readonly) MRCNewsViewModelType type;
+@property (nonatomic, assign, readonly) BOOL isCurrentUser;
+@property (nonatomic, assign, readonly) LYXNewsViewModelType type;
 @property (nonatomic, strong, readonly) RACCommand *didClickLinkCommand;
 
 - (NSArray *)dataSourceWithEvents:(NSArray *)events;

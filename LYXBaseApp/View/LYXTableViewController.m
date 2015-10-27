@@ -15,7 +15,7 @@
 @property (nonatomic, weak, readwrite) IBOutlet UITableView *tableView;
 
 @property (nonatomic, strong, readonly) LYXTableViewModel *viewModel;
-//@property (nonatomic, strong) CBStoreHouseRefreshControl *refreshControl;
+@property (nonatomic, strong) CBStoreHouseRefreshControl *refreshControl;
 
 @end
 
@@ -43,7 +43,7 @@
 }
 
 - (UIEdgeInsets)contentInset {
-    return UIEdgeInsetsZero;
+    return UIEdgeInsetsMake(64, 0, 0, 0);
 }
 
 - (void)viewDidLoad {
@@ -60,50 +60,47 @@
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
     [self.tableView registerClass:[LYXTableViewCellStyleValue1 class] forCellReuseIdentifier:@"LYXTableViewCellStyleValue1"];
     
-//    @weakify(self)
-//    if (self.viewModel.shouldPullToRefresh) {
-//        self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.tableView
-//                                                                      target:self
-//                                                               refreshAction:@selector(refreshTriggered:)
-//                                                                       plist:@"storehouse"
-//                                                                       color:UIColor.blackColor
-//                                                                   lineWidth:1.5
-//                                                                  dropHeight:80
-//                                                                       scale:1
-//                                                        horizontalRandomness:150
-//                                                     reverseLoadingAnimation:YES
-//                                                     internalAnimationFactor:0.5];
-//    }
-//    
-//    if (self.viewModel.shouldInfiniteScrolling) {
-//        [self.tableView addInfiniteScrollingWithActionHandler:^{
-//            @strongify(self)
-//            [[[self.viewModel.requestRemoteDataCommand execute:@(self.viewModel.page + 1)]
-//              deliverOnMainThread]
-//            	subscribeNext:^(NSArray *results) {
-//                    @strongify(self)
-//                    [self.tableView.infiniteScrollingView stopAnimating];
-//                    self.viewModel.page += 1;
-//                } error:^(NSError *error) {
-//                    @strongify(self)
-//                    [self.tableView.infiniteScrollingView stopAnimating];
-//                } completed:^{
-//                    @strongify(self)
-//                    [self.tableView.infiniteScrollingView stopAnimating];
-//                }];
-//        }];
-//        
-//        RAC(self.tableView, showsInfiniteScrolling) = [[RACObserve(self.viewModel, dataSource)
-//                                                        deliverOnMainThread]
-//                                                       map:^(NSArray *dataSource) {
-//                                                           @strongify(self)
-//                                                           NSUInteger count = 0;
-//                                                           for (NSArray *array in dataSource) {
-//                                                               count += array.count;
-//                                                           }
-//                                                           return @(count >= self.viewModel.perPage);
-//                                                       }];
-//    }
+    @weakify(self)
+    if (self.viewModel.shouldPullToRefresh) {
+        self.refreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.tableView
+                                                                      target:self
+                                                               refreshAction:@selector(refreshTriggered:)
+                                                                       plist:@"storehouse"
+                                                                       color:UIColor.blackColor
+                                                                   lineWidth:1.5
+                                                                  dropHeight:80
+                                                                       scale:1
+                                                        horizontalRandomness:150
+                                                     reverseLoadingAnimation:YES
+                                                     internalAnimationFactor:0.5];
+    }
+    
+    if (self.viewModel.shouldInfiniteScrolling) {
+        [self.tableView addInfiniteScrollingWithActionHandler:^{
+            @strongify(self)
+            [[[self.viewModel.requestRemoteDataCommand execute:@(self.viewModel.page + 1)] deliverOn:RACScheduler.mainThreadScheduler] subscribeNext:^(NSArray *results) {
+                @strongify(self)
+                self.viewModel.page += 1;
+            } error:^(NSError *error) {
+                @strongify(self)
+                [self.tableView.infiniteScrollingView stopAnimating];
+            } completed:^{
+                @strongify(self)
+                [self.tableView.infiniteScrollingView stopAnimating];
+            }];
+        }];
+        
+        RAC(self.tableView, showsInfiniteScrolling) = [[RACObserve(self.viewModel, dataSource)
+                                                        deliverOn:RACScheduler.mainThreadScheduler]
+                                                       map:^(NSArray *dataSource) {
+                                                           @strongify(self)
+                                                           NSUInteger count = 0;
+                                                           for (NSArray *array in dataSource) {
+                                                               count += array.count;
+                                                           }
+                                                           return @(count >= self.viewModel.perPage);
+                                                       }];
+    }
     
     self.tableView.tableFooterView = [[UIView alloc] init];
 }
@@ -122,9 +119,12 @@
         [self.tableView reloadData];
     }];
     
-    [[RACObserve(self.viewModel, shouldDisplayEmptyDataSet) deliverOn:RACScheduler.mainThreadScheduler] subscribeNext:^(id x) {
+    [self.viewModel.requestRemoteDataCommand.executing subscribeNext:^(NSNumber *executing) {
         @strongify(self)
-        [self.tableView reloadEmptyDataSet];
+        UIView *emptyDataSetView = [self.tableView.subviews.rac_sequence objectPassingTest:^(UIView *view) {
+            return [NSStringFromClass(view.class) isEqualToString:@"DZNEmptyDataSetView"];
+        }];
+        emptyDataSetView.alpha = 1.0 - executing.floatValue;
     }];
 }
 
@@ -145,7 +145,7 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [self tableView:tableView dequeueReusableCellWithIdentifier:@"MRCTableViewCellStyleValue1" forIndexPath:indexPath];
+    UITableViewCell *cell = [self tableView:tableView dequeueReusableCellWithIdentifier:@"LYXTableViewCellStyleValue1" forIndexPath:indexPath];
     
     id object = self.viewModel.dataSource[indexPath.section][indexPath.row];
     [self configureCell:cell atIndexPath:indexPath withObject:(id)object];
@@ -171,29 +171,31 @@
 
 #pragma mark - UIScrollViewDelegate
 
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//    [self.refreshControl scrollViewDidScroll];
-//}
-//
-//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
-//    [self.refreshControl scrollViewDidEndDragging];
-//}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    [self.refreshControl scrollViewDidScroll];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+    [self.refreshControl scrollViewDidEndDragging];
+}
 
 #pragma mark - Listening for the user to trigger a refresh
 
 - (void)refreshTriggered:(id)sender {
     @weakify(self)
-    [[[self.viewModel.requestRemoteDataCommand execute:@1] deliverOn:RACScheduler.mainThreadScheduler] subscribeNext:^(id x) {
-        @strongify(self)
-        self.viewModel.page = 1;
-//        [self.refreshControl finishingLoading];
-    } error:^(NSError *error) {
-        @strongify(self)
-//        [self.refreshControl finishingLoading];
-    } completed:^{
-        @strongify(self)
-//        [self.refreshControl finishingLoading];
-    }];
+    [[[self.viewModel.requestRemoteDataCommand
+       execute:@1]
+     	deliverOn:RACScheduler.mainThreadScheduler]
+    	subscribeNext:^(id x) {
+            @strongify(self)
+            self.viewModel.page = 1;
+        } error:^(NSError *error) {
+            @strongify(self)
+            [self.refreshControl finishingLoading];
+        } completed:^{
+            @strongify(self)
+            [self.refreshControl finishingLoading];
+        }];
 }
 
 #pragma mark - DZNEmptyDataSetSource
@@ -205,7 +207,7 @@
 #pragma mark - DZNEmptyDataSetDelegate
 
 - (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView {
-    return self.viewModel.shouldDisplayEmptyDataSet;
+    return self.viewModel.dataSource == nil;
 }
 
 - (BOOL)emptyDataSetShouldAllowScroll:(UIScrollView *)scrollView {

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="109" id="HqE-Uu-1Vs" customClass="LYXNewsTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="61"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HqE-Uu-1Vs" id="D7N-vN-FrL">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHt-z5-RiR" customClass="DTAttributedLabel">
+                        <rect key="frame" x="60" y="10" width="305" height="40"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mET-0O-89c">
+                        <rect key="frame" x="10" y="10" width="40" height="40"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="cJc-5i-ZwO"/>
+                            <constraint firstAttribute="width" constant="40" id="ddy-pH-Bgx"/>
+                        </constraints>
+                        <state key="normal">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="didClickAvatarButton:" destination="HqE-Uu-1Vs" eventType="touchUpInside" id="toz-nH-9Vh"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <animations/>
+                <constraints>
+                    <constraint firstItem="sHt-z5-RiR" firstAttribute="top" secondItem="D7N-vN-FrL" secondAttribute="top" constant="10" id="6vQ-2H-jFm"/>
+                    <constraint firstItem="mET-0O-89c" firstAttribute="top" secondItem="D7N-vN-FrL" secondAttribute="top" constant="10" id="AzD-k5-IZn"/>
+                    <constraint firstAttribute="trailing" secondItem="sHt-z5-RiR" secondAttribute="trailing" constant="10" id="QzN-va-iQG"/>
+                    <constraint firstItem="mET-0O-89c" firstAttribute="leading" secondItem="D7N-vN-FrL" secondAttribute="leading" constant="10" id="e4M-8x-J9e"/>
+                    <constraint firstItem="sHt-z5-RiR" firstAttribute="leading" secondItem="mET-0O-89c" secondAttribute="trailing" constant="10" id="m3W-IA-DXN"/>
+                    <constraint firstAttribute="bottom" secondItem="sHt-z5-RiR" secondAttribute="bottom" constant="10" id="x8C-d5-fAY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="avatarButton" destination="mET-0O-89c" id="9J9-zn-LUL"/>
+                <outlet property="detailView" destination="sHt-z5-RiR" id="hne-qK-rZ3"/>
+            </connections>
+            <point key="canvasLocation" x="-1640.5" y="148.5"/>
+        </tableViewCell>
+    </objects>
+</document>
