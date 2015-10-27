@@ -8,9 +8,9 @@
 
 #import "LYXViewController.h"
 #import "LYXViewModel.h"
-//#import "MRCLoginViewModel.h"
-//#import "MRCDoubleTitleView.h"
-//#import "MRCLoadingTitleView.h"
+#import "LYXLoginViewModel.h"
+#import "LYXDoubleTitleView.h"
+#import "LYXLoadingTitleView.h"
 
 @interface LYXViewController ()
 
@@ -46,6 +46,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.automaticallyAdjustsScrollViewInsets = NO;
     self.extendedLayoutIncludesOpaqueBars = YES;
 }
 
@@ -53,60 +55,62 @@
     // System title view
     RAC(self, title) = RACObserve(self.viewModel, title);
     
-//    UIView *titleView = self.navigationItem.titleView;
-//    
-//    // Double title view
-//    MRCDoubleTitleView *doubleTitleView = [[MRCDoubleTitleView alloc] init];
-//    
-//    @weakify(self)
-//    [[[self
-//       rac_signalForSelector:@selector(viewWillTransitionToSize:withTransitionCoordinator:)]
-//      startWith:nil]
-//    	subscribeNext:^(id x) {
-//            @strongify(self)
-//            doubleTitleView.titleLabel.text    = self.viewModel.title;
-//            doubleTitleView.subtitleLabel.text = self.viewModel.subtitle;
-//        }];
-//    
-//    // Loading title view
-//    MRCLoadingTitleView *loadingTitleView = [[NSBundle mainBundle] loadNibNamed:@"MRCLoadingTitleView" owner:nil options:nil].firstObject;
-//    loadingTitleView.frame = CGRectMake((SCREEN_WIDTH - CGRectGetWidth(loadingTitleView.frame)) / 2.0, 0, CGRectGetWidth(loadingTitleView.frame), CGRectGetHeight(loadingTitleView.frame));
-//    
-//    RAC(self.navigationItem, titleView) = [RACObserve(self.viewModel, titleViewType).distinctUntilChanged map:^(NSNumber *value) {
-//        MRCTitleViewType titleViewType = value.unsignedIntegerValue;
-//        switch (titleViewType) {
-//            case MRCTitleViewTypeDefault:
-//                return titleView;
-//            case MRCTitleViewTypeDoubleTitle:
-//                return (UIView *)doubleTitleView;
-//            case MRCTitleViewTypeLoadingTitle:
-//                return (UIView *)loadingTitleView;
-//        }
-//    }];
+    UIView *titleView = self.navigationItem.titleView;
     
-//    [self.viewModel.errors subscribeNext:^(NSError *error) {
-//        @strongify(self)
-//        
-//        NSLog(@"error.localizedDescription: %@", error.localizedDescription);
-//        
-//        if ([error.domain isEqual:OCTClientErrorDomain] && error.code == OCTClientErrorAuthenticationFailed) {
-//            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:MRC_ALERT_TITLE
-//                                                                                     message:@"Your authorization has expired, please login again"
-//                                                                              preferredStyle:UIAlertControllerStyleAlert];
-//            
-//            [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-//                @strongify(self)
-//                [SSKeychain deleteAccessToken];
-//                
-//                MRCLoginViewModel *loginViewModel = [[MRCLoginViewModel alloc] initWithServices:self.viewModel.services params:nil];
-//                [self.viewModel.services resetRootViewModel:loginViewModel];
-//            }]];
-//            
-//            [self presentViewController:alertController animated:YES completion:NULL];
-//        } else if (error.code != OCTClientErrorTwoFactorAuthenticationOneTimePasswordRequired && error.code != OCTClientErrorConnectionFailed) {
-//            MRCError(error.localizedDescription);
-//        }
-//    }];
+    // Double title view
+    LYXDoubleTitleView *doubleTitleView = [[LYXDoubleTitleView alloc] init];
+    
+    RAC(doubleTitleView.titleLabel, text)    = RACObserve(self.viewModel, title);
+    RAC(doubleTitleView.subtitleLabel, text) = RACObserve(self.viewModel, subtitle);
+    
+    @weakify(self)
+    [[self
+      rac_signalForSelector:@selector(viewWillTransitionToSize:withTransitionCoordinator:)]
+    	subscribeNext:^(id x) {
+            @strongify(self)
+            doubleTitleView.titleLabel.text    = self.viewModel.title;
+            doubleTitleView.subtitleLabel.text = self.viewModel.subtitle;
+        }];
+    
+    // Loading title view
+    LYXLoadingTitleView *loadingTitleView = [[NSBundle mainBundle] loadNibNamed:@"LYXLoadingTitleView" owner:nil options:nil].firstObject;
+    loadingTitleView.frame = CGRectMake((SCREEN_WIDTH - CGRectGetWidth(loadingTitleView.frame)) / 2.0, 0, CGRectGetWidth(loadingTitleView.frame), CGRectGetHeight(loadingTitleView.frame));
+    
+    RAC(self.navigationItem, titleView) = [RACObserve(self.viewModel, titleViewType).distinctUntilChanged map:^(NSNumber *value) {
+        LYXTitleViewType titleViewType = value.unsignedIntegerValue;
+        switch (titleViewType) {
+            case LYXTitleViewTypeDefault:
+                return titleView;
+            case LYXTitleViewTypeDoubleTitle:
+                return (UIView *)doubleTitleView;
+            case LYXTitleViewTypeLoadingTitle:
+                return (UIView *)loadingTitleView;
+        }
+    }];
+    
+    [self.viewModel.errors subscribeNext:^(NSError *error) {
+        @strongify(self)
+        
+        LYXLogError(error);
+        
+        if ([error.domain isEqual:OCTClientErrorDomain] && error.code == OCTClientErrorAuthenticationFailed) {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:LYX_ALERT_TITLE
+                                                                                     message:@"Your authorization has expired, please login again"
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            
+            [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+                @strongify(self)
+                [SSKeychain deleteAccessToken];
+                
+                LYXLoginViewModel *loginViewModel = [[LYXLoginViewModel alloc] initWithServices:self.viewModel.services params:nil];
+                [self.viewModel.services resetRootViewModel:loginViewModel];
+            }]];
+            
+            [self presentViewController:alertController animated:YES completion:NULL];
+        } else if (error.code != OCTClientErrorTwoFactorAuthenticationOneTimePasswordRequired && error.code != OCTClientErrorConnectionFailed) {
+            LYXError(error.localizedDescription);
+        }
+    }];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
