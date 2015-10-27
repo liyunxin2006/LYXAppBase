@@ -2,7 +2,7 @@
 //  LYXWebViewController.m
 //  LYXBaseApp
 //
-//  Created by Yunxin.Li on 15/10/15.
+//  Created by Yunxin.Li on 15/10/27.
 //  Copyright © 2015年 LYX. All rights reserved.
 //
 
@@ -25,11 +25,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    RACSignal *didFinishLoadSignal   = [self rac_signalForSelector:@selector(webViewDidFinishLoad:) fromProtocol:@protocol(UIWebViewDelegate)];
-//    RACSignal *didFailLoadLoadSignal = [self rac_signalForSelector:@selector(webView:didFailLoadWithError:) fromProtocol:@protocol(UIWebViewDelegate)];
-//    
-//    MRCTitleViewType type = self.viewModel.titleViewType;
-//    RAC(self.viewModel, titleViewType) = [[RACSignal merge:@[ didFinishLoadSignal, didFailLoadLoadSignal ]] mapReplace:@(type)];
+    self.automaticallyAdjustsScrollViewInsets = YES;
+    
+    RACSignal *didFinishLoadSignal   = [self rac_signalForSelector:@selector(webViewDidFinishLoad:) fromProtocol:@protocol(UIWebViewDelegate)];
+    RACSignal *didFailLoadLoadSignal = [self rac_signalForSelector:@selector(webView:didFailLoadWithError:) fromProtocol:@protocol(UIWebViewDelegate)];
+    
+    LYXTitleViewType type = self.viewModel.titleViewType;
+    RAC(self.viewModel, titleViewType) = [[RACSignal merge:@[ didFinishLoadSignal, didFailLoadLoadSignal ]] mapReplace:@(type)];
     
     NSParameterAssert(self.viewModel.request);
     
@@ -41,7 +43,7 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     if (navigationType == UIWebViewNavigationTypeOther) {
         if ([request.URL.scheme isEqualToString:@"http"] || [request.URL.scheme isEqualToString:@"https"]) {
-//            self.viewModel.titleViewType = MRCTitleViewTypeLoadingTitle;
+            self.viewModel.titleViewType = LYXTitleViewTypeLoadingTitle;
         }
         return YES;
     } else {

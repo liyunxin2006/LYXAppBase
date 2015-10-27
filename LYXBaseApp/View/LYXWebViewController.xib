@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LYXWebViewController">
+            <connections>
+                <outlet property="view" destination="ltl-hB-7N9" id="vHa-kH-Nge"/>
+                <outlet property="webView" destination="bgs-ah-M9G" id="nnY-wy-QL7"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ltl-hB-7N9">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgs-ah-M9G">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="dSQ-Os-PoZ"/>
+                    </connections>
+                </webView>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bgs-ah-M9G" firstAttribute="leading" secondItem="ltl-hB-7N9" secondAttribute="leading" id="A0Y-EC-Lpu"/>
+                <constraint firstItem="bgs-ah-M9G" firstAttribute="top" secondItem="ltl-hB-7N9" secondAttribute="top" id="Hav-js-SzM"/>
+                <constraint firstAttribute="trailing" secondItem="bgs-ah-M9G" secondAttribute="trailing" id="nst-pu-8id"/>
+                <constraint firstAttribute="bottom" secondItem="bgs-ah-M9G" secondAttribute="bottom" id="oxe-hq-0RZ"/>
+            </constraints>
+            <point key="canvasLocation" x="421" y="269"/>
+        </view>
+    </objects>
+</document>

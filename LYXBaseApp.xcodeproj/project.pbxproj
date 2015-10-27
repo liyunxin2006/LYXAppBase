@@ -25,7 +25,6 @@
 		356810431BCF796A00FED7C9 /* LYXTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810421BCF796A00FED7C9 /* LYXTableViewController.m */; settings = {ASSET_TAGS = (); }; };
 		356810461BCF83E300FED7C9 /* LYXSegmentedControlController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810451BCF83E300FED7C9 /* LYXSegmentedControlController.m */; settings = {ASSET_TAGS = (); }; };
 		356810491BCF863900FED7C9 /* UINavigationItem+LYXBackBarButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810481BCF863900FED7C9 /* UINavigationItem+LYXBackBarButtonItem.m */; settings = {ASSET_TAGS = (); }; };
-		356810501BCF88F800FED7C9 /* LYXWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568104F1BCF88F800FED7C9 /* LYXWebViewController.m */; settings = {ASSET_TAGS = (); }; };
 		356810601BCF8E1200FED7C9 /* LYXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568105F1BCF8E1200FED7C9 /* LYXMeViewController.m */; settings = {ASSET_TAGS = (); }; };
 		356810631BCF945900FED7C9 /* LYXMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 356810621BCF945900FED7C9 /* LYXMainViewController.m */; settings = {ASSET_TAGS = (); }; };
 		3568106B1BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 3568106A1BCF9E6F00FED7C9 /* FMDatabaseQueue+LYXHelper.m */; settings = {ASSET_TAGS = (); }; };
@@ -159,6 +158,8 @@
 		35D90E931BDF27D1005D0B7E /* LYXDoubleTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D90E921BDF27D1005D0B7E /* LYXDoubleTitleView.m */; settings = {ASSET_TAGS = (); }; };
 		35D90E971BDF28BA005D0B7E /* LYXLoadingTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D90E951BDF28BA005D0B7E /* LYXLoadingTitleView.m */; settings = {ASSET_TAGS = (); }; };
 		35D90E981BDF28BA005D0B7E /* LYXLoadingTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D90E961BDF28BA005D0B7E /* LYXLoadingTitleView.xib */; settings = {ASSET_TAGS = (); }; };
+		35D90E9C1BDF65DC005D0B7E /* LYXWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D90E9A1BDF65DC005D0B7E /* LYXWebViewController.m */; settings = {ASSET_TAGS = (); }; };
+		35D90E9D1BDF65DC005D0B7E /* LYXWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D90E9B1BDF65DC005D0B7E /* LYXWebViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		D250878AE353638C20334E5B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A5A9315246188397DFECFF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -223,8 +224,6 @@
 		356810451BCF83E300FED7C9 /* LYXSegmentedControlController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXSegmentedControlController.m; sourceTree = "<group>"; };
 		356810471BCF863900FED7C9 /* UINavigationItem+LYXBackBarButtonItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationItem+LYXBackBarButtonItem.h"; sourceTree = "<group>"; };
 		356810481BCF863900FED7C9 /* UINavigationItem+LYXBackBarButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationItem+LYXBackBarButtonItem.m"; sourceTree = "<group>"; };
-		3568104E1BCF88F800FED7C9 /* LYXWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXWebViewController.h; sourceTree = "<group>"; };
-		3568104F1BCF88F800FED7C9 /* LYXWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXWebViewController.m; sourceTree = "<group>"; };
 		3568105E1BCF8E1200FED7C9 /* LYXMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXMeViewController.h; sourceTree = "<group>"; };
 		3568105F1BCF8E1200FED7C9 /* LYXMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXMeViewController.m; sourceTree = "<group>"; };
 		356810611BCF945900FED7C9 /* LYXMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXMainViewController.h; sourceTree = "<group>"; };
@@ -482,6 +481,9 @@
 		35D90E941BDF28BA005D0B7E /* LYXLoadingTitleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXLoadingTitleView.h; sourceTree = "<group>"; };
 		35D90E951BDF28BA005D0B7E /* LYXLoadingTitleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXLoadingTitleView.m; sourceTree = "<group>"; };
 		35D90E961BDF28BA005D0B7E /* LYXLoadingTitleView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYXLoadingTitleView.xib; sourceTree = "<group>"; };
+		35D90E991BDF65DC005D0B7E /* LYXWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXWebViewController.h; sourceTree = "<group>"; };
+		35D90E9A1BDF65DC005D0B7E /* LYXWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXWebViewController.m; sourceTree = "<group>"; };
+		35D90E9B1BDF65DC005D0B7E /* LYXWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYXWebViewController.xib; sourceTree = "<group>"; };
 		51A5A9315246188397DFECFF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		650AEF6BED8CEBA9047305AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -663,8 +665,9 @@
 				356810421BCF796A00FED7C9 /* LYXTableViewController.m */,
 				356810441BCF83E300FED7C9 /* LYXSegmentedControlController.h */,
 				356810451BCF83E300FED7C9 /* LYXSegmentedControlController.m */,
-				3568104E1BCF88F800FED7C9 /* LYXWebViewController.h */,
-				3568104F1BCF88F800FED7C9 /* LYXWebViewController.m */,
+				35D90E991BDF65DC005D0B7E /* LYXWebViewController.h */,
+				35D90E9A1BDF65DC005D0B7E /* LYXWebViewController.m */,
+				35D90E9B1BDF65DC005D0B7E /* LYXWebViewController.xib */,
 				356810471BCF863900FED7C9 /* UINavigationItem+LYXBackBarButtonItem.h */,
 				356810481BCF863900FED7C9 /* UINavigationItem+LYXBackBarButtonItem.m */,
 			);
@@ -1431,6 +1434,7 @@
 				35BED8DA1BB252C80030D89B /* LaunchScreen.storyboard in Resources */,
 				35AA4A1F1BDA29F700BABB4F /* LICENSE in Resources */,
 				35D90E661BDE2DA0005D0B7E /* LYXNewsTableViewCell.xib in Resources */,
+				35D90E9D1BDF65DC005D0B7E /* LYXWebViewController.xib in Resources */,
 				35680FFB1BCE55C700FED7C9 /* empty in Resources */,
 				35AA4A2E1BDA2A4D00BABB4F /* icon-info.png in Resources */,
 				35D90E721BDE34A6005D0B7E /* LICENSE in Resources */,
@@ -1548,6 +1552,7 @@
 				35AA49091BDA00E100BABB4F /* OCTResponse.m in Sources */,
 				35AA49271BDA019300BABB4F /* OCTClient+Organizations.m in Sources */,
 				35AA49BF1BDA034A00BABB4F /* OCTServerMetadata.m in Sources */,
+				35D90E9C1BDF65DC005D0B7E /* LYXWebViewController.m in Sources */,
 				35D90E591BDE274C005D0B7E /* OCTRef+LYXAdditions.m in Sources */,
 				35AA492E1BDA01AC00BABB4F /* OCTClient+User.m in Sources */,
 				35D90E501BDE1FE8005D0B7E /* OCTEvent+LYXAttributedString.m in Sources */,
@@ -1594,7 +1599,6 @@
 				35AA49521BDA01D800BABB4F /* OCTPublicEvent.m in Sources */,
 				35AA49A51BDA02F900BABB4F /* OCTClient+Repositories.m in Sources */,
 				35D90E5C1BDE2AB9005D0B7E /* OCTEvent+LYXPersistence.m in Sources */,
-				356810501BCF88F800FED7C9 /* LYXWebViewController.m in Sources */,
 				35AA49511BDA01D800BABB4F /* OCTMemberEvent.m in Sources */,
 				35AA49E01BDA15EE00BABB4F /* LYXLoginViewModel.m in Sources */,
 				35AA490F1BDA010900BABB4F /* OCTAccessToken.m in Sources */,
