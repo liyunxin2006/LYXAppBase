@@ -10,7 +10,7 @@
 #import "LYXNewsItemViewModel.h"
 //#import "LYXUserDetailViewModel.h"
 //#import "LYXRepoDetailViewModel.h"
-//#import "LYXWebViewModel.h"
+#import "LYXWebViewModel.h"
 
 @interface LYXHomeViewModel ()
 
@@ -49,29 +49,29 @@
     self.shouldInfiniteScrolling = YES;
     
     @weakify(self)
-//    self.didClickLinkCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSURL *URL) {
-//        @strongify(self)
-//        
-//        NSString *title = [[[[URL.absoluteString componentsSeparatedByString:@"?"].lastObject componentsSeparatedByString:@"="].lastObject stringByReplacingOccurrencesOfString:@"-" withString:@" "] stringByReplacingOccurrencesOfString:@"@" withString:@"#"];
-//        NSLog(@"didClickLinkCommand: %@, title: %@", URL, title);
-//        
-//        if (URL.type == LYXLinkTypeUser) {
+    self.didClickLinkCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSURL *URL) {
+        @strongify(self)
+        
+        NSString *title = [[[[URL.absoluteString componentsSeparatedByString:@"?"].lastObject componentsSeparatedByString:@"="].lastObject stringByReplacingOccurrencesOfString:@"-" withString:@" "] stringByReplacingOccurrencesOfString:@"@" withString:@"#"];
+        NSLog(@"didClickLinkCommand: %@, title: %@", URL, title);
+        
+        if (URL.type == LYXLinkTypeUser) {
 //            LYXUserDetailViewModel *viewModel = [[LYXUserDetailViewModel alloc] initWithServices:self.services params:URL.lyx_dictionary];
 //            [self.services pushViewModel:viewModel animated:YES];
-//        } else if (URL.type == LYXLinkTypeRepository) {
+        } else if (URL.type == LYXLinkTypeRepository) {
 //            LYXRepoDetailViewModel *viewModel = [[LYXRepoDetailViewModel alloc] initWithServices:self.services params:URL.lyx_dictionary];
 //            [self.services pushViewModel:viewModel animated:YES];
-//        } else {
-//            NSURLRequest *request = [NSURLRequest requestWithURL:URL];
-//            
-//            LYXWebViewModel *viewModel = [[LYXWebViewModel alloc] initWithServices:self.services
-//                                                                            params:@{ @"title": title ?: @"",
-//                                                                                      @"request": request ?: @"" }];
-//            [self.services pushViewModel:viewModel animated:YES];
-//        }
-//        
-//        return [RACSignal empty];
-//    }];
+        } else {
+            NSURLRequest *request = [NSURLRequest requestWithURL:URL];
+            
+            LYXWebViewModel *viewModel = [[LYXWebViewModel alloc] initWithServices:self.services
+                                                                            params:@{ @"title": title ?: @"",
+                                                                                      @"request": request ?: @"" }];
+            [self.services pushViewModel:viewModel animated:YES];
+        }
+        
+        return [RACSignal empty];
+    }];
     
     self.didSelectCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(NSIndexPath *indexPath) {
         @strongify(self)
