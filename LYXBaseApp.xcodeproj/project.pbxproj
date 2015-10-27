@@ -160,6 +160,7 @@
 		35D90E981BDF28BA005D0B7E /* LYXLoadingTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D90E961BDF28BA005D0B7E /* LYXLoadingTitleView.xib */; settings = {ASSET_TAGS = (); }; };
 		35D90E9C1BDF65DC005D0B7E /* LYXWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D90E9A1BDF65DC005D0B7E /* LYXWebViewController.m */; settings = {ASSET_TAGS = (); }; };
 		35D90E9D1BDF65DC005D0B7E /* LYXWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 35D90E9B1BDF65DC005D0B7E /* LYXWebViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		35D90EA01BDF688B005D0B7E /* UISearchBar+LYXShowsCancelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 35D90E9F1BDF688B005D0B7E /* UISearchBar+LYXShowsCancelButton.m */; settings = {ASSET_TAGS = (); }; };
 		D250878AE353638C20334E5B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A5A9315246188397DFECFF /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -484,6 +485,8 @@
 		35D90E991BDF65DC005D0B7E /* LYXWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYXWebViewController.h; sourceTree = "<group>"; };
 		35D90E9A1BDF65DC005D0B7E /* LYXWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYXWebViewController.m; sourceTree = "<group>"; };
 		35D90E9B1BDF65DC005D0B7E /* LYXWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LYXWebViewController.xib; sourceTree = "<group>"; };
+		35D90E9E1BDF688B005D0B7E /* UISearchBar+LYXShowsCancelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UISearchBar+LYXShowsCancelButton.h"; sourceTree = "<group>"; };
+		35D90E9F1BDF688B005D0B7E /* UISearchBar+LYXShowsCancelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UISearchBar+LYXShowsCancelButton.m"; sourceTree = "<group>"; };
 		51A5A9315246188397DFECFF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		650AEF6BED8CEBA9047305AA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -670,6 +673,8 @@
 				35D90E9B1BDF65DC005D0B7E /* LYXWebViewController.xib */,
 				356810471BCF863900FED7C9 /* UINavigationItem+LYXBackBarButtonItem.h */,
 				356810481BCF863900FED7C9 /* UINavigationItem+LYXBackBarButtonItem.m */,
+				35D90E9E1BDF688B005D0B7E /* UISearchBar+LYXShowsCancelButton.h */,
+				35D90E9F1BDF688B005D0B7E /* UISearchBar+LYXShowsCancelButton.m */,
 			);
 			name = BaseClass;
 			sourceTree = "<group>";
@@ -1620,6 +1625,7 @@
 				356810721BCFA82600FED7C9 /* UIImage+RTTint.m in Sources */,
 				35AA49CF1BDA03A700BABB4F /* NSValueTransformer+OCTPredefinedTransformerAdditions.m in Sources */,
 				35AA494B1BDA01D800BABB4F /* OCTClient+Events.m in Sources */,
+				35D90EA01BDF688B005D0B7E /* UISearchBar+LYXShowsCancelButton.m in Sources */,
 				35AA4A351BDA2F3A00BABB4F /* LYXButton.m in Sources */,
 				356810F71BD4DEB500FED7C9 /* LYXRepositoryServiceImpl.m in Sources */,
 				35AA49E91BDA1DEE00BABB4F /* LYXUtil.m in Sources */,
